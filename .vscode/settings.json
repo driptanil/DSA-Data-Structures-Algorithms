@@ -1,0 +1,6 @@
+{
+    "jupyter.jupyterServerType": "local",
+    "files.associations": {
+        "cmath": "cpp"
+    }
+}
