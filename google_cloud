@@ -1,0 +1,73 @@
+# Getting started with Anaconda 3:
+## Update
+    sudo apt-get update
+    sudo apt-get upgrade
+
+##Install Anaconda
+    cd /tmp
+    curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+
+##Run the Install Script
+    bash Anaconda3-2019.03-Linux-x86_64.sh
+
+    //Welcome to Anaconda3 2019.03
+
+    In order to continue the installation process, please review the license
+    agreement.
+    Please, press ENTER to continue
+    We will press the [ENTER] key to continue the installation. The next step is to then agree to and approve the license terms:
+
+    Output:
+    Do you accept the license terms? [yes|no]
+    Type yes, then press the [ENTER] key to submit your answer. Now we should choose the installation location.
+
+    Output:
+    Anaconda3 will now be installed into this location:
+    /root/anaconda3
+
+    - Press ENTER to confirm the location
+    - Press CTRL-C to abort the installation
+    - Or specify a different location below
+    //We will choose the default path location /root/anaconda3. Press the [ENTER] key to continue with the installation. The installation will take some time – once it is completed, you will be prompted with the following output:
+
+    Do you wish the installer to initialize Anaconda3
+    by running conda init? [yes|no]
+    //We will type yes so that we can use the conda command. You should be presented with the following output:
+
+    For changes to take effect, close and re-open your current shell.
+
+    If you'd prefer that conda's base environment not be activated on startup,
+    set the auto_activate_base parameter to false:
+    conda config --set auto_activate_base false
+
+    Thank you for installing Anaconda3!
+    //Next, we will activate the Anaconda installation and load the initial path which we added previously. To activate the Anaconda installer, run the following command:
+
+    source ~/.bashrc
+    //We can verify the Anaconda installation by running the following command:
+
+    conda info
+
+##Creating an Anaconda Environment[not useful]
+    conda create --name virt_env python=3
+    conda activate virt_env
+    conda deactivate
+
+# Getting started with JupyterLab:
+## Installation with conda
+    conda install -c conda-forge jupyterlab
+
+## Run JupyterLab
+    jupyter lab --ip=127.0.0.1 --port=8080
+
+
+#Resetting Cloud Shell
+    //Check for personal files in the home directory:
+    ls -a $HOME
+    
+    //Remove all files from your home directory:
+    sudo rm -rf $HOME
+    
+    //In the Cloud Shell menu, click the three dots menu icon, then click Restart Cloud Shell.
+
+    //Click Restart Cloud Shell in the confirmation dialog.
