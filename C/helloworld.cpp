@@ -2,10 +2,7 @@
 #include <math.h>
 int main()
 {
-    int a=3,b=4;
-    a=b+a;
-    b=a-b;
-    a=a-b;
-    printf("%d %d\n",a,b);
+    printf("nn\n\n nn\n");
+    printf("nn/n/n nn/n");
     return 0;
 }
