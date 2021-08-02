@@ -2,7 +2,8 @@
 #include <math.h>
 int main()
 {
-    printf("nn\n\n nn\n");
-    printf("nn/n/n nn/n");
+    float a=21,b=7,c=6,d=3,f;
+    f=a/b*c/d;
+    printf("%f",f);
     return 0;
 }
