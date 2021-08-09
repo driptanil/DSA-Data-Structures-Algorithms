@@ -3,6 +3,6 @@
     "files.associations": {
         "cmath": "cpp"
     },
-    "editor.fontSize": 18,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 15
 }
