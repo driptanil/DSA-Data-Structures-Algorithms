@@ -2,8 +2,14 @@
 #include <math.h>
 int main()
 {
-    float a=21,b=7,c=6,d=3,f;
-    f=a/b*c/d;
-    printf("%f",f);
-    return 0;
+    int num,remainder,divisor=10000,multiplier=1,reverse=0;
+    printf("Enter a 5 Digit number:");
+    scanf("%d", &num);
+
+    remainder=num%divisor;
+    num=(num-remainder)/10;
+    remainder=remainder*multiplier;
+    multiplier=multiplier*10;
+    divisor=divisor/10;
+    reverse=reverse+remainder;
 }
