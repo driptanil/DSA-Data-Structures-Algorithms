@@ -1,26 +1,5 @@
-['Spades 3',
- 'Clubs Jack',
- 'Hearts 4',
- 'Hearts Jack',
- 'Hearts 3',
- 'Spades 1',
- 'Spades 7',
- 'Clubs 1',
- 'Diamonds 5',
- 'Spades 8',
- 'Diamonds 8',
- 'Spades 6',
- 'Clubs 2',
- 'Diamonds King',
- 'Spades Jack',
- 'Spades 2',
- 'Diamonds 7',
- 'Clubs 3',
- 'Diamonds 1',
- 'Diamonds 4',
- 'Diamonds 10',
- 'Diamonds 6',
- 'Hearts 10',
- 'Spades 5',
- 'Clubs 4',
- 'Hearts Queen']
+#include <stdio.h>
+int main ()
+{
+    printf("Hello world");
+}
