@@ -3,5 +3,7 @@
     "files.associations": {
         "cmath": "cpp"
     },
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "terminal.explorerKind": "external",
+    "debug.terminal.clearBeforeReusing": true
 }
