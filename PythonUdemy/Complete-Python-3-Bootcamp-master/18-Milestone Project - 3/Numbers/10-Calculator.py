@@ -433,126 +433,126 @@ class Calculator:
 
 equation=False
 while True:
-    #try:
-    # Printing Instructions
-    print('\n\n----------------------------Calculator------------------------------\n')
-    print('\tOperations :')
-    print("\t\tAddition : '+'")
-    print("\t\tSubstraction : '-'")
-    print("\t\tMultiplication : '*'")
-    print("\t\tDecimal : '.'")
-    print("\t\tDivide : '/'")
-    print("\t\tPercentage : '%'")
-    print("\t\tPower : '^'")
-    print("\t\tFactorial : '!'")
-    print("\t\tBrackets : '(...)'")
-    print("\t\tModulas : '|...|'")
-    print("\t\te : 'e'")
-    print("\t\tπ : 'pi'")
-    print("\t\tDegrees : 'deg(...)'")
-    print("\t\tRadians : 'rad(...)'")
-    print("\t\tSine : 'sin(...)'")
-    print("\t\tCosine : 'cos(...)'")
-    print("\t\tTangent : 'tan(...)'")
-    print("\t\tSine Inverse : 'sin_in(...)'")
-    print("\t\tCosine Inverse : 'cos_in(...)'")
-    print("\t\tTangent Inverse : 'tan_in(...)'")
-    print("\t\tLogarithm (base 10) : 'log(...)'")
-    print("\t\tNatural Logarithm (base e) : 'ln(...)'")
-    print('\n\t\!!!Caution!!!: Do not add any space in between the characters\n')
-    print("\tDon't worry to use large equations (as it shows all steps)!!!!\n")
-    print("\tUse 'exit' to Exit\n\n")
+    try:
+        # Printing Instructions
+        print('\n\n----------------------------Calculator------------------------------\n')
+        print('\tOperations :')
+        print("\t\tAddition : '+'")
+        print("\t\tSubstraction : '-'")
+        print("\t\tMultiplication : '*'")
+        print("\t\tDecimal : '.'")
+        print("\t\tDivide : '/'")
+        print("\t\tPercentage : '%'")
+        print("\t\tPower : '^'")
+        print("\t\tFactorial : '!'")
+        print("\t\tBrackets : '(...)'")
+        print("\t\tModulas : '|...|'")
+        print("\t\te : 'e'")
+        print("\t\tπ : 'pi'")
+        print("\t\tDegrees : 'deg(...)'")
+        print("\t\tRadians : 'rad(...)'")
+        print("\t\tSine : 'sin(...)'")
+        print("\t\tCosine : 'cos(...)'")
+        print("\t\tTangent : 'tan(...)'")
+        print("\t\tSine Inverse : 'sin_in(...)'")
+        print("\t\tCosine Inverse : 'cos_in(...)'")
+        print("\t\tTangent Inverse : 'tan_in(...)'")
+        print("\t\tLogarithm (base 10) : 'log(...)'")
+        print("\t\tNatural Logarithm (base e) : 'ln(...)'")
+        print('\n\t\!!!Caution!!!: Do not add any space in between the characters\n')
+        print("\tDon't worry to use large equations (as it shows all steps)!!!!\n")
+        print("\tUse 'exit' to Exit\n\n")
 
-    # Taking input
-    string=input('input:')
+        # Taking input
+        string=input('input:')
 
-    # Exit
-    if string=='exit':
-        break
+        # Exit
+        if string=='exit':
+            break
 
-    elif string=='equation':
-        equation=True
-        break
+        elif string=='equation':
+            equation=True
+            break
 
-    # Clear (it is not working in linux)!!!
-    #elif string=='clear':
-        #from IPython.display import clear_output
-        #clear_output()
+        # Clear (it is not working in linux)!!!
+        #elif string=='clear':
+            #from IPython.display import clear_output
+            #clear_output()
 
-    # Calling Class
-    cal=Calculator()
+        # Calling Class
+        cal=Calculator()
 
-    # Unpacking (list)
-    lst=cal.unpacking(string)
-    cal.print_list(lst)
+        # Unpacking (list)
+        lst=cal.unpacking(string)
+        cal.print_list(lst)
 
-    # Inside Bracket or Modulas Operations
-    if lst.count('(')==lst.count(')') and lst.count('|')%2==0:
-        if '(' in lst or '|' in lst:
-            pairs=lst.count('(')+lst.count('|')/2
-            for count1 in range(0,int(pairs)):
+        # Inside Bracket or Modulas Operations
+        if lst.count('(')==lst.count(')') and lst.count('|')%2==0:
+            if '(' in lst or '|' in lst:
+                pairs=lst.count('(')+lst.count('|')/2
+                for count1 in range(0,int(pairs)):
+                    index1=cal.brakets_open_index(lst)
+                    index2=cal.brakets_close_index(lst,index1)
+
+                    for obj in lst[index1:index2+1]:
+                        if obj in ['+','-','*','/','^','!','%']:
+                            # Checking Operator
+                            lst=cal.operation(lst,index1,index2)
+                            cal.print_list(lst)
+                            index1=cal.brakets_open_index(lst)
+                            index2=cal.brakets_close_index(lst,index1)
+                    
+                    # Checking Other Functions
+                    if lst[index1-1] in ['sin','cos','tan','sin_in','cos_in','tan_in','log','ln','rad','deg']:
+                        lst=cal.other_functions(lst,index1,index2)
+                        index1=cal.brakets_open_index(lst)
+                        index2=cal.brakets_close_index(lst,index1)
+                        cal.print_list(lst)
+
+                    # Modulas
+                    index1=cal.brakets_open_index(lst)
+                    index2=cal.brakets_close_index(lst,index1)
+                    lst=cal.modulas(lst,index1,index2)
+                    cal.print_list(lst)
+
+                    # Bracket Remove
+                    index1=cal.brakets_open_index(lst)
+                    lst=cal.open_bracket(lst,index1)
+                    index2=cal.brakets_close_index(lst,index1)
+                    lst=cal.close_bracket(lst,index2)
+                    cal.print_list(lst)
+
+                # Outside Bracket or Modulas Operations
                 index1=cal.brakets_open_index(lst)
                 index2=cal.brakets_close_index(lst,index1)
-
-                for obj in lst[index1:index2+1]:
-                    if obj in ['+','-','*','/','^','!','%']:
+                for obj in lst[index1+1:index2+1]:
+                    if obj in ['+','-','*','/','^','!','%','`']:
                         # Checking Operator
                         lst=cal.operation(lst,index1,index2)
                         cal.print_list(lst)
                         index1=cal.brakets_open_index(lst)
                         index2=cal.brakets_close_index(lst,index1)
-                
-                # Checking Other Functions
-                if lst[index1-1] in ['sin','cos','tan','sin_in','cos_in','tan_in','log','ln','rad','deg']:
-                    lst=cal.other_functions(lst,index1,index2)
-                    index1=cal.brakets_open_index(lst)
-                    index2=cal.brakets_close_index(lst,index1)
-                    cal.print_list(lst)
-
-                # Modulas
+            # No Bracket or Modulas Operations
+            else:
                 index1=cal.brakets_open_index(lst)
                 index2=cal.brakets_close_index(lst,index1)
-                lst=cal.modulas(lst,index1,index2)
-                cal.print_list(lst)
-
-                # Bracket Remove
-                index1=cal.brakets_open_index(lst)
-                lst=cal.open_bracket(lst,index1)
-                index2=cal.brakets_close_index(lst,index1)
-                lst=cal.close_bracket(lst,index2)
-                cal.print_list(lst)
-
-            # Outside Bracket or Modulas Operations
-            index1=cal.brakets_open_index(lst)
-            index2=cal.brakets_close_index(lst,index1)
-            for obj in lst[index1+1:index2+1]:
-                if obj in ['+','-','*','/','^','!','%','`']:
-                    # Checking Operator
-                    lst=cal.operation(lst,index1,index2)
-                    cal.print_list(lst)
-                    index1=cal.brakets_open_index(lst)
-                    index2=cal.brakets_close_index(lst,index1)
-        # No Bracket or Modulas Operations
-        else:
-            index1=cal.brakets_open_index(lst)
-            index2=cal.brakets_close_index(lst,index1)
-            for obj in lst[index1+1:index2+1]:
-                if obj in ['+','-','*','/','^','!','%','`']:
-                    # Checking Operator
-                    lst=cal.operation(lst,index1,index2)
-                    cal.print_list(lst)
-                    index1=cal.brakets_open_index(lst)
-                    index2=cal.brakets_close_index(lst,index1)
-    #except:
-        #print('Syntax/Math Error')
-    '''else:
+                for obj in lst[index1+1:index2+1]:
+                    if obj in ['+','-','*','/','^','!','%','`']:
+                        # Checking Operator
+                        lst=cal.operation(lst,index1,index2)
+                        cal.print_list(lst)
+                        index1=cal.brakets_open_index(lst)
+                        index2=cal.brakets_close_index(lst,index1)
+    except:
+        print('Syntax/Math Error')
+    else:
         if len(lst)!=1:
             print('Syntax/Math Error')
         else:
             try:
                 float(lst[0])
             except:
-                print('Syntax/Math Error')'''
+                print('Syntax/Math Error')
 
 while True:
     if equation==True:
