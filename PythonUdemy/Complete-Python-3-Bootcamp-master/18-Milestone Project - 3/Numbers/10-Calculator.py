@@ -1,50 +1,170 @@
-class Calculator:
+# Please read the comments to understand what is really going on under the hood
+# Enjoy
 
+# Defining class
+class Calculator:
+    # Defining function that coverts string to list:
+    # "1+(23*sin(pi*2ln(e))" --> "[1,'+','(',23,'*','sin','(',3.14,'*',2,'ln','(',2.73,')',')']"
     def unpacking(self,string):
         import math
         num=0
         lst=[]
+        count_deci=0
         for obj in string:
-            if obj.isnumeric()==True:
+            if len(lst)!=0 and '.' in str(lst[num-1]):
+                integer=True
+                try:
+                    int(obj)
+                except:
+                    integer=False
+                if '.'==str(lst[num-1]) and integer==True:
+                    lst[num-1]=float('0'+'.'+obj)
+                    count_deci+=1
+                    num-=1
+                elif integer==True:
+                    count_deci+=1
+                    lst[num-1]=lst[num-1]+int(obj)/(10**count_deci)
+                    num-=1
+
+            integer=True
+            try:
+                int(obj)
+            except:
+                integer=False
+            if integer==True:
                 if lst==[]:
                     lst.append(int(obj))
                 else:
+                    if '.' not in str(lst[num-1]):
+                        try:
+                            int(lst[num-1])
+                            lst[num-1]=lst[num-1]*10+int(obj)
+                            num-=1
+                        except:
+                            lst.append(int(obj))
+
+            # e
+            elif obj=='e':
+                if len(lst)==0:
+                    lst.append(math.e)
+                else:
+                    integer=True
                     try:
                         int(lst[num-1])
-                        lst[num-1]=lst[num-1]*10+int(obj)
-                        num-=1
                     except:
-                        lst.append(int(obj))
-            else:
-                if obj=='e':
-                    lst.append(math.e)
-                elif obj=='i':
-                    if lst[num-1]=='p':
-                        lst[num-1]=math.pi
+                        integer=False
+                    if integer==True:
+                        lst.append('*')
+                        lst.append(math.e)
+                        num+=1
+                    else:
+                        lst.append(math.e)
+
+            # pi
+            elif len(lst)!=0 and obj=='i' and lst[num-1]=='p':
+                integer=True
+                try:
+                    int(lst[num-2])
+                except:
+                    integer=False
+                if integer==True:
+                    lst[num-1]='*'
+                    lst.append(math.pi)
+                else:
+                    lst[num-1]=math.pi
+                    num-=1
+
+            #
+            elif len(lst)>1 and obj=='n' and lst[num-1]=='i' and lst[num-2]=='s':
+                lst[num-2]='sin'
+                lst.pop(num-1)
+                num-=2
+            elif len(lst)>1 and obj=='n' and lst[num-1]=='a' and lst[num-2]=='t':
+                lst[num-2]='tan'
+                lst.pop(num-1)
+                num-=2
+            elif len(lst)>0 and obj=='n' and lst[num-1]=='l':
+                lst[num-1]='ln'
+                num-=1
+                    
+            elif len(lst)>1 and obj=='s' and lst[num-1]=='o' and lst[num-2]=='c':
+                lst[num-2]='cos'
+                lst.pop(num-1)
+                num-=2
+    
+            elif len(lst)>1 and obj=='g' and lst[num-1]=='o' and lst[num-2]=='l':
+                if len(lst)==2:
+                    lst[num-2]='log'
+                    lst.pop(num-1)
+                    num-=2
+                else:
+                    integer=True
+                    try:
+                        int(lst[num-3])
+                    except:
+                        integer=False
+                    if integer==True:
+                        lst[num-2]='*'
+                        lst[num-1]='log'
                         num-=1
+                    else:
+                        lst[num-2]='log'
+                        lst.pop(num-1)
+                        num-=2
+
+            elif obj=='.':
+                integer=True
+                try:
+                    int(lst[num-1])
+                except:
+                    integer=False
+                if integer==True:
+                    lst[num-1]=float(str(lst[num-1])+'.0')
+                    num-=1
                 else:
                     lst.append(obj)
+            else:
+                lst.append(obj)
             num+=1
         return lst
-
+    
+    # Index of Opening Brackets or Modulas
     def brakets_open_index(self,lst):
-        if '(' in lst:
+        if '(' in lst or '|' in lst:
+            mycount=lst.count('|')/2
+            count=0
+            index1=0
+            index=0
             for num,obj in enumerate(lst):
                 if obj=='(':
+                    index=num
+            for num,obj in enumerate(lst):
+                if obj=='|':
                     index1=num
+                    count+=1
+                    if count==mycount:
+                        break 
+            if index>index1:
+                index1=index          
         else:
             index1=-1
         return index1
     
+    # Index of Closing Brackets or Modulas
     def brakets_close_index(self,lst,index1):
-        if ')' in lst[index1:]: 
-            index2=lst[index1:].index(')')+index1
+        if ')' in lst[index1+1:] or '|' in lst[index1+1:]: 
+            for num,obj in enumerate(lst[index1+1:]):
+                if obj==')'or obj=='|': 
+                    index2=num+index1+1
+                    break
         else:
             index2=len(lst)-1
         return index2
 
     def operation(self,lst,index1,index2):
         import math
+
+        # Factorial
         if '!' in lst[index1+1:index2+1]:
             count=lst[index1+1:index2+1].index('!')
             count=count+index1+1
@@ -57,14 +177,30 @@ class Calculator:
                     fact=fact*obj
                 lst[count]=fact
                 lst.pop(count-1)
-
+        
+        # Power
         elif '^' in lst[index1+1:index2+1]:
             count=lst[index1+1:index2+1].index('^')
             count=count+index1+1
             lst[count]=lst[count-1]**lst[count+1]
             lst.pop(count+1)
             lst.pop(count-1)
+        
+        # Percentage
+        elif '%' in lst[index1+1:index2+1]:
+            count=lst[index1+1:index2+1].index('%')
+            count=count+index1+1
+            lst[count]=lst[count-1]/100
+            lst.pop(count-1)
 
+        # Degrees
+        elif '`' in lst[index1+1:index2+1]:
+            count=lst[index1+1:index2+1].index('`')
+            count=count+index1+1
+            lst[count]=math.radians(lst[count-1])
+            lst.pop(count-1)
+        
+        # Division
         elif '/' in lst[index1+1:index2+1]:
             count=lst[index1+1:index2+1].index('/')
             count=count+index1+1
@@ -72,6 +208,7 @@ class Calculator:
             lst.pop(count+1)
             lst.pop(count-1)
 
+        # Multiplication
         elif '*' in lst[index1+1:index2+1]:
             count=lst[index1+1:index2+1].index('*')
             count=count+index1+1
@@ -79,6 +216,7 @@ class Calculator:
             lst.pop(count+1)
             lst.pop(count-1)
 
+        # Addition
         elif '+' in lst[index1+1:index2+1]:
             count=lst[index1+1:index2+1].index('+')
             count=count+index1+1
@@ -86,20 +224,83 @@ class Calculator:
             lst.pop(count+1)
             lst.pop(count-1)
         
+        # Substraction
         elif '-' in lst[index1+1:index2+1]:
             count=lst[index1+1:index2+1].index('-')
             count=count+index1+1
-            lst[count]=lst[count-1]-lst[count+1]
-            lst.pop(count+1)
-            lst.pop(count-1)
+            # Joining '-' + number => -number
+            if lst[count-1]=='(' or lst[count-1]=='|':
+                lst[count]=-lst[count+1]
+                lst.pop(count+1)
+            # Normal Substraction
+            else:
+                lst[count]=lst[count-1]-lst[count+1]
+                lst.pop(count+1)
+                lst.pop(count-1)
         
         return lst
+
+    def other_functions(self,lst,index1,index2):
+        import math
+        # Sine
+        if 'sin' in lst:
+            index3=lst.index('sin')
+            if index3+1==index1:
+                lst[index3]='('
+                lst[index3+1]=math.sin(lst[index3+2])
+                lst[index3+2]=')'
+                lst.pop(index3+3)
+        # Cosine
+        elif 'cos' in lst:
+            index3=lst.index('cos')
+            if index3+1==index1:
+                lst[index3]='('
+                lst[index3+1]=math.cos(lst[index3+2])
+                lst[index3+2]=')'
+                lst.pop(index3+3)
+
+        # Tangent
+        elif 'tan' in lst:
+            index3=lst.index('tan')
+            if index3+1==index1:
+                lst[index3]='('
+                lst[index3+1]=math.tan(lst[index3+2])
+                lst[index3+2]=')'
+                lst.pop(index3+3)
+
+        # Logarithm (base 10)
+        elif 'log' in lst:
+            index3=lst.index('log')
+            if index3+1==index1:
+                lst[index3]='('
+                lst[index3+1]=math.log(lst[index3+2],10)
+                lst[index3+2]=')'
+                lst.pop(index3+3)
+        
+        # Natural Logarithm (base e)
+        elif 'ln' in lst:
+            index3=lst.index('ln')
+            if index3+1==index1:
+                lst[index3]='('
+                lst[index3+1]=math.log(lst[index3+2],math.e)
+                lst[index3+2]=')'
+                lst.pop(index3+3)
+
+        return lst
     
+    # Modulas
+    def modulas(self,lst,index1,index2):
+        if lst[index1]=='|' and lst[index2]=='|':
+            if lst[index1+1]<0:
+                lst[index1+1]=-lst[index1+1]
+        return lst
+
+    # Removing Opening Brackets
     def open_bracket(self,lst,index1):
         if index1==0:
             lst.pop(index1)
         else:
-            if lst[index1-1] not in ['+','-','*','/','^','!']:
+            if lst[index1-1] not in ['+','-','*','/','^','!','%','`']:
                 integer=False
                 for count in range(index1):
                     try:
@@ -116,11 +317,12 @@ class Calculator:
                 lst.pop(index1)
         return lst
 
+    # Removing Closing Brackets
     def close_bracket(self,lst,index2):
         if index2==len(lst)-1:
             lst.pop(index2)
         else:   
-            if lst[index2+1] not in ['+','-','*','/','^','!']:
+            if lst[index2+1] not in ['+','-','*','/','^','!','%','`']:
                 integer=False
                 for count in range(index2+1,len(lst)):
                     try:
@@ -137,75 +339,127 @@ class Calculator:
                 lst.pop(index2)
         return lst
 
+    # Printer
     def print_list(self,lst):
         string='='
         for obj in lst:
             string+=' '+str(obj)
         print(string)
 
-# Taking input (string)
-print('\n\n-------------------------Calculator--------------------------\n')
-print('Operations :')
-print("\tAddition : '+'")
-print("\tSubstraction : '-'")
-print("\tMultiplication : '*'")
-print("\tDivide : '/'")
-print("\tPower : '^'")
-print("\tFactorial : '!'")
-print("\tBrackets : '(',')'")
-print("\te : 'e'")
-print("\tπ : 'pi'")
-print('\n!!!Causion!!!: Do not add any space in between the charecters\n\n')
 
-string=input('input:')
-#string='(4572*25)/70(12/78+2589*89+63)/13'
+while True:
+    try:
+        # Printing Instructions
+        print('\n\n----------------------------Calculator------------------------------\n')
+        print('\tOperations :')
+        print("\t\tAddition : '+'")
+        print("\t\tSubstraction : '-'")
+        print("\t\tMultiplication : '*'")
+        print("\t\tDecimal : '.'")
+        print("\t\tDivide : '/'")
+        print("\t\tDegrees : '`'")
+        print("\t\tPercentage : '%'")
+        print("\t\tPower : '^'")
+        print("\t\tFactorial : '!'")
+        print("\t\tBrackets : '(...)'")
+        print("\t\tModulas : '|...|'")
+        print("\t\te : 'e'")
+        print("\t\tπ : 'pi'")
+        print("\t\tSine : 'sin(...)'")
+        print("\t\tCosine : 'cos(...)'")
+        print("\t\tTangent : 'tan(...)'")
+        print("\t\tLogarithm (base 10) : 'log(...)'")
+        print("\t\tNatural Logarithm (base e) : 'ln(...)'")
+        print('\n\t\!!!Caution!!!: Do not add any space in between the characters\n')
+        print("\tDon't worry to use large equations (as it shows all steps)!!!!\n")
+        print("\tUse 'exit' to Exit\n\n")
 
-# Calling Class
-cal=Calculator()
+        # Taking input
+        string=input('input:')
 
-# Unpacking (list)
-lst=cal.unpacking(string)
-cal.print_list(lst)
-if lst.count('(')==lst.count(')'):
-    if '(' in lst:
-        for count1 in range(0,lst.count('(')):
-            index1=cal.brakets_open_index(lst)
-            index2=cal.brakets_close_index(lst,index1)
+        # Exit
+        if string=='exit':
+            break
 
-            for obj in lst[index1:index2+1]:
-                if obj in ['+','-','*','/','^','!']:
-                    # Checking Operator
-                    lst=cal.operation(lst,index1,index2)
-                    cal.print_list(lst)
+        elif :
+
+        # Clear (it is not working in linux)!!!
+        #elif string=='clear':
+            #from IPython.display import clear_output
+            #clear_output()
+
+        else:
+            # Calling Class
+            cal=Calculator()
+
+            # Unpacking (list)
+            lst=cal.unpacking(string)
+            cal.print_list(lst)
+
+            # Inside Bracket or Modulas Operations
+            if lst.count('(')==lst.count(')') and lst.count('|')%2==0:
+                if '(' in lst or '|' in lst:
+                    pairs=lst.count('(')+lst.count('|')/2
+                    for count1 in range(0,int(pairs)):
+                        index1=cal.brakets_open_index(lst)
+                        index2=cal.brakets_close_index(lst,index1)
+
+                        for obj in lst[index1:index2+1]:
+                            if obj in ['+','-','*','/','^','!','%','`']:
+                                # Checking Operator
+                                lst=cal.operation(lst,index1,index2)
+                                cal.print_list(lst)
+                                index1=cal.brakets_open_index(lst)
+                                index2=cal.brakets_close_index(lst,index1)
+                        
+                        # Checking Other Functions
+                        if lst[index1-1] in ['sin','cos','tan','log','ln']:
+                            lst=cal.other_functions(lst,index1,index2)
+                            index1=cal.brakets_open_index(lst)
+                            index2=cal.brakets_close_index(lst,index1)
+                            cal.print_list(lst)
+
+                        # Modulas
+                        index1=cal.brakets_open_index(lst)
+                        index2=cal.brakets_close_index(lst,index1)
+                        lst=cal.modulas(lst,index1,index2)
+                        cal.print_list(lst)
+
+                        # Bracket Remove
+                        index1=cal.brakets_open_index(lst)
+                        lst=cal.open_bracket(lst,index1)
+                        index2=cal.brakets_close_index(lst,index1)
+                        lst=cal.close_bracket(lst,index2)
+                        cal.print_list(lst)
+
+                    # Outside Bracket or Modulas Operations
                     index1=cal.brakets_open_index(lst)
                     index2=cal.brakets_close_index(lst,index1)
-
-            # Bracket Remove
-            index1=cal.brakets_open_index(lst)
-            lst=cal.open_bracket(lst,index1)
-            cal.print_list(lst)
-
-            index2=cal.brakets_close_index(lst,index1)
-            lst=cal.close_bracket(lst,index2)
-            cal.print_list(lst)
-
-        index1=cal.brakets_open_index(lst)
-        index2=cal.brakets_close_index(lst,index1)
-        for obj in lst[index1+1:index2+1]:
-            if obj in ['+','-','*','/','^','!']:
-                # Checking Operator
-                lst=cal.operation(lst,index1,index2)
-                cal.print_list(lst)
-                index1=cal.brakets_open_index(lst)
-                index2=cal.brakets_close_index(lst,index1)
-
+                    for obj in lst[index1+1:index2+1]:
+                        if obj in ['+','-','*','/','^','!','%','`']:
+                            # Checking Operator
+                            lst=cal.operation(lst,index1,index2)
+                            cal.print_list(lst)
+                            index1=cal.brakets_open_index(lst)
+                            index2=cal.brakets_close_index(lst,index1)
+                # No Bracket or Modulas Operations
+                else:
+                    index1=cal.brakets_open_index(lst)
+                    index2=cal.brakets_close_index(lst,index1)
+                    for obj in lst[index1+1:index2+1]:
+                        if obj in ['+','-','*','/','^','!','%','`']:
+                            # Checking Operator
+                            lst=cal.operation(lst,index1,index2)
+                            cal.print_list(lst)
+                            index1=cal.brakets_open_index(lst)
+                            index2=cal.brakets_close_index(lst,index1)
+    except:
+        print('Syntax/Math Error')
     else:
-        index1=cal.brakets_open_index(lst)
-        index2=cal.brakets_close_index(lst,index1)
-        for obj in lst[index1+1:index2+1]:
-            if obj in ['+','-','*','/','^','!']:
-                # Checking Operator
-                lst=cal.operation(lst,index1,index2)
-                cal.print_list(lst)
-                index1=cal.brakets_open_index(lst)
-                index2=cal.brakets_close_index(lst,index1)
+        if len(lst)!=1:
+            print('Syntax/Math Error')
+        else:
+            try:
+                float(lst[0])
+            except:
+                print('Syntax/Math Error')
