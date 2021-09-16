@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "LearningCoding_eb9b3b60"
+        },
+        {
+            "type": "java",
             "name": "Launch Hello",
             "request": "launch",
             "mainClass": "Hello",
