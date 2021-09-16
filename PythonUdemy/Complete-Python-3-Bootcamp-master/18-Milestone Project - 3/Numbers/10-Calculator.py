@@ -475,9 +475,9 @@ while True:
         if string=='exit':
             break
 
-        elif string=='equation':
-            equation=True
-            break
+        #elif string=='equation':
+            #equation=True
+            #break
 
         # Clear (it is not working in linux)!!!
         #elif string=='clear':
@@ -559,6 +559,6 @@ while True:
             except:
                 print('Syntax/Math Error')
 
-while True:
-    if equation==True:
-        pass
+#while True:
+    #if equation==True:
+        #pass
