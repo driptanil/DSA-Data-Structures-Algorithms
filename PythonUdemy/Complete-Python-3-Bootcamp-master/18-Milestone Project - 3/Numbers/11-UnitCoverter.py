@@ -131,7 +131,7 @@ class Length:
                 for count in range(self.bunits.index('league')+1,self.bunits.index(input2)+1):
                     storage=input3
                     input3=input3*self.bvalues[count]
-                    print(f"=> {storage} {self.bunits[count-1]} = [ {storage} / {self.bvalues[count]} ] {self.bunits[count]} = {input3} {self.bunits[count]}")
+                    print(f"=> {storage} {self.bunits[count-1]} = [ {storage} * {self.bvalues[count]} ] {self.bunits[count]} = {input3} {self.bunits[count]}")
 
         elif input1 in self.bunits:
             if input2 in self.bunits:
