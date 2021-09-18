@@ -106,11 +106,63 @@ class Length:
         if input1 in self.sunits:
             if input2 in self.sunits:
                 if self.sunits.index(input1)<self.sunits.index(input2):
-                    for count in range(self.sunits.index(input1),self.suits.index(input2)+1):
+                    for count in range(self.sunits.index(input1)+1,self.sunits.index(input2)+1):
                         storage=input3
                         input3=10**self.svalues[count]*input3
-                        print(f"=> {storage} {input1} = 10^{self.svalues[count]} * {input3}")
+                        print(f"=> {storage} {self.sunits[count-1]} = [ {storage} * 10^{self.svalues[count]} ] {self.sunits[count]} = {input3} {self.sunits[count]}")
 
+                elif self.sunits.index(input1)>self.sunits.index(input2):
+                    for count in range(self.sunits.index(input2)+1,self.sunits.index(input1)+1):
+                        storage=input3
+                        input3=input3/(10**self.svalues[count])
+                        print(f"=> {storage} {self.sunits[count]} = [ {storage} * 10^-{self.svalues[count]} ] {self.sunits[count-1]} = {input3} {self.sunits[count-1]}")
+                
+                else:
+                    print(f"=> {input3} {input1} =[ {input3} * 10^0 ] {input2} = {input3} {input2}")
+                    
+            else:
+                for count in range(self.sunits.index('km')+1,self.sunits.index(input1)+1):
+                    storage=input3
+                    input3=input3/10**self.svalues[count]
+                    print(f"=> {storage} {self.sunits[count]} = [ {storage} * 10^{self.svalues[count]} ] {self.sunits[count-1]} = {input3} {self.sunits[count-1]}")
+                storage=input3
+                input3=input3*1.60934*3
+                print(f"=> {storage} km = [ {storage} * 1.60934 * 3 ] km = {input3} league")
+                for count in range(self.bunits.index('league')+1,self.bunits.index(input2)+1):
+                    storage=input3
+                    input3=input3*self.bvalues[count]
+                    print(f"=> {storage} {self.bunits[count-1]} = [ {storage} / {self.bvalues[count]} ] {self.bunits[count]} = {input3} {self.bunits[count]}")
+
+        elif input1 in self.bunits:
+            if input2 in self.bunits:
+                if self.bunits.index(input1)>self.bunits.index(input2):
+                    for count in range(self.bunits.index(input2)+1,self.bunits.index(input1)+1):
+                        storage=input3
+                        input3=input3/self.bvalues[count]
+                        print(f"=> {storage} {self.bunits[count]} = [ {storage} / {self.bvalues[count]} ] {self.bunits[count-1]} = {input3} {self.bunits[count-1]}")
+
+                elif self.bunits.index(input1)<self.bunits.index(input2):
+                    for count in range(self.bunits.index(input1)+1,self.bunits.index(input2)+1):
+                        storage=input3
+                        input3=input3*(self.bvalues[count])
+                        print(f"=> {storage} {self.bunits[count-1]} = [ {storage} * {self.bvalues[count]} ] {self.bunits[count]} = {input3} {self.bunits[count]}")
+
+                else:
+                    print(f"=> {input3} {input1} =[ {input3} * 1 ] {input2} = {input3} {input2}")
+            
+            else:
+                for count in range(self.bunits.index('league')+1,self.bunits.index(input1)+1):
+                    storage=input3
+                    input3=input3/(self.bvalues[count])
+                    print(f"=> {storage} {self.bunits[count]} = [ {storage} / {self.bvalues[count]} ] {self.bunits[count-1]} = {input3} {self.bunits[count-1]}")
+                storage=input3
+                input3=input3/1.60934/3
+                print(f"=> {storage} league = [ {storage} / 1.60934 / 3 ] km = {input3} km")
+                for count in range(self.sunits.index('km')+1,self.sunits.index(input2)+1):
+                    storage=input3
+                    input3=input3*(10**self.svalues[count])
+                    print(f"=> {storage} {self.sunits[count-1]} = [ {storage} * 10^-{self.svalues[count]} ] {self.sunits[count]} = {input3} {self.sunits[count]}")
+        
 
 
 print('''
@@ -189,9 +241,9 @@ while boolean1:
         print("\tLeague : 'league'")
         standard_units=['km','m','cm','mm','mmm','nm']
         standard_values=[0,3,2,1,1,3]
-        british_units=['inch','foot','yard','rod','furlong','mile','league']
-        british_values=[1,12,3,11/2,40,8,3]
+        british_units=['league','mile','fur','rod','yard','foot','inch']
+        british_values=[1,3,8,40,5.5,3,12,1]
         units=standard_units+british_units
-        len=Length(standard_units,british_units,units,standard_values,british_units)
+        len=Length(standard_units,british_units,units,standard_values,british_values)
         input1,input2,input3=len.user_input()
         len.convertion(input1,input2,input3)
