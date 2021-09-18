@@ -126,8 +126,8 @@ class Length:
                     input3=input3/10**self.svalues[count]
                     print(f"=> {storage} {self.sunits[count]} = [ {storage} * 10^{self.svalues[count]} ] {self.sunits[count-1]} = {input3} {self.sunits[count-1]}")
                 storage=input3
-                input3=input3*1.60934*3
-                print(f"=> {storage} km = [ {storage} * 1.60934 * 3 ] km = {input3} league")
+                input3=input3/1.60934/3
+                print(f"=> {storage} km = [ {storage} / 1.60934 / 3 ] km = {input3} league")
                 for count in range(self.bunits.index('league')+1,self.bunits.index(input2)+1):
                     storage=input3
                     input3=input3*self.bvalues[count]
@@ -156,8 +156,8 @@ class Length:
                     input3=input3/(self.bvalues[count])
                     print(f"=> {storage} {self.bunits[count]} = [ {storage} / {self.bvalues[count]} ] {self.bunits[count-1]} = {input3} {self.bunits[count-1]}")
                 storage=input3
-                input3=input3/1.60934/3
-                print(f"=> {storage} league = [ {storage} / 1.60934 / 3 ] km = {input3} km")
+                input3=input3*1.60934*3
+                print(f"=> {storage} league = [ {storage} * 1.60934 * 3 ] km = {input3} km")
                 for count in range(self.sunits.index('km')+1,self.sunits.index(input2)+1):
                     storage=input3
                     input3=input3*(10**self.svalues[count])
