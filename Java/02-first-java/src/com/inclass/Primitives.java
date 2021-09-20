@@ -1,4 +1,4 @@
-package com.class;
+package com.inclass;
 
 public class Primitives {
     public static void main(String[] args) {
