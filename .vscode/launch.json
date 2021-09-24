@@ -9,6 +9,20 @@
             "name": "Launch Average",
             "request": "launch",
             "mainClass": "com.assignments.Average",
+            "projectName": "LearningCoding_53f4ab2c"
+        },
+        {
+            "type": "java",
+            "name": "Launch HcfLcm",
+            "request": "launch",
+            "mainClass": "com.assignments.HcfLcm",
+            "projectName": "LearningCoding_53f4ab2c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Average",
+            "request": "launch",
+            "mainClass": "com.assignments.Average",
             "projectName": "LearningCoding_eb9b3b60"
         },
         {
