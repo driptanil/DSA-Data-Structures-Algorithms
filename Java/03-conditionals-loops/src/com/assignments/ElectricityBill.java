@@ -34,18 +34,19 @@ public class ElectricityBill {
     }
 
     public static void main(String[] args) {
-        float cost=0;
-        float domestic=5;
-        float commercial=5.5f;
-        float industrial=6;
-        float agricultural=4;
+        Float cost=0f;
+        Float domestic=5f;
+        Float commercial=5.5f;
+        Float industrial=6f;
+        Float agricultural=4f;
         boolean bool=true;
+        Integer unit;
 
         Scanner in =new Scanner(System.in);
 
         while (true) {
             System.out.print("Unit (int): ");
-            int unit = in.nextInt();
+            unit = in.nextInt();
             if (unit < 0) {
                 System.out.println("Error: Unit is never -ve !");
             }
