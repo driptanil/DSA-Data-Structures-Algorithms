@@ -188,14 +188,14 @@ public class ElectricityBill {
         int totalmonths = delay[1]+delay[2]*12;
         int count = (int) totalmonths/3;
         float temp=cost,fine,totalfine=0;
-        for (int i = 0; i < count; i++) {
+        for (int i = 1; i <= count; i++) {
             cost+=cost*i/100;
+            System.out.println(cost);
         }
         fine = cost - temp;
         totalfine+=fine;
         System.out.println("\tFine (per 3 months): ");
         System.out.println("\t\t$"+temp+" + $"+fine+" = $"+cost);
-        cost+=cost*1/3*totalmonths%3;
 
         temp=cost;
         cost+=cost*count/3/100*totalmonths%3;
@@ -205,8 +205,8 @@ public class ElectricityBill {
         System.out.println("\t\t$"+temp+" + $"+fine+" = $"+cost);
 
         int totalweeks = (int) delay[0]/7;
-        cost+=cost*count/15*totalweeks;
         temp=cost;
+        cost+=cost*count/15/100*totalweeks;
         fine = cost - temp;
         totalfine+=fine;
         System.out.println("\tFine (per week): ");
