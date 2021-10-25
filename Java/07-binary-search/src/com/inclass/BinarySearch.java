@@ -35,7 +35,6 @@ public class BinarySearch {
             } else {
                 start = index + 1;
             }
-            System.out.print("! ");
         }
         return -1;
     }
@@ -54,7 +53,6 @@ public class BinarySearch {
             } else {
                 start = index + 1;
             }
-            System.out.print("! ");
         }
         return -1;
     }

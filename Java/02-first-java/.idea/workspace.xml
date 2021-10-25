@@ -5,28 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a35975d1-61b1-4a20-b19e-382835beb405" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../01-flow-of-program/HCFandLCM.drawio.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../01-flow-of-program/HCFandLCM.drawio.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-flow-of-program/TotalSum.drawio.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../01-flow-of-program/TotalSum.drawio.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-first-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/02-first-java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/assignment/EvenOdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/assignment/Greeting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/assignment/INRtoUSD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/assignment/LargerNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/assignment/Operation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/assignment/SimpleInterest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/inclass/Basics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/inclass/Inputs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/inclass/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/inclass/Primitives.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/inclass/Sum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/inclass/TypeCasting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled104.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/inclass/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/Ceiling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/FirstLastIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/Floor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/IndexInfiniteArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/NextGreatestLetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/PeakIndexMountainArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/TargetMountainArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-binary-search/src/com/questions/TargetRotatedSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-binary-search/out/production/07-binary-search/com/inclass/BinarySearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/../07-binary-search/out/production/07-binary-search/com/inclass/BinarySearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-binary-search/src/com/inclass/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-binary-search/src/com/inclass/BinarySearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HelloWorld">
     <configuration name="EvenOdd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.assignment.EvenOdd" />
       <module name="02-first-java" />
@@ -61,8 +51,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.inclass.HelloWorld" />
+      <module name="02-first-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloWorld" />
         <item itemvalue="Application.EvenOdd" />
       </list>
     </recent_temporary>
