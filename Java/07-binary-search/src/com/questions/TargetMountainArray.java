@@ -15,11 +15,11 @@ public class TargetMountainArray {
     static int selfAttempt () {
         int[] arr = {1, 2, 3, 4, 5, 3, 1};
         int target = 3;
-        int peak = targetIndex(arr, target);
+        int peak = peak(arr, target);
         return BinarySearch(arr, target, peak);
     }
 
-    static int targetIndex(int[] arr, int target) {
+    static int peak(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
 
