@@ -2,7 +2,7 @@ package com.leetcode;
 
 // https://leetcode.com/problems/search-in-rotated-sorted-array/
 
-public class L33_Search_in_Rotated_Sorted_Array {
+public class Q33_Search_in_Rotated_Sorted_Array {
     public static void main(String[] args) {
 
     }
