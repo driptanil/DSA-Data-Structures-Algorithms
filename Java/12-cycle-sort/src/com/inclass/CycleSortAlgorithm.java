@@ -13,6 +13,7 @@ public class CycleSortAlgorithm {
         int index = 0;
         while(index < arr.length) {
             if (arr[index] != arr[arr[index] - 1]) {
+                System.out.println(Arrays.toString(arr));
                 int temp = arr[index];
                 arr[index] = arr[arr[index] - 1];
                 arr[temp - 1] = temp;

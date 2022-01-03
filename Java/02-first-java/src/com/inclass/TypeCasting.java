@@ -12,10 +12,9 @@ public class TypeCasting {
 //        int num = (int)(input.nextFloat());
 //        System.out.println("Num = " + num);
 
-//        Scanner input = new Scanner(System.in);
-//        int a = (byte)(input.nextInt());
-//        System.out.println("a = " + a);
-
+//        int a = 100;
+//        byte b = (byte) (a);
+//        System.out.println("b = " + b);
 //        byte a = 40;
 //        byte b = 50;
 //        byte c = 100;
@@ -42,8 +41,7 @@ public class TypeCasting {
         double result = (f * b) + (i / c) - (d * s);
         // float + int - double = double
         System.out.println("= " + (f * b) + " + " + (i / c) + " - " + (d * s));
-        System.out.println("= " + result);
-
+        System.out.println("result = " + result);
 
     }
 }
