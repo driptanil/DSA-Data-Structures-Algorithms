@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Ambigutity {
     public static void main(String[] args) {
-        func(); // ERROR !
+        // func(); ERROR !
     }
 
     static void func(int ...v) {

@@ -1,6 +1,6 @@
 package com.inclass;
 
-public class Empty {
+public class Array {
     public static void main(String[] args) {
 //        int[] rnos= new int[5];
 //        int[] rnos2 = {23, 12, 45, 32, 15};
