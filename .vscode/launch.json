@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Kanai",
+            "request": "launch",
+            "mainClass": "Kanai",
+            "projectName": "LearningCoding_eb9b3b60"
+        },
+        {
+            "type": "java",
             "name": "Launch Average",
             "request": "launch",
             "mainClass": "com.assignments.Average",
