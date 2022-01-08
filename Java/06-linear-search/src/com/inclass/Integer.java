@@ -5,11 +5,9 @@ public class Integer {
     public static void main(String[] args) {
         int[] nums = {23, 45, 1, 2, 8, 19, -3, 16, -11, 28};
         int target = 2;
-//        System.out.println(linearSearch(nums, target));
-//        System.out.println(linearSearch2(nums, target));
-//        System.out.println(linearSearch3(nums, target));
-//        System.out.println(rangeSearch(nums, target, 1, 5));
-        System.out.println(findMin(nums));
+        System.out.println(linearSearch(nums, target));
+        System.out.println(linearSearch2(nums, target));
+        System.out.println(rangeSearch(nums, target, 1, 5));
     }
 
     // search in the array: return the index if item found
@@ -43,21 +41,6 @@ public class Integer {
         return java.lang.Integer.MAX_VALUE;
     }
 
-    //search in the array: return true or false
-    static boolean linearSearch3(int[] arr, int target) {
-        if (arr.length == 0) {
-            return false;
-        }
-        // run a for loop
-        for (int element : arr) {
-            if (element == target) {
-                return true;
-            }
-        }
-        // not target found
-        return false;
-    }
-
     // search in array[index1, index2]: return true or false
     static int rangeSearch(int[] arr,int target, int index1, int index2) {
         if (index1 >= index2) {
@@ -69,16 +52,5 @@ public class Integer {
             }
         }
         return -1;
-    }
-
-    // find minimum number from an array
-    static int findMin(int[] arr) {
-        int min = arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) {
-               min = arr[i];
-            }
-        }
-        return min;
     }
 }
