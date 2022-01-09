@@ -41,7 +41,7 @@ public class Recursion {
 
         Types of Recerence Relations:
             1. Linear (like Fibonacci)
-            2. Divide and Rule (Space reduced by a Factor) (like Binary Search)
+            2. Divide and Rule (Space reduced by a Factor) (like BinarySearch Search)
      */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
