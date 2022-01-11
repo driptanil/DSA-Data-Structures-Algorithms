@@ -11,7 +11,7 @@ public class CycleSortAlgorithm {
 
     static void cycleSort(int[] arr) {
         int index = 0;
-        while(index < arr.length) {
+        while (index < arr.length) {
             if (arr[index] != arr[arr[index] - 1]) {
                 System.out.println(Arrays.toString(arr));
                 int temp = arr[index];
