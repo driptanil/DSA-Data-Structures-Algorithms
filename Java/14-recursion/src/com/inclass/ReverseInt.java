@@ -12,6 +12,6 @@ public class ReverseInt {
             return 0;
         }
         System.out.println(temp);
-        return temp + reverse((int) n / 10);
+        return temp * 10 + reverse((int) n / 10) * 10;
     }
 }
