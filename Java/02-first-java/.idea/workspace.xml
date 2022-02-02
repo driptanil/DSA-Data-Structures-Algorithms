@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a35975d1-61b1-4a20-b19e-382835beb405" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inclass/Inputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inclass/Inputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inclass/TypeCasting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inclass/TypeCasting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-cycle-sort/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-cycle-sort/src/com/inclass/CycleSortAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12-cycle-sort/src/com/inclass/CycleSortAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16-math-for-dsa/out/production/16-math-for-dsa/com/inclass/Factorial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16-math-for-dsa/out/production/16-math-for-dsa/com/inclass/PrintRange.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../16-math-for-dsa" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

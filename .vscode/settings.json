@@ -6,5 +6,5 @@
     "files.autoSave": "afterDelay",
     "terminal.explorerKind": "external",
     "debug.terminal.clearBeforeReusing": true,
-    "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+    "editor.fontFamily": "'JetBrains Mono'"
 }
