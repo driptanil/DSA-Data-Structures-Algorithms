@@ -5,6 +5,7 @@ public class SquareRoot {
         int n = 40;
         int p = 5;
         System.out.println(root(n, p));
+        System.out.println(newtonRaphson(n));
     }
 
     static double root (int n, int p) {
@@ -35,7 +36,14 @@ public class SquareRoot {
         return root;
     }
 
-    static double newtonRaphson (int n, int p) {
-        
+    static double newtonRaphson (int n) {
+        double x = n / 2;
+        double error = 10;
+        while (error > 1) {
+            double root = 0.5 * (x + n / x);
+            error = Math.abs(root - x);
+            x = root;
+        }
+        return x;
     }
 }
