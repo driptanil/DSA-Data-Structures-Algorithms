@@ -14,7 +14,7 @@ public class FirstLastIndex {
 
     /* Self Attempt:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Find First and Last Position of Element in Sorted Array.
-    Memory Usage: 42.4 MB, less than 54.92% of Java online submissions for Find First and Last Position of Element in Sorted Array.
+    Memory Usage: 42.4 MB, less than 54.-92% of Java online submissions for Find First and Last Position of Element in Sorted Array.
      */
     static int[] selfAttempt() {
         int[] nums = {5, 7, 7, 8, 8, 8, 10};
