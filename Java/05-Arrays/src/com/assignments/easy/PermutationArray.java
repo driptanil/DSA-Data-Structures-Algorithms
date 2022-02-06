@@ -1,6 +1,8 @@
-package com.inclass;
+package com.assignments.easy;
 
 import java.util.Arrays;
+
+// https://leetcode.com/problems/build-array-from-permutation/
 
 public class PermutationArray {
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class PermutationArray {
 
     /*
     Runtime: 1 ms, faster than 98.83% of Java online submissions for Build Array from Permutation.
-Memory Usage: 53.5 MB, less than 6.48% of Java online submissions for Build Array from Permutation.
+    Memory Usage: 53.5 MB, less than 6.48% of Java online submissions for Build Array from Permutation.
      */
     static int[] buildArray(int[] nums) {
         int [] ans = new int[nums.length];

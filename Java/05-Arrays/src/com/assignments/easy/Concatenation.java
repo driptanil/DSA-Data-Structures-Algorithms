@@ -1,6 +1,8 @@
-package com.inclass;
+package com.assignments.easy;
 
 import java.util.Arrays;
+
+// https://leetcode.com/problems/concatenation-of-array/
 
 public class Concatenation {
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class Concatenation {
 
     /*
     Runtime: 1 ms, faster than 77.99% of Java online submissions for Concatenation of Array.
-Memory Usage: 50.6 MB, less than 5.12% of Java online submissions for Concatenation of Array.
+    Memory Usage: 50.6 MB, less than 5.12% of Java online submissions for Concatenation of Array.
      */
     static int[] concatenation (int[] nums) {
         int[] con = new int[nums.length * 2];
