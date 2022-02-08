@@ -6,5 +6,5 @@
     "files.autoSave": "afterDelay",
     "terminal.explorerKind": "external",
     "debug.terminal.clearBeforeReusing": true,
-    "editor.fontFamily": "'monospaced'"
+    "editor.fontFamily": "monospace"
 }
