@@ -16,13 +16,8 @@ public class Rotation {
     }
 
     static boolean transpose (int[][] matrix, int[][] target) {
-        int option = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; i++) {
-                if (matrix[j][i] != target[i][j]) {
-                    break;
-                }
-            }
+        for (int i = 0; i < ; i++) {
+            
         }
         return false;
     }
