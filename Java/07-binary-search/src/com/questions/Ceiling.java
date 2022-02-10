@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Ceiling {
     public static void main(String[] args) {
         int[] arr = {2, 3, 5, 9, 14, 16, 18};
-        Scanner in =new Scanner(System.in);
-        int target = in.nextInt();
+        int target = 15;
         if (target > arr[arr.length - 1]) {
             System.out.println("No Result Found !");
         }
