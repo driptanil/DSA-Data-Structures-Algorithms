@@ -24,7 +24,6 @@ public class Rotation {
         for (int i = 0; i < matrix.length - 1; i++) {
             for (int j = i + 1; j < matrix.length; j++) {
                 for (int k = 0; k < matrix.length; k++) {
-                    if ()
                     matrix[j][k] -= (matrix[j][k] / matrix[i][k]) * matrix[i][k];
                 }
             }
