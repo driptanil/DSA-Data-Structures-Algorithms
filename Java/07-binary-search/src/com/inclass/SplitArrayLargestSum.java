@@ -8,7 +8,21 @@ public class SplitArrayLargestSum {
         int m = 3;
     }
 
-    static int largestsum (int[] arr, int m) {
-        
+    static int splitArray (int[] arr, int m) {
+        int start = arr[0];
+        int end = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            end += arr[i];
+            if (start < arr[i]) {
+                start = arr[i];
+            }
+        }
+
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+            int sum = 0;
+        }
+
+        return end;
     }
 }
