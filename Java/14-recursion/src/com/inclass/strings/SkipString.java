@@ -11,10 +11,8 @@ public class SearchWord {
         if (str.length() < target.length()) {
             return false;
         }
-        for (int i = 0; i < target.length(); i++) {
-            if (str.charAt(i) != target.charAt(i)) {
-                return searchWord(str.substring(1), target);
-            }
+        else if (str.startsWith(target)) {
+            return searchWord(str.substring(1), target);
         }
         return true;
     }
