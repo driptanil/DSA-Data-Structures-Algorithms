@@ -6,6 +6,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] arr = new int[] {5, 3, 2, 1, 6};
+        System.out.println(Arrays.toString(arr));
 //        startPivot(arr, 0, arr.length - 1);
 //        endPivot(arr, 0, arr.length - 1);
         midPivot(arr, 0, arr.length - 1);
