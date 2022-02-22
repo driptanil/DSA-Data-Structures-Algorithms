@@ -1,19 +1,19 @@
 package com.inclass.strings;
 
-public class SearchWord {
+public class SkipString {
     public static void main(String[] args) {
         String str = "Martini";
-        String target = "tinii";
-        System.out.println(searchWord(str, target));
+        String target = "tin";
+        System.out.println(skipString(str, target));
     }
 
-    static boolean searchWord (String str, String target) {
+    static String skipString (String str, String target) {
         if (str.length() < target.length()) {
-            return false;
+            return str;
         }
         else if (str.startsWith(target)) {
-            return searchWord(str.substring(1), target);
+            return skipString(str.substring(target.length()), target);
         }
-        return true;
+        return str.charAt(0) + skipString(str.substring(1), target);
     }
 }
