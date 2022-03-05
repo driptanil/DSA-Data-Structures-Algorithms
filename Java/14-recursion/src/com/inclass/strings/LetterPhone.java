@@ -1,4 +1,4 @@
-package com.questions;
+package com.inclass.strings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,19 +6,18 @@ import java.util.List;
 // https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 public class LetterPhone {
     public static void main(String[] args) {
+        String[] arr = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         String str = "23";
-        System.out.println(letters(str));
-        System.out.println(letters("0"));
-        -+
+        System.out.println(letters(arr, str));
     }
 
-    /*
+        /*
     Runtime: 5 ms, faster than 41.38% of Java online submissions for Letter Combinations of a Phone Number.
     Memory Usage: 41.2 MB, less than 41.69% of Java online submissions for Letter Combinations of a Phone Number.
      */
-    static List<String> letters (String str) {
+
+    static List<String> letters (String[] arr, String str) {
         List<String> list = new ArrayList<>();
-        String[] arr = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         if (str.length() != 0) {
             list.add("");
         }
@@ -35,5 +34,15 @@ public class LetterPhone {
         }
         return list;
     }
+
+//     static List<String> recursion(String[] arr, String str) {
+//        List<String> list = new ArrayList<>();
+//        if (str.length() == 0) {
+//            return list;
+//        }
+//        String temp = arr[str.charAt(0) - '0'];
+//        for (int i = 0; i < temp.length(); i++) {
+//
+//        }
+//    }
 }
-`

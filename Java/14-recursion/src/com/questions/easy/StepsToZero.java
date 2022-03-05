@@ -1,4 +1,4 @@
-package com.inclass.basics;
+package com.questions.easy;
 
 public class StepsToZero {
     public static void main(String[] args) {

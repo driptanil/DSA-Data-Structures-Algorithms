@@ -1,4 +1,4 @@
-package com.inclass.basics;
+package com.questions.easy;
 
 public class DigitsSum {
     public static void main(String[] args) {
