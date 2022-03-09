@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "4f23f1dec777e7cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "9faa9b5c69ebfb08",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Java/09-bubble-sort/Bubble-Sort.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "442af784ba7869e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "a52905dbb3ce24e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38de0f9f5f1d0535",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f32b4895a655b5d1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 253
+  },
+  "right": {
+    "id": "e832f17a60fdad76",
+    "type": "split",
+    "children": [
+      {
+        "id": "3943f6575a6cf72a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d75a67bb6a56343b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Java/09-bubble-sort/Bubble-Sort.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "9faa9b5c69ebfb08",
+  "lastOpenFiles": [
+    "Java/09-bubble-sort/Bubble-Sort.md",
+    "Java/07-binary-search/Binary-Search.md",
+    "Java/06-linear-search/Linear-Search.md",
+    "Java/05-Arrays/Arrays.md",
+    "Java/04-functions-methods/Functions.md",
+    "Java/01-flow-of-program/Introduction-to-Programming.md",
+    "image1 2.png.md",
+    "Java/02-first-java/Introduction-to-Java.md",
+    "Java/03-conditionals-loops/Input-Output-Datatypes.md",
+    "Java/02-first-java/image4.png"
+  ]
+}
