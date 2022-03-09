@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Java/09-bubble-sort/Bubble-Sort.md",
+            "file": "Java/09-bubble-sort/README.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/09-bubble-sort/Bubble-Sort.md",
+                "file": "Java/09-bubble-sort/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "9faa9b5c69ebfb08",
   "lastOpenFiles": [
-    "Java/09-bubble-sort/Bubble-Sort.md",
+    "Java/09-bubble-sort/README.md",
     "Java/07-binary-search/README.md",
     "Java/06-linear-search/README.md",
     "Java/05-Arrays/README.md",
     "Java/04-functions-methods/README.md",
+    "Java/04-functions-methods/image1.png",
     "Java/03-conditionals-loops/README.md",
     "Java/02-first-java/README.md",
     "Java/01-flow-of-program/README.md",
-    "image1 2.png.md",
-    "Java/02-first-java/image4.png"
+    "Java/09-bubble-sort/Bubble-Sort.md"
   ]
 }

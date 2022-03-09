@@ -40,11 +40,11 @@
 E.g. a = 10; a = " name " { will give no errors
 
 ## Stack & Heap Memory
-![[Java/01-flow-of-program/image1.png]]
+![](image1.png)
 
 
 1.  More than one reference variable can point to object
 2.  if one of the reference variables is changed then the object will be changed for all reference variables
 
 ## Flow-Charts
-![[Java/01-flow-of-program/image2.png]]
+![](image2.png)

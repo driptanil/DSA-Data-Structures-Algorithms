@@ -4,7 +4,7 @@ Bubble Sort is also called Sinking or Exchange Sort.
 
 In every step, adjacent elements are compared and swapped.
 
-![[Java/09-bubble-sort/image1.png]]
+![](image1.png)
 
 -   Space Complexity = O(1) [In-place Sorting Algorithm]
     

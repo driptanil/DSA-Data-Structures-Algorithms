@@ -345,7 +345,7 @@
     ```
     
 -   Q6. Peak Index in Mountain Array
-	![[Java/07-binary-search/image1.png]]
+	![](image1.png)
     
     ```java
     package com.questions;
@@ -382,7 +382,7 @@
     ```
     
 -   Q7. Search in Rotated Sorted Array
-	![[Java/07-binary-search/image2.png]]
+	![](image2.png)
     
     ```java
     package com.questions;

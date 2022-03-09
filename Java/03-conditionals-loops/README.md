@@ -76,7 +76,7 @@ Scanner input = new Scanner(System.in);
     
 -   `in` takes input from specially from keyboard or another source specified the user
     
-    ![[Java/03-conditionals-loops/image1.png]]
+    ![](image1.png)
     
     `InputStream` function Documentation :
     
