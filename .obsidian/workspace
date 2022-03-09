@@ -90,14 +90,14 @@
   "active": "9faa9b5c69ebfb08",
   "lastOpenFiles": [
     "Java/09-bubble-sort/Bubble-Sort.md",
-    "Java/07-binary-search/Binary-Search.md",
-    "Java/06-linear-search/Linear-Search.md",
-    "Java/05-Arrays/Arrays.md",
-    "Java/04-functions-methods/Functions.md",
-    "Java/01-flow-of-program/Introduction-to-Programming.md",
+    "Java/07-binary-search/README.md",
+    "Java/06-linear-search/README.md",
+    "Java/05-Arrays/README.md",
+    "Java/04-functions-methods/README.md",
+    "Java/03-conditionals-loops/README.md",
+    "Java/02-first-java/README.md",
+    "Java/01-flow-of-program/README.md",
     "image1 2.png.md",
-    "Java/02-first-java/Introduction-to-Java.md",
-    "Java/03-conditionals-loops/Input-Output-Datatypes.md",
     "Java/02-first-java/image4.png"
   ]
 }
