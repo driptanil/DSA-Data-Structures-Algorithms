@@ -4,7 +4,7 @@
 -   Best Case : O ( 1 )
 -   Worst Case : O ( log (n) ) [ where n is number of element in the array ]
 
-
+![](image1.png)
 
 ### Steps for Binary Search :
 
@@ -20,7 +20,9 @@
         1.  return element
 
 -   Q1. Binary Search
-    
+
+	![](image2.png)
+
     ```java
     package com.inclass;
     
@@ -85,7 +87,7 @@
     
 -   Q2. Ceiling Element
     
-    ![Untitled-2022-02-09-0247.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd641a17-9e39-461c-8bf9-75fd1ea0ea87/Untitled-2022-02-09-0247.png)
+	![](image3.png)
     
     ```java
     package com.questions;
@@ -127,7 +129,7 @@
     
 -   Q3. Floor Element
     
-    ![Untitled-2022-02-09-1207.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ece88fa7-5500-4e92-a027-89677a88e91e/Untitled-2022-02-09-1207.png)
+    ![](image4.png)
     
     ```java
     package com.questions;
@@ -345,7 +347,6 @@
     ```
     
 -   Q6. Peak Index in Mountain Array
-	![](image1.png)
     
     ```java
     package com.questions;
@@ -382,7 +383,7 @@
     ```
     
 -   Q7. Search in Rotated Sorted Array
-	![](image2.png)
+	![](image5.png)
     
     ```java
     package com.questions;
