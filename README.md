@@ -1,5 +1,5 @@
 
-<h2>Data-Structures-Algorithms Bootcamp 🪖</h2><br>
+<h2><img src="readme/back.png"></h2><br>
 <table border="0">
 	<tr>
 		<td>
@@ -23,7 +23,7 @@
 			</p>
 		</td>
 		<td>
-			<img src="readme/algorithm.gif" width=350>
+			<img src="https://i.pinimg.com/originals/ef/16/e4/ef16e4e68b0d3cb81e6bb8a8c3258d7e.gif" width=450>
 		</td>
 	</tr>
 </table>
@@ -120,6 +120,9 @@
 						<td><img src="https://progress-bar.dev/0?title=🔴⠀"> </td>
 					</tr>
 				</tbody>
-			</table></td>
+			</table>
+			<td>
+				<img src="readme/machine.gif">
+			</td>
 		</tr>
 	</table>
