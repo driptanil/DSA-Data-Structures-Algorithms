@@ -1,0 +1,9 @@
+{
+  "style": "inline",
+  "min_depth": 2,
+  "max_depth": 6,
+  "externalStyle": "None",
+  "supportAllMatchers": false,
+  "allow_inconsistent_headings": false,
+  "varied_style": true
+}

@@ -4,14 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "9faa9b5c69ebfb08",
+        "id": "8d5256c4a79f6e2d",
         "type": "leaf",
+        "dimension": 63.33333333333333,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Java/09-bubble-sort/README.md",
+            "file": "README.md",
             "mode": "source",
-            "source": false
+            "source": true
+          }
+        }
+      },
+      {
+        "id": "a16536c5108f4564",
+        "type": "leaf",
+        "dimension": 36.666666666666664,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "preview",
+            "source": true
           }
         }
       }
@@ -50,10 +64,25 @@
             }
           }
         ]
+      },
+      {
+        "id": "cae4f5dfbc939db1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9faa9b5c69ebfb08",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 253
+    "width": 477,
+    "collapsed": true
   },
   "right": {
     "id": "e832f17a60fdad76",
@@ -69,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/09-bubble-sort/README.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -79,25 +108,36 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "f7d7f9ddbde19769",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 396,
     "collapsed": true
   },
-  "active": "9faa9b5c69ebfb08",
+  "active": "8d5256c4a79f6e2d",
   "lastOpenFiles": [
+    "README.md",
+    "Java/14-recursion/14-recursion.md",
+    "Untitled.md",
+    "Java/15-complexity/15-complexity.md",
     "Java/09-bubble-sort/README.md",
     "Java/07-binary-search/README.md",
     "Java/06-linear-search/README.md",
     "Java/05-Arrays/README.md",
     "Java/04-functions-methods/README.md",
-    "Java/04-functions-methods/image1.png",
-    "Java/03-conditionals-loops/README.md",
-    "Java/02-first-java/README.md",
-    "Java/01-flow-of-program/README.md",
-    "Java/09-bubble-sort/Bubble-Sort.md"
+    "Java/04-functions-methods/image1.png"
   ]
 }
