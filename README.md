@@ -19,6 +19,24 @@
 				<img src="readme/bullet.gif" width="40">
 				<a href="https://obsidian.md/"><img src="https://i.imgur.com/Wa6wkgS.png" alt="Obsidian" width="35"/> Obsidian</a>
 			</p>
+			<h2>How to use ?:</h2>
+			<ol>
+				<li>To clone the repository use <code>git clone https://github.com/driptanil/DSA-Data-Structures-Algorithms</code></li>
+				<li>To use Obsidian (because <u><b>GitHub README.md does not support LATEX</b></u> (math equations)):</li>
+				<ul>
+					<li>Choose <code>Open Folder as a vault</code>, choose repository folder</li>
+				</ul>
+				<li>To use IntelliJ Idea:</li>
+				<ul>
+					<li>each topic is a project, use <code>Open Project</code> and choose the topic folder</li>
+					<li>Java files are stored in `src/com`</li>
+				</ul>
+				<li>To use Visual Studio Code:
+				<ul>
+					<li> Java files are stored in <code>`topic`/src/com</code></li>
+					<li>remove 1st line <code>package *;</code>(if error while compiling)</li>
+				</ul>
+			</ol>
 <br>
 <h2><img align="left" src="readme/progress.gif" width="30">⠀Progress: <img src="https://progress-bar.dev/78?title=35/46"></h2>
 <img align="right" width=400px alt="side_sticker" src="readme/machine.gif">
