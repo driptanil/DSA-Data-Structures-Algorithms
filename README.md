@@ -22,9 +22,10 @@
 			<h2>How to use ?:</h2>
 			<ol>
 				<li>To clone the repository use <code>git clone https://github.com/driptanil/DSA-Data-Structures-Algorithms</code></li>
-				<li>To use Obsidian (because <u><b>GitHub README.md does not support LATEX</b></u> (math equations)):</li>
+				<li>To use Obsidian (because <u><b>GitHub README.md does not support LATEX</b></u> (math equations) 😭) :</li>
 				<ul>
 					<li>Choose <code>Open Folder as a vault</code>, choose repository folder</li>
+					<li>Choose safe mode off (if promoted), because some helpful community plugins are used in Obsidian.</li>
 				</ul>
 				<li>To use IntelliJ Idea:</li>
 				<ul>
