@@ -4,27 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "8d5256c4a79f6e2d",
+        "id": "a16536c5108f4564",
         "type": "leaf",
-        "dimension": 63.33333333333333,
         "state": {
           "type": "markdown",
           "state": {
             "file": "README.md",
             "mode": "source",
-            "source": true
-          }
-        }
-      },
-      {
-        "id": "a16536c5108f4564",
-        "type": "leaf",
-        "dimension": 36.666666666666664,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "README.md",
-            "mode": "preview",
             "source": true
           }
         }
@@ -81,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 477,
-    "collapsed": true
+    "width": 477
   },
   "right": {
     "id": "e832f17a60fdad76",
@@ -127,9 +112,10 @@
     "width": 396,
     "collapsed": true
   },
-  "active": "8d5256c4a79f6e2d",
+  "active": "a16536c5108f4564",
   "lastOpenFiles": [
     "README.md",
+    "README.svg",
     "Java/14-recursion/14-recursion.md",
     "Untitled.md",
     "Java/15-complexity/15-complexity.md",
@@ -137,7 +123,6 @@
     "Java/07-binary-search/README.md",
     "Java/06-linear-search/README.md",
     "Java/05-Arrays/README.md",
-    "Java/04-functions-methods/README.md",
-    "Java/04-functions-methods/image1.png"
+    "Java/04-functions-methods/README.md"
   ]
 }
