@@ -1,6 +1,6 @@
 {
   "legacyEditor": false,
-  "livePreview": false,
+  "livePreview": true,
   "foldHeading": true,
   "showLineNumber": false,
   "promptDelete": true,

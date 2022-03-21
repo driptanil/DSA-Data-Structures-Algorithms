@@ -14,35 +14,9 @@ public class SingleObstacle {
         /* N -> North, S -> South, E -> East, W -> West
         Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
         System.out.println(recList(x1 - x2, y1 - y2, xx - x2, yy - y2, ""));
-        System.out.println(recListSol(x1 - x2, y1 - y2, xx - x2, yy - y2, ""));
-
-        boolean[][] arr = new boolean[][]{
-                {true, true, true},
-                {true, false, true},
-                {true, true, true}
-        };
-
     }
 
-    static List<String> recList (int x, int y, int xx, int yy, String str) {
-        List<String> list = new ArrayList<>();
-        if (x == 0 && y == 0) {
-            list.add(str);
-            return list;
-        }
-        if (x > 0 && x - 1 != xx | y != yy) {
-            list.addAll(recList(x - 1, y, xx, yy, str + "N"));
-        } if (x < 0 && x + 1 != xx | y != yy) {
-            list.addAll(recList(x + 1, y, xx, yy, str + "S"));
-        } if (y > 0 && x != xx | y - 1 != yy) {
-            list.addAll(recList(x, y - 1, xx, yy, str + "W"));
-        } if (y < 0  && x != xx | y + 1 != yy) {
-            list.addAll(recList(x, y + 1, xx, yy, str + "E"));
-        }
-        return list;
-    }
-
-    static List<String> recListSol(int x, int y, int xx, int yy, String str) {
+    static List<String> recList(int x, int y, int xx, int yy, String str) {
         List<String> list = new ArrayList<>();
         if (x == 0 && y == 0) {
             list.add(str);
@@ -51,13 +25,13 @@ public class SingleObstacle {
             return list;
         }
         if (x > 0) {
-            list.addAll(recListSol(x - 1, y, xx, yy, str + "N"));
+            list.addAll(recList(x - 1, y, xx, yy, str + "N"));
         } if (x < 0) {
-            list.addAll(recListSol(x + 1, y, xx, yy, str + "S"));
+            list.addAll(recList(x + 1, y, xx, yy, str + "S"));
         } if (y > 0) {
-            list.addAll(recListSol(x, y - 1, xx, yy, str + "W"));
+            list.addAll(recList(x, y - 1, xx, yy, str + "W"));
         } if (y < 0) {
-            list.addAll(recListSol(x, y + 1, xx, yy, str + "E"));
+            list.addAll(recList(x, y + 1, xx, yy, str + "E"));
         }
         return list;
     }

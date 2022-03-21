@@ -67,23 +67,37 @@ Order of Function call :
 ![450](image3.png)
 
 ```java
-package com.inclass;
+package com.inclass.basics;
 
 import java.util.Scanner;
 
 public class Fibonacci {
-  public static void main(String[] args) {
-	int n = 5;
-	System.out.println(fibonacci(n));
-  }
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println(fibonacci(n));
+        System.out.println(ultfibo(n, 0, 1));
+    }
 
-  static int fibonacci(int n) {
-	if (n < 2) {
-	    return n;
-	}
-	return fibonacci(n - 1) + fibonacci(n - 2);
-  }
+    static int fibonacci(int n) {
+        if (n < 2) {
+            return n;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+
+    /*
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Fibonacci Number.
+    Memory Usage: 38.9 MB, less than 49.59% of Java online submissions for Fibonacci Number.
+     */
+    static int ultfibo (int n, int a, int b) {
+        if (n == 0) {
+            return a;
+        }
+        return ultfibo(n - 1, b, a + b);
+    }
 }
+
 ```
     
 
@@ -872,91 +886,86 @@ $$4. [abc:] + [ab:] + [ac:] + [a:] + [bc:] + [b:] + [c:] + [:]$$
 
 ## Back-Tracking
 
-##### Q1. Maze:
+#### Q1. Maze 
+###### Recursion, return void
 
-###### Recursion, returns void
-  
-  ```java
-  package com.inclass.backtracking;
-  
-  import java.util.ArrayList;
-  import java.util.List;
-  
-  public class Maze {
-	public static void main(String[] args) {
-	    // start
-	    int x1 = 1, y1 = 1;
-	    // end
-	    int x2 = 3, y2 = 3;
-	    /* N -> North, S -> South, E -> East, W -> West
-	    Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
-	    recVoid(x1 - x2, y1 - y2, "");
-	}
-  
-	static void recVoid (int x, int y, String str) {
-	    if (x == 0 && y == 0) {
-		  System.out.print(str + " ");
-		  return;
-	    }
-	    if (x > 0) {
-		  recVoid(x - 1, y, str + "N");
-	    } if (x < 0) {
-		  recVoid(x + 1, y, str + "S");
-	    } if (y > 0) {
-		  recVoid(x, y - 1, str + "W");
-	    } if (y < 0) {
-		  recVoid(x, y + 1, str + "E");
-	    }
-	}
-  
-  }
-  ```
-  
+```java
+package com.inclass.backtracking;
 
-###### Recursion, returns list
-  
-  ```java
-  package com.inclass.backtracking;
-  
-  import java.util.ArrayList;
-  import java.util.List;
-  
-  public class Maze {
-	public static void main(String[] args) {
-	    // start
-	    int x1 = 1, y1 = 1;
-	    // end
-	    int x2 = 3, y2 = 3;
-	    /* N -> North, S -> South, E -> East, W -> West
-	    Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
-	    System.out.println("\n" + recList(x1 - x2, y1 - y2, ""));
-	}
-  
-	static List<String> recList (int x, int y, String str) {
-	    List<String> list = new ArrayList<>();
-	    if (x == 0 && y == 0) {
-		  list.add(str);
-		  return list;
-	    }
-	    if (x > 0) {
-		  list.addAll(recList(x - 1, y, str + "N"));
-	    } if (x < 0) {
-		  list.addAll(recList(x + 1, y, str + "S"));
-	    } if (y > 0) {
-		  list.addAll(recList(x, y - 1, str + "W"));
-	    } if (y < 0) {
-		  list.addAll(recList(x, y + 1, str + "E"));
-	    }
-	    return list;
-	}
-  }
-  ```
-        
+import java.util.ArrayList;
+import java.util.List;
 
-##### Q2. Maze with Diagonal:
-    
-###### Recursion, returns list
-    
+public class Maze {
+    public static void main(String[] args) {
+        // start
+        int x1 = 1, y1 = 1;
+        // end
+        int x2 = 3, y2 = 3;
+        /* N -> North, S -> South, E -> East, W -> West
+        Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
+        recVoid(x1 - x2, y1 - y2, "");
+    }
+
+    static void recVoid (int x, int y, String str) {
+        if (x == 0 && y == 0) {
+            System.out.print(str + " ");
+            return;
+        }
+        if (x > 0) {
+            recVoid(x - 1, y, str + "N");
+        } if (x < 0) {
+            recVoid(x + 1, y, str + "S");
+        } if (y > 0) {
+            recVoid(x, y - 1, str + "W");
+        } if (y < 0) {
+            recVoid(x, y + 1, str + "E");
+        }
+    }
+}
+
+```
+
+
+###### Recursion, return List
+```java
+package com.inclass.backtracking;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Maze {
+    public static void main(String[] args) {
+        // start
+        int x1 = 1, y1 = 1;
+        // end
+        int x2 = 3, y2 = 3;
+        /* N -> North, S -> South, E -> East, W -> West
+        Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
+        System.out.println("\n" + recList(x1 - x2, y1 - y2, ""));
+    }
+
+    static List<String> recList (int x, int y, String str) {
+        List<String> list = new ArrayList<>();
+        if (x == 0 && y == 0) {
+            list.add(str);
+            return list;
+        }
+        if (x > 0) {
+            list.addAll(recList(x - 1, y, str + "N"));
+        } if (x < 0) {
+            list.addAll(recList(x + 1, y, str + "S"));
+        } if (y > 0) {
+            list.addAll(recList(x, y - 1, str + "W"));
+        } if (y < 0) {
+            list.addAll(recList(x, y + 1, str + "E"));
+        }
+        return list;
+    }
+}
+
+```
+
+#### Q2. Maze with diagonals
 ```java
 package com.inclass.backtracking;
 
@@ -964,117 +973,95 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Diagonal {
-  public static void main(String[] args) {
-	// start
-	int x1 = 1, y1 = 1;
-	// end
-	int x2 = 3, y2 = 3;
-	/* N -> North, S -> South, E -> East, W -> West
-	Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
-	System.out.println(recList(x1 - x2, y1 - y2, ""));
-  }
+    public static void main(String[] args) {
+        // start
+        int x1 = 1, y1 = 1;
+        // end
+        int x2 = 3, y2 = 3;
+        /* N -> North, S -> South, E -> East, W -> West
+        Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
+        System.out.println(recList(x1 - x2, y1 - y2, ""));
+    }
 
-  static List<String> recList (int x, int y, String str) {
-	List<String> list = new ArrayList<>();
-	if (x == 0 && y == 0) {
-	    list.add(str);
-	    return list;
-	}
+    static List<String> recList (int x, int y, String str) {
+        List<String> list = new ArrayList<>();
+        if (x == 0 && y == 0) {
+            list.add(str);
+            return list;
+        }
 
-	if (x > 0) {
-	    list.addAll(recList(x - 1, y, str + "N"));
-	    if (y < 0) {
-		  list.addAll(recList(x - 1, y + 1, str + "Ne"));
-	    } if (y > 0) {
-		  list.addAll(recList(x - 1, y - 1, str + "Nw"));
-	    }
-	} if (y < 0) {
-	    list.addAll(recList(x, y + 1, str + "E"));
-	}
+        if (x > 0) {
+            list.addAll(recList(x - 1, y, str + "N"));
+            if (y < 0) {
+                list.addAll(recList(x - 1, y + 1, str + "Ne"));
+            } if (y > 0) {
+                list.addAll(recList(x - 1, y - 1, str + "Nw"));
+            }
+        } if (y < 0) {
+            list.addAll(recList(x, y + 1, str + "E"));
+        }
 
-	if (x < 0) {
-	    list.addAll(recList(x + 1, y, str + "S"));
-	    if (y > 0) {
-		  list.addAll(recList(x + 1, y - 1, str + "Sw"));
-	    } if (y < 0) {
-		  list.addAll(recList(x + 1, y + 1, str + "Se"));
-	    }
-	} if (y > 0) {
-	    list.addAll(recList(x, y - 1, str + "W"));
-	}
+        if (x < 0) {
+            list.addAll(recList(x + 1, y, str + "S"));
+            if (y > 0) {
+                list.addAll(recList(x + 1, y - 1, str + "Sw"));
+            } if (y < 0) {
+                list.addAll(recList(x + 1, y + 1, str + "Se"));
+            }
+        } if (y > 0) {
+            list.addAll(recList(x, y - 1, str + "W"));
+        }
 
-	return list;
-  }
+        return list;
+    }
 }
-```
-    
 
-##### Q3. Maze with an Obstacle:
-    
+```
+
+#### Q3. Maze with single obstacle
 ```java
 package com.inclass.backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SinObstacle {
-  public static void main(String[] args) {
-	// start
-	int x1 = 1, y1 = 1;
-	// end
-	int x2 = 3, y2 = 3;
-	// obstacle
-	int xx = 2, yy = 2;
-	/* N -> North, S -> South, E -> East, W -> West
-	Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
-	System.out.println(recList(x1 - x2, y1 - y2, xx - x2, yy - y2, ""));
-	System.out.println(recListSol(x1 - x2, y1 - y2, xx - x2, yy - y2, ""));
-  }
+public class SingleObstacle {
+    public static void main(String[] args) {
+        // start
+        int x1 = 1, y1 = 1;
+        // end
+        int x2 = 3, y2 = 3;
+        // obstacle
+        int xx = 2, yy = 2;
+        /* N -> North, S -> South, E -> East, W -> West
+        Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
+        System.out.println(recList(x1 - x2, y1 - y2, xx - x2, yy - y2, ""));
+    }
 
-  static List<String> recList (int x, int y, int xx, int yy, String str) {
-	List<String> list = new ArrayList<>();
-	if (x == 0 && y == 0) {
-	    list.add(str);
-	    return list;
-	}
-	if (x > 0 && x - 1 != xx | y != yy) {
-	    list.addAll(recList(x - 1, y, xx, yy, str + "N"));
-	} if (x < 0 && x + 1 != xx | y != yy) {
-	    list.addAll(recList(x + 1, y, xx, yy, str + "S"));
-	} if (y > 0 && x != xx | y - 1 != yy) {
-	    list.addAll(recList(x, y - 1, xx, yy, str + "W"));
-	} if (y < 0  && x != xx | y + 1 != yy) {
-	    list.addAll(recList(x, y + 1, xx, yy, str + "E"));
-	}
-	return list;
-  }
-
-  static List<String> recListSol(int x, int y, int xx, int yy, String str) {
-	List<String> list = new ArrayList<>();
-	if (x == 0 && y == 0) {
-	    list.add(str);
-	    return list;
-	} if (x == xx && y == yy) {
-	    return list;
-	}
-	if (x > 0) {
-	    list.addAll(recListSol(x - 1, y, xx, yy, str + "N"));
-	} if (x < 0) {
-	    list.addAll(recListSol(x + 1, y, xx, yy, str + "S"));
-	} if (y > 0) {
-	    list.addAll(recListSol(x, y - 1, xx, yy, str + "W"));
-	} if (y < 0) {
-	    list.addAll(recListSol(x, y + 1, xx, yy, str + "E"));
-	}
-	return list;
-  }
+    static List<String> recList(int x, int y, int xx, int yy, String str) {
+        List<String> list = new ArrayList<>();
+        if (x == 0 && y == 0) {
+            list.add(str);
+            return list;
+        } if (x == xx && y == yy) {
+            return list;
+        }
+        if (x > 0) {
+            list.addAll(recList(x - 1, y, xx, yy, str + "N"));
+        } if (x < 0) {
+            list.addAll(recList(x + 1, y, xx, yy, str + "S"));
+        } if (y > 0) {
+            list.addAll(recList(x, y - 1, xx, yy, str + "W"));
+        } if (y < 0) {
+            list.addAll(recList(x, y + 1, xx, yy, str + "E"));
+        }
+        return list;
+    }
 }
-```
-    
-    
 
-##### Q4. Maze with multiple Obstacles:
-    
+```
+
+#### Q4. Maze with multiply obstacles
 ```java
 package com.inclass.backtracking;
 
@@ -1082,52 +1069,342 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MultipleObstacles {
-  public static void main(String[] args) {
-	/* N -> North, S -> South, E -> East, W -> West
-	Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
-	boolean[][] arr = new boolean[][]{
-		  {true, true, true},
-		  {true, false, true},
-		  {true, true, true}
-	};
+    public static void main(String[] args) {
+        /* N -> North, S -> South, E -> East, W -> West
+        Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
+        boolean[][] arr = new boolean[][]{
+                {true, true, true},
+                {true, true, false},
+                {true, true, true}
+        };
+        int x1, y1, x2, y2;
 
-	// start
-	int x1 = 1, y1 = 1;
-	// target
-	int x2 = 3, y2 = 3;
-	System.out.println(recList(arr, x1 - x2, y1 - y2, ""));
+        // start
+        x1 = 1; y1 = 1;
+        // target
+        x2 = 3; y2 = 3;
+        System.out.println(recList(arr, x1 - x2, y1 - y2, "", x1 - x2 > 0));
 
-	// start
-	x1 = 3; y1 = 3;
-	// target
-	x2 = 1; y2 = 1;
-	System.out.println(recList(arr, x1 - x2, y1 -y2, ""));
+        // start
+        x1 = 3; y1 = 3;
+        // target
+        x2 = 1; y2 = 1;
+        System.out.println(recList(arr, x1 - x2, y1 -y2, "", x1 - x2 > 0));
 
-  }
+        // start
+        x1 = 3; y1 = 1;
+        // target
+        x2 = 1; y2 = 3;
+        System.out.println(recList(arr, x1 - x2, y1 -y2, "", x1 - x2 > 0));
 
-  static List<String> recList (boolean[][] arr, int x, int y, String str) {
-	List<String> list = new ArrayList<>();
-	if (Math.abs(x) == 0 && Math.abs(y) == 0) {
-	    list.add(str);
-	    return list;
-	} if (!arr[Math.abs(x)][Math.abs(y)]) {
-	    return list;
-	} if (x < 0) {
-	    list.addAll(recList(arr, x + 1, y, str + "E"));
-	} if (x > 0) {
-	    list.addAll(recList(arr, x - 1, y, str + "W"));
-	} if (y < 0) {
-	    list.addAll(recList(arr, x, y + 1, str + "S"));
-	} if (y > 0) {
-	    list.addAll(recList(arr, x, y - 1, str + "N"));
-	} return list;
-  }
+        // start
+        x1 = 1; y1 = 3;
+        // target
+        x2 = 3; y2 = 1;
+        System.out.println(recList(arr, x1 - x2, y1 -y2, "", x1 - x2 > 0));
+
+    }
+
+    static List<String> recList (boolean[][] arr, int x, int y, String str, Boolean bool) {
+        List<String> list = new ArrayList<>();
+        if (Math.abs(x) == 0 && Math.abs(y) == 0) {
+            list.add(str);
+            return list;
+        }
+
+        if (!bool) {
+            if (y < 0) {
+                if (!arr[arr.length + y - 1][arr.length + x - 1]){
+                    return list;
+                }
+                list.addAll(recList(arr, x, y + 1, str + "S", bool));
+            } if (y > 0) {
+                if (!arr[y][arr.length + x - 1]) {
+                    return list;
+                }
+                list.addAll(recList(arr, x, y - 1, str + "N", bool));
+            } if (x != 0) {
+                list.addAll(recList(arr, x + 1, y, str + "E", bool));
+            }
+        }
+
+        if (bool) {
+            if (y < 0) {
+                if (!arr[arr.length + y - 1][x]){
+                    return list;
+                }
+                list.addAll(recList(arr, x, y + 1, str + "S", bool));
+            } if (y > 0) {
+                if (!arr[y][x]) {
+                    return list;
+                }
+                list.addAll(recList(arr, x, y - 1, str + "N", bool));
+            } if (x != 0) {
+                list.addAll(recList(arr, x - 1, y, str + "W", bool));
+            }
+        }
+        return list;
+    }
 }
+
 ```
-    
+
+#### Q5. Maze with all directions
+```java
+package com.inclass.backtracking;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AllDirections {
+    public static void main(String[] args) {
+        /* N -> North, S -> South, E -> East, W -> West
+        Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
+        boolean[][] arr = new boolean[][]{
+                {true, true, true},
+                {true, true, true},
+                {true, true, true}
+        };
+        int x1, y1, x2, y2;
+
+        // start
+        x1 = 1; y1 = 1;
+        // target
+        x2 = 3; y2 = 3;
+        System.out.println(recList(arr, x1 - x2, y1 - y2, "", x1 - x2 > 0 , y1 - y2 > 0));
+
+        // start
+        x1 = 1; y1 = 3;
+        // target
+        x2 = 3; y2 = 1;
+        System.out.println(recList(arr, x1 - x2, y1 - y2, "", x1 - x2 > 0, y1 - y2 > 0));
+
+        // start
+        x1 = 3; y1 = 1;
+        // target
+        x2 = 1; y2 = 3;
+        System.out.println(recList(arr, x1 - x2, y1 - y2, "", x1 - x2 > 0, y1 - y2 > 0));
+
+        // start
+        x1 = 3; y1 = 3;
+        // target
+        x2 = 1; y2 = 1;
+        System.out.println(recList(arr, x1 - x2, y1 - y2, "", x1 - x2 > 0, y1 - y2 > 0));
+
+    }
+
+    static List<String> recList (boolean[][] arr, int x, int y, String str, boolean bool1, boolean bool2) {
+        List<String> list = new ArrayList<>(0);
+        if (x == 0 && y == 0) {
+            list.add(str);
+            return list;
+        } if (!bool1) {
+            if (!bool2) {
+                if (-x < 0 || -x >= arr.length || -y < 0 || -y >= arr[0].length || !arr[arr[0].length + y - 1][arr.length + x - 1]) {
+                    return list;
+                }
+                arr[arr[0].length + y - 1][arr.length + x - 1] = false;
+                list.addAll(recList(arr, x + 1, y, str + "E", bool1, bool2));
+                list.addAll(recList(arr, x - 1, y, str + "W", bool1, bool2));
+                list.addAll(recList(arr, x, y + 1, str + "S", bool1, bool2));
+                list.addAll(recList(arr, x, y - 1, str + "N", bool1, bool2));
+                arr[arr[0].length + y - 1][arr.length + x - 1] = true;
+            } if (bool2) {
+                if (-x < 0 || -x >= arr.length ||  y < 0 || y >= arr[0].length || !arr[y][arr.length + x - 1]) {
+                    return list;
+                }
+                arr[y][arr.length + x - 1] = false;
+                list.addAll(recList(arr, x + 1, y, str + "E", bool1, bool2));
+                list.addAll(recList(arr, x - 1, y, str + "W", bool1, bool2));
+                list.addAll(recList(arr, x, y + 1, str + "S", bool1, bool2));
+                list.addAll(recList(arr, x, y - 1, str + "N", bool1, bool2));
+                arr[y][arr.length + x - 1] = true;
+            }
+        } if (bool1) {
+            if (!bool2) {
+                if (x < 0 || x >= arr.length || -y < 0 || -y >= arr[0].length || !arr[arr[0].length + y - 1][x]) {
+                    return list;
+                }
+                arr[arr[0].length + y - 1][x] = false;
+                list.addAll(recList(arr, x + 1, y, str + "E", bool1, bool2));
+                list.addAll(recList(arr, x - 1, y, str + "W", bool1, bool2));
+                list.addAll(recList(arr, x, y + 1, str + "S", bool1, bool2));
+                list.addAll(recList(arr, x, y - 1, str + "N", bool1, bool2));
+                arr[arr[0].length + y - 1][x] = true;
+            } if (bool2) {
+                if (x < 0 || x >= arr.length ||  y < 0 || y >= arr[0].length || !arr[y][x]) {
+                    return list;
+                }
+                arr[y][x] = false;
+                list.addAll(recList(arr, x + 1, y, str + "E", bool1, bool2));
+                list.addAll(recList(arr, x - 1, y, str + "W", bool1, bool2));
+                list.addAll(recList(arr, x, y + 1, str + "S", bool1, bool2));
+                list.addAll(recList(arr, x, y - 1, str + "N", bool1, bool2));
+                arr[y][x] = true;
+            }
+        }
+        return list;
+    }
+
+    static List<String> recList1 (boolean[][] arr, int x, int y, String str) {
+        List<String> list = new ArrayList<>(0);
+        if (x == 0 && y == 0) {
+            list.add(str);
+            return list;
+        }
+        if (x < 0 || x >= arr.length || y < 0 || y >= arr[0].length || !arr[x][y]) {
+            return list;
+        }
+        arr[x][y] = false;
+        list.addAll(recList1(arr, x + 1, y, str + "E"));
+        list.addAll(recList1(arr, x - 1, y, str + "W"));
+        list.addAll(recList1(arr, x, y + 1, str + "S"));
+        list.addAll(recList1(arr, x, y - 1, str + "N"));
+        arr[x][y] = true;
+        return list;
+    }
+
+    static List<String> recList2(boolean[][] arr, int x, int y, String str) {
+        List<String> list = new ArrayList<>();
+        if (x == 0 && y == 0) {
+            list.add(str);
+            return list;
+        }
+
+        if (!arr[Math.abs(x)][Math.abs(y)]) {
+            return list;
+        }
+        arr[Math.abs(x)][Math.abs(y)] = false;
+        if (x < 0) {
+            list.addAll(recList2(arr, x + 1, y, str + "E"));
+        } if (x > 0) {
+            list.addAll(recList2(arr, x - 1, y, str + "W"));
+        } if (y < 0) {
+            list.addAll(recList2(arr, x, y + 1, str + "S"));
+        } if (y > 0) {
+            list.addAll(recList2(arr, x, y - 1, str + "N"));
+        }
+        arr[Math.abs(x)][Math.abs(y)] = true;
+        return list;
+    }
+}
 
 
+```
 
+#### Q6. Maze with all the paths
+```java
+package com.inclass.backtracking;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class AllPath {
+    public static void main(String[] args) {
+        /* N -> North, S -> South, E -> East, W -> West
+        Ne -> North-east, Nw -> North-west, Se -> South-east, Sw -> South-west */
+        int x1, y1, x2, y2;
+
+        // start
+        x1 = 1; y1 = 1;
+        // target
+        x2 = 3; y2 = 3;
+        recList(new int[Math.abs(y1 - y2) + 1][Math.abs(x1 - x2) + 1], x1 - x2, y1 - y2, " ", x1 - x2 > 0 , y1 - y2 > 0, 0);
+        System.out.println("=============================");
+
+        // start
+        x1 = 1; y1 = 3;
+        // target
+        x2 = 3; y2 = 1;
+        recList(new int[Math.abs(y1 - y2) + 1][Math.abs(x1 - x2) + 1], x1 - x2, y1 - y2, " ", x1 - x2 > 0 , y1 - y2 > 0, 0);
+        System.out.println("=============================");
+
+        // start
+        x1 = 3; y1 = 1;
+        // target
+        x2 = 1; y2 = 3;
+        recList(new int[Math.abs(y1 - y2) + 1][Math.abs(x1 - x2) + 1], x1 - x2, y1 - y2, " ", x1 - x2 > 0 , y1 - y2 > 0, 0);
+        System.out.println("=============================");
+
+        // start
+        x1 = 3; y1 = 3;
+        // target
+        x2 = 1; y2 = 1;
+        recList(new int[Math.abs(y1 - y2) + 1][Math.abs(x1 - x2) + 1], x1 - x2, y1 - y2, " ", x1 - x2 > 0 , y1 - y2 > 0, 0);
+        System.out.println("=============================");
+
+    }
+
+    static void recList (int[][] arr, int x, int y, String str, boolean bool1, boolean bool2, int count) {
+        if (x == 0 && y == 0) {
+            System.out.print("->");
+            System.out.println(Arrays.toString(arr[0]));
+            for(int i = 1; i < arr.length; i++) {
+                System.out.print("  ");
+                System.out.println(Arrays.toString(arr[i]));
+            }
+            System.out.println("  " + str);
+            arr = new int[arr[0].length][arr.length];
+            return;
+        } if (!bool1) {
+            if (!bool2) {
+                if (-x < 0 || -x >= arr.length || -y < 0 || -y >= arr[0].length || arr[arr[0].length + y - 1][arr.length + x - 1] != 0){
+                    return;
+                }
+                arr[arr[0].length + y - 1][arr.length + x - 1] = ++count;
+                recList(arr, x + 1, y, str + "E", bool1, bool2, count);
+                recList(arr, x - 1, y, str + "W", bool1, bool2, count);
+                recList(arr, x, y + 1, str + "S", bool1, bool2, count);
+                recList(arr, x, y - 1, str + "N", bool1, bool2, count);
+                arr[arr[0].length + y - 1][arr.length + x - 1] = 0;
+                --count;
+                return;
+            } if (bool2) {
+                if (-x < 0 || -x >= arr.length ||  y < 0 || y >= arr[0].length || arr[y][arr.length + x - 1] != 0) {
+                    return;
+                }
+                arr[y][arr.length + x - 1] = ++count;
+                recList(arr, x + 1, y, str + "E", bool1, bool2, count);
+                recList(arr, x - 1, y, str + "W", bool1, bool2, count);
+                recList(arr, x, y + 1, str + "S", bool1, bool2, count);
+                recList(arr, x, y - 1, str + "N", bool1, bool2, count);
+                arr[y][arr.length + x - 1] = 0;
+                --count;
+                return;
+            }
+        } if (bool1) {
+            if (!bool2) {
+                if (x < 0 || x >= arr.length || -y < 0 || -y >= arr[0].length || arr[arr[0].length + y - 1][x] != 0) {
+                    return;
+                }
+                arr[arr[0].length + y - 1][x] = ++count;
+                recList(arr, x + 1, y, str + "E", bool1, bool2, count);
+                recList(arr, x - 1, y, str + "W", bool1, bool2, count);
+                recList(arr, x, y + 1, str + "S", bool1, bool2, count);
+                recList(arr, x, y - 1, str + "N", bool1, bool2, count);
+                arr[arr[0].length + y - 1][x] = 0;
+                --count;
+                return;
+            } if (bool2) {
+                if (x < 0 || x >= arr.length ||  y < 0 || y >= arr[0].length || arr[y][x] != 0) {
+                    return;
+                }
+                arr[y][x] = ++count;
+                recList(arr, x + 1, y, str + "E", bool1, bool2, count);
+                recList(arr, x - 1, y, str + "W", bool1, bool2, count);
+                recList(arr, x, y + 1, str + "S", bool1, bool2, count);
+                recList(arr, x, y - 1, str + "N", bool1, bool2, count);
+                arr[y][x] = 0;
+                --count;
+                return;
+            }
+        }
+    }
+
+}
+
+```
 
 ## Assignments🧠
 
@@ -2091,8 +2368,7 @@ public class MultipleObstacles {
             }
         }
         ```
-        
-    - Using
+
     - Using Integer array using recursion [List]
         
         ```java
@@ -2146,4 +2422,4 @@ public class MultipleObstacles {
 ### Hard 🖖🏻
 
 
-![[15-complexity]]
+## ![](Java/15-complexity/15-complexity.md)
