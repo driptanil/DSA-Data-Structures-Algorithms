@@ -39,7 +39,7 @@
 				</ul>
 			</ol>
 <br>
-<h2><img align="left" src="readme/progress.gif" width="30">⠀Progress: <img src="https://progress-bar.dev/78?title=35/46"></h2>
+<h2><img align="left" src="readme/progress.gif" width="30">⠀Progress: <img src="https://progress-bar.dev/78?title=37/46"></h2>
 <img align="right" width=400px alt="side_sticker" src="readme/machine.gif">
 			<table>
 				<thead align="center">
@@ -99,7 +99,7 @@
 					</tr>
 					<tr>
 						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/14-recursion">Recursion</a></td>
-						<td><img src="https://progress-bar.dev/80?title=🟡⠀"> </td>
+						<td><img src="https://progress-bar.dev/95?title=🟡⠀"> </td>
 					</tr>
 					<tr>
 						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/15-complexity">Complexity</a></td>
