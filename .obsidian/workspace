@@ -7,11 +7,9 @@
         "id": "a16536c5108f4564",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Java/15-complexity/15-complexity.md",
-            "mode": "source",
-            "source": false
+            "file": "Java/01-flow-of-program/Prime.drawio.svg"
           }
         }
       }
@@ -83,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/15-complexity/15-complexity.md",
+                "file": "Java/01-flow-of-program/Prime.drawio.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/15-complexity/15-complexity.md"
+                "file": "Java/01-flow-of-program/Prime.drawio.svg"
               }
             }
           }
@@ -113,15 +111,15 @@
   },
   "active": "a16536c5108f4564",
   "lastOpenFiles": [
+    "Java/01-flow-of-program/Prime.drawio.svg",
+    "Java/01-flow-of-program/MultiplicationTable.drawio.svg",
+    "Java/01-flow-of-program/LeapYear.drawio.svg",
+    "Java/01-flow-of-program/HCFandLCM.drawio.svg",
+    "Java/01-flow-of-program/HCFandLCM.png",
     "Java/15-complexity/15-complexity.md",
     "Java/06-linear-search/06-linear-search.md",
     "Java/10-selection-sort/10-selection-sort.md",
     "Java/03-conditionals-loops/03-conditionals-loops.md",
-    "Java/02-first-java/02-first-java.md",
-    "Java/01-flow-of-program/01-flow-of program.md",
-    "Java/14-recursion/14-recursion.md",
-    "README.svg",
-    "README.md",
-    "Untitled.md"
+    "Java/02-first-java/02-first-java.md"
   ]
 }
