@@ -4,7 +4,7 @@
 -   Best Case : O ( 1 )
 -   Worst Case : O ( log (n) ) [ where n is number of element in the array ]
 
-![](image1.png)
+![](Java/07-binary-search/image1.png)
 
 ### Steps for Binary Search :
 
@@ -21,7 +21,7 @@
 
 -   Q1. Binary Search
 
-	![](image2.png)
+	![](Java/07-binary-search/image2.png)
 
     ```java
     package com.inclass;
@@ -87,7 +87,7 @@
     
 -   Q2. Ceiling Element
     
-	![](image3.png)
+	![](Java/07-binary-search/image3.png)
     
     ```java
     package com.questions;
@@ -129,7 +129,7 @@
     
 -   Q3. Floor Element
     
-    ![](image4.png)
+    ![](Java/07-binary-search/image4.png)
     
     ```java
     package com.questions;
@@ -383,7 +383,7 @@
     ```
     
 -   Q7. Search in Rotated Sorted Array
-	![](image5.png)
+	![](Java/07-binary-search/image5.png)
     
     ```java
     package com.questions;
@@ -600,4 +600,4 @@
     -   Case 2: m = size of array; $\Rightarrow maximum\ element\ of\ array$
 
 
-![[09-bubble-sort]]
+![[08-bubble-sort]]

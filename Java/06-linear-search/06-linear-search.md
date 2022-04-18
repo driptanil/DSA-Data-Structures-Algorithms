@@ -174,5 +174,3 @@ Time Complexity :
         }
     }
     ```
-
-![[07-binary-search]]
