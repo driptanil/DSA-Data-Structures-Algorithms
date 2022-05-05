@@ -1,7 +1,7 @@
 {
-  "baseFontSize": 18,
+  "baseFontSize": 20,
   "translucency": false,
   "cssTheme": "Primary",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "baseFontSizeAction": true
 }
