@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Java/19-oop/Inheritance.md",
+            "file": "Java/19-oop/Encapsulation & Abstraction.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/19-oop/Inheritance.md",
+                "file": "Java/19-oop/Encapsulation & Abstraction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/19-oop/Inheritance.md"
+                "file": "Java/19-oop/Encapsulation & Abstraction.md"
               }
             }
           },
@@ -135,7 +135,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -144,15 +144,15 @@
   },
   "active": "270b357fcdd2b441",
   "lastOpenFiles": [
+    "Java/19-oop/Encapsulation & Abstraction.md",
+    "Java/19-oop/Untitled.md",
+    "Java/19-oop/Static.md",
+    "Java/19-oop/Polymorphism.md",
+    "Java/19-oop/Introduction.md",
     "Java/19-oop/Inheritance.md",
     "Java/14-complexity/14-complexity.md",
     "Java/13-recursion/13-recursion.md",
-    "Java/19-oop/Introduction.md",
-    "Java/19-oop/Polymorphism.md",
     "Java/10-insertion-sort/image1.png",
-    "Java/10-insertion-sort/10-insertion-sort.md",
-    "Java/19-oop/Static.md",
-    "Java/19-oop/Static.md",
-    "Java/08-bubble-sort/08-bubble-sort.md"
+    "Java/10-insertion-sort/10-insertion-sort.md"
   ]
 }
