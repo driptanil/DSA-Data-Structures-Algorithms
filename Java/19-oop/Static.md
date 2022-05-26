@@ -1,14 +1,14 @@
 ## Understanding static:
 
-- Static methods can be accessed before any objects of its class are created, and without reference to any object.
+- Static methods can be *accessed before any objects of its class are created*, and without reference to any object.
   
-- `main( )` is declared as static because it must be called before any objects exist.
+- `main( )` is declared as static because it must be called *before any objects exist*.
   
-- Static method in Java is a method which belongs to the class and not to the object.
+- Static method in Java is a method which *belongs to the class and not to the object.*
   
-- A static method can access only static data. It cannot access non-static data (instance variables)
+- A *static method can access only static data.* It cannot access non-static data (instance variables)
   
-- A non-static member belongs to an instance and in a static context, non-static object can be accessed without without explicitly mentioning an object reference..
+- A non-static member belongs to an instance and in a static context, non-static object can be accessed without without explicitly mentioning an object reference.
   
 - In fact, you can access a non-static member in a static context by specifying the object reference explicitly :
 ```java

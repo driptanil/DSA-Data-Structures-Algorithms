@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Java/19-oop/Encapsulation & Abstraction.md",
+            "file": "Java/19-oop/Untitled.md",
             "mode": "source",
             "source": false
           }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
-    "collapsed": true
+    "width": 363.5
   },
   "right": {
     "id": "e832f17a60fdad76",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/19-oop/Encapsulation & Abstraction.md",
+                "file": "Java/19-oop/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/19-oop/Encapsulation & Abstraction.md"
+                "file": "Java/19-oop/Untitled.md"
               }
             }
           },
@@ -144,15 +143,15 @@
   },
   "active": "270b357fcdd2b441",
   "lastOpenFiles": [
-    "Java/19-oop/Encapsulation & Abstraction.md",
     "Java/19-oop/Untitled.md",
-    "Java/19-oop/Static.md",
+    "Java/10-insertion-sort/10-insertion-sort.md",
     "Java/19-oop/Polymorphism.md",
-    "Java/19-oop/Introduction.md",
+    "Java/19-oop/Encapsulation & Abstraction.md",
     "Java/19-oop/Inheritance.md",
-    "Java/14-complexity/14-complexity.md",
-    "Java/13-recursion/13-recursion.md",
-    "Java/10-insertion-sort/image1.png",
-    "Java/10-insertion-sort/10-insertion-sort.md"
+    "Java/19-oop/Static.md",
+    "Java/19-oop/Introduction.md",
+    "Java/07-binary-search/07-binary-search.md",
+    "Java/09-selection-sort/09-selection-sort.md",
+    "Java/08-bubble-sort/08-bubble-sort.md"
   ]
 }

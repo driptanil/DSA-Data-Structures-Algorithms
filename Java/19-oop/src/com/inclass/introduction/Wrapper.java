@@ -5,12 +5,12 @@ public class Wrapper {
         Integer a = 10;
         Integer b = 20;
         swap (a,b);
-        System.out.println(a);
-        System.out.println(b);
-
         // in the Integer Wrapper Class, final keyword is used
         // final helps to initialize variable, which cannot be modified
         // always initialize while declaring
+        System.out.println(a);
+        System.out.println(b);
+
         // this is only for primitives
         final float pi = 3.14f;
 

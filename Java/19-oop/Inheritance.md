@@ -163,7 +163,7 @@ title: Error
 ````
 
 ```ad-important
-Here the object itself is of parent class and it is not possible to call the constructor of parenct class.
+Here the object itself is of parent class and it is not possible to call the constructor of parent class.
 ```
 
 ##### Super keyword

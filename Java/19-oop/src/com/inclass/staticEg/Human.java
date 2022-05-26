@@ -1,3 +1,5 @@
+// 01
+
 package com.inclass.staticEg;
 
 public class Human {
@@ -9,7 +11,7 @@ public class Human {
     boolean married;
     // some type of property which is common for all the objects
     // property which are independent of all objects -> static variable or static methods
-    static long population;
+    static long population = 0;
 
     static void greeting() {
         System.out.println("Hello, World");

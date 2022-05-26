@@ -2,24 +2,24 @@ package com.inclass.generics;
 
 import java.util.Arrays;
 
-public class CustomArrayList {
+public class GenericArrayList <T>{
 
-    private int[] data;
+    private Object[] data;
     private static final int DEFAULT_SIZE = 10;
     private int size = 0;
 
     /**
      * Constructor for default ArrayList class
      */
-    public CustomArrayList() {
-        this.data = new int[DEFAULT_SIZE];
+    public GenericArrayList() {
+        this.data = new Object[DEFAULT_SIZE];
     }
 
     /**
      * Adds element at the last index of the Arraylist
      * @param num
      */
-    public void add(int num) {
+    public void add(Object num) {
         if (this.isFull()) {
             resize();
         }
@@ -40,7 +40,7 @@ public class CustomArrayList {
      * copies all the elements of old array to new array
      */
     public void resize() {
-        int[] temp = new int[data.length * 2];
+        Object[] temp = new Object[data.length * 2];
 
         for (int i = 0; i < data.length; i++) {
             temp[i] = data[i];
@@ -54,7 +54,7 @@ public class CustomArrayList {
      * by decreasing the size by 1
      * @return
      */
-    public int pop() {
+    public Object pop() {
         return data[size--];
     }
 
@@ -71,19 +71,19 @@ public class CustomArrayList {
      * @param index
      * @param element
      */
-    public void set(int index, int element) {
+    public void set(int index, Object element) {
         data[index] = element;
     }
 
     @Override
     public String toString() {
-        return "CustomArrayList{" +
+        return "GenericArrayList{" +
                 "data=" + Arrays.toString(Arrays.copyOfRange(data, 0, size)) +
                 '}';
     }
 
     public static void main (String[] args) {
-        WildCards custom = new WildCards();
+        WildCards<Integer> custom = new WildCards();
         custom.add(1);
         custom.add(2);
         System.out.println(custom.toString());
