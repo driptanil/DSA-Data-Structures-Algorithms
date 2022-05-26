@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Java/19-oop/Untitled.md",
+            "file": "Java/13-recursion/13-recursion.md",
             "mode": "source",
             "source": false
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/19-oop/Untitled.md",
+                "file": "Java/13-recursion/13-recursion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/19-oop/Untitled.md"
+                "file": "Java/13-recursion/13-recursion.md"
               }
             }
           },
@@ -143,6 +143,7 @@
   },
   "active": "270b357fcdd2b441",
   "lastOpenFiles": [
+    "Java/13-recursion/13-recursion.md",
     "Java/19-oop/Untitled.md",
     "Java/10-insertion-sort/10-insertion-sort.md",
     "Java/19-oop/Polymorphism.md",
@@ -151,7 +152,6 @@
     "Java/19-oop/Static.md",
     "Java/19-oop/Introduction.md",
     "Java/07-binary-search/07-binary-search.md",
-    "Java/09-selection-sort/09-selection-sort.md",
-    "Java/08-bubble-sort/08-bubble-sort.md"
+    "Java/09-selection-sort/09-selection-sort.md"
   ]
 }
