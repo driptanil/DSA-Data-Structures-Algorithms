@@ -29,7 +29,7 @@ SOFTWARE.
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-  --default-font: "JetBrains Mono Light"; /*Note and Settings Text*/
+  --default-font: "SF Pro Display"; /*Note and Settings Text*/
   --font-monospace: "JetBrains Mono"; /*Code block text*/
 
   --black: #21222c;

@@ -13,20 +13,29 @@ public class Intersection {
     }
 
     /**
-     * 
+     * Runtime: 7 ms, faster than 19.95% of Java online submissions for Intersection of Two Arrays.
+     * Memory Usage: 43 MB, less than 70.17% of Java online submissions for Intersection of Two Arrays.
      * @param arr1
      * @param arr2
      * @return
      */
     static int[] intersection(int[] arr1, int[] arr2) {
-        int[] arr3 = new int[Math.max(arr1.length, arr2.length)];
+        int[] arr3 = new int[arr1.length];
         int index = 0;
         for (int i = 0; i < arr1.length; i++) {
             for (int j = 0; j < arr2.length; j++) {
                 if (arr1[i] == arr2[j]) {
-                    arr3[index] = arr1[i];
-                    index++;
-                    break;
+                    boolean bool = true;
+                    for (int k = 0; k < index; k++) {
+                        if (arr1[i] == arr3[k]) {
+                            bool = false;
+                            break;
+                        }
+                    }
+                    if (bool) {
+                        arr3[index] = arr1[i];
+                        index++;
+                    }
                 }
             }
         }

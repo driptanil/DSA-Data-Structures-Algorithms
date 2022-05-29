@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Java/13-recursion/13-recursion.md",
+            "file": "Java/20-linked-list/Linked List.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5
+    "width": 363.5,
+    "collapsed": true
   },
   "right": {
     "id": "e832f17a60fdad76",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/13-recursion/13-recursion.md",
+                "file": "Java/20-linked-list/Linked List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/13-recursion/13-recursion.md"
+                "file": "Java/20-linked-list/Linked List.md"
               }
             }
           },
@@ -143,15 +144,15 @@
   },
   "active": "270b357fcdd2b441",
   "lastOpenFiles": [
+    "Java/20-linked-list/Linked List.md",
+    "Java/19-oop/GeeksForGeeks.md",
+    "Java/19-oop/Encapsulation & Abstraction.md",
+    "Java/19-oop/Abstract_Default_Interface.md",
+    "Java/19-oop/Static.md",
     "Java/13-recursion/13-recursion.md",
-    "Java/19-oop/Untitled.md",
     "Java/10-insertion-sort/10-insertion-sort.md",
     "Java/19-oop/Polymorphism.md",
-    "Java/19-oop/Encapsulation & Abstraction.md",
     "Java/19-oop/Inheritance.md",
-    "Java/19-oop/Static.md",
-    "Java/19-oop/Introduction.md",
-    "Java/07-binary-search/07-binary-search.md",
-    "Java/09-selection-sort/09-selection-sort.md"
+    "Java/19-oop/Introduction.md"
   ]
 }

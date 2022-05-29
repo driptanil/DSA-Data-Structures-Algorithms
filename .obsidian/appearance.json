@@ -1,7 +1,10 @@
 {
   "baseFontSize": 18,
   "translucency": false,
-  "cssTheme": "Primary",
+  "cssTheme": "Prism",
   "theme": "obsidian",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "interfaceFontFamily": "SF Pro Display",
+  "textFontFamily": "SF Pro Display",
+  "monospaceFontFamily": "JetBrains Mono"
 }

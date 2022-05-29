@@ -35,7 +35,6 @@ public class CountNegative {
                     start = mid + 1;
                 }
             }
-            System.out.println(grid[i].length - start);
             total += grid[i].length - start;
         }
         return total;
