@@ -119,11 +119,11 @@
 					</tr>
 					<tr>
 						<td>Object Oriented Programming</td>
-						<td><img src="https://progress-bar.dev/0?title=🔴⠀"> </td>
+						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
 						<td>Linked List</td>
-						<td><img src="https://progress-bar.dev/0?title=🔴⠀"> </td>
+						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
 						<td>Stacks Queues</td>

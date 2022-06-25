@@ -22,7 +22,6 @@ public class Inputs {
 //        float marks = input.nextFloat();
 //        System.out.println("Your marks : " + marks);
 
-        Scanner input = new Scanner(System.in);
 
         int num = input.nextInt();
         double deci = input.nextDouble();

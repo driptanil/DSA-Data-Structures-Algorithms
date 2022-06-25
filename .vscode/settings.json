@@ -7,5 +7,6 @@
     "terminal.explorerKind": "external",
     "debug.terminal.clearBeforeReusing": true,
     "editor.fontFamily": "JetBrains mono",
-    "editor.mouseWheelZoom": true
+    "editor.mouseWheelZoom": true,
+    "editor.smoothScrolling": true
 }

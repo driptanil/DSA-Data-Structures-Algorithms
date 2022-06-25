@@ -5,19 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a35975d1-61b1-4a20-b19e-382835beb405" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../16-math-for-dsa/out/production/16-math-for-dsa/com/inclass/Factorial.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../16-math-for-dsa/out/production/16-math-for-dsa/com/inclass/PrintRange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inclass/Inputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inclass/Inputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-linked-list/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20-linked-list/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-linked-list/out/production/20-linked-list/com/inclass/CustomLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-linked-list/out/production/20-linked-list/com/inclass/CustomLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-linked-list/out/production/20-linked-list/com/inclass/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-linked-list/src/com/inclass/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-linked-list/src/com/inclass/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20-linked-list/src/com/inclass/SinglyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar:///usr/lib/jvm/jdk-17/lib/src.zip!/java.base/java/lang/System.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,16 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../16-math-for-dsa" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
-  </component>
-  <component name="RunManager" selected="Application.TypeCasting">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Driptanil/Documents/DSA-Data-Structures-Algorithms/Java/02-first-java",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.HelloWorldGUI">
     <configuration name="EvenOdd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.assignment.EvenOdd" />
       <module name="02-first-java" />
@@ -64,6 +75,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloWorldGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.inclass.HelloWorldGUI" />
+      <module name="02-first-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TypeCasting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.inclass.TypeCasting" />
       <module name="02-first-java" />
@@ -79,6 +103,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloWorldGUI" />
         <item itemvalue="Application.TypeCasting" />
         <item itemvalue="Application.HelloWorld" />
         <item itemvalue="Application.EvenOdd" />
@@ -93,8 +118,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632276143844</updated>
+      <workItem from="1654019430500" duration="331000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
