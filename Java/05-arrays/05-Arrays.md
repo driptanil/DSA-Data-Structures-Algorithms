@@ -22,16 +22,16 @@ public classArray {
 -   `int[]` represents the type of data stored in the array, all elements in the array has to be the same datatype is declared.
 -   `int[] nos;` is the declaration of array, i.e. `nos` is defined as a reference variable in the stack memory at compile time.
 
-![](Java/05-arrays/image1.png)
+![](/Java/05-arrays/image1.png)
 
 -   `nos = new int[5];` is the initialisation of array, i.e. object of null type is created in heap memory at runtime [dynamic memory allocation].
 
-![](Java/05-arrays/image2.png)
+![](/Java/05-arrays/image2.png)
 
 -   Primitives are stored in stack memory and non-primitives are stored in heap memory.
 -   Elements in Array act as reference variables in the heap memory.
 
-![](Java/05-arrays/image3.png)
+![](/Java/05-arrays/image3.png)
 
 ### Printing Arrays
 
@@ -88,7 +88,7 @@ This does not work for non-primitive data-types.
 
 But this is not the same for arrays. Although `array` is changed, `arr` also gets changed, but in the case of arrays new objects are not created in heap memory.
 
-![](Java/05-arrays/image4.png)
+![](/Java/05-arrays/image4.png)
 
 ### How to return Arrays ?
 
@@ -147,7 +147,7 @@ public class TwoDimension {
 */
 ```
 
-![](Java/05-arrays/image5.png)
+![](/Java/05-arrays/image5.png)
 
 `new int[3][]` : object of array of null elements is created in the heap. While declaration, only no of rows be stated.
 

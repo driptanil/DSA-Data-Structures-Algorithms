@@ -7,7 +7,7 @@
 
 In Selection Sort, Largest or Smallest element is selected and is placed in correct place.
 
-![](Java/09-selection-sort/image1.png)
+![](/Java/09-selection-sort/image1.png)
 
 -   Time Complexity :
     -   Best Case : O(n^2)

@@ -1,6 +1,6 @@
 # Introduction to Java
 
-![700](Java/02-first-java/image1.png)
+![700](/Java/02-first-java/image1.png)
 
 1.  This code will not directly run on a system.
 2.  Only JVM ( interpreter ) can run the byte code
@@ -13,7 +13,7 @@
 
 ## Java Architecture
 
-![700](Java/02-first-java/image2.png)
+![700](/Java/02-first-java/image2.png)
 
 ### Java Development Kit ( JDK ) :
 
@@ -37,7 +37,7 @@
 
 ## How Java works ?
 
-![500](Java/02-first-java/image3.png)
+![500](/Java/02-first-java/image3.png)
 
 #### Class Loader :
 
@@ -51,7 +51,7 @@
 ##### 3.  Initialisation :
 1.  All static variables are assigned with their values defined in the code and static block.
 
-![550](Java/02-first-java/image4.png)
+![550](/Java/02-first-java/image4.png)
 
 
 #### JVM Execution :

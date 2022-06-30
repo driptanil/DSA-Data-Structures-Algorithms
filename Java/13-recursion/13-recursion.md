@@ -24,7 +24,7 @@ Recursion is Function calling itself.
 
 In stack memory :
 
-![500](image1.jpeg)
+![500](/Java/13-recursion/image1.jpeg)
 
 ---
 
@@ -56,7 +56,7 @@ Output : 0 1 1 2 3 5 8 13 21
 1. Break the problem into smaller problems.
 2. Base Condition is represented like fibo(0) = 0; fibo(1) = 1.
 
-![450](Java/13-recursion/image2.png)
+![450](/Java/13-recursion/image2.png)
 
 Recurence Relation : 
 
@@ -64,7 +64,7 @@ fibo(n) = fibo(n-1) + fibo(n-2).
 
 Order of Function call :
 
-![450](Java/13-recursion/image3.png)
+![450](/Java/13-recursion/image3.png)
 
 ```java
 package com.inclass.basics;
@@ -130,9 +130,9 @@ public class BinarySearch {
 
 ##### Q3. Printing Range
 
-![250](Java/13-recursion/image4.png)
+![250](/Java/13-recursion/image4.png)
 
-![250](Java/13-recursion/image5.png)
+![250](/Java/13-recursion/image5.png)
 
 ```java
 package com.inclass;
@@ -162,10 +162,10 @@ public class PrintRange {
 }
 ```
 
-![250](Java/13-recursion/image6.png)
+![250](/Java/13-recursion/image6.png)
 
-![250](Java/13-recursion/image7.png)    
-![250](Java/13-recursion/image8.png)
+![250](/Java/13-recursion/image7.png)    
+![250](/Java/13-recursion/image8.png)
     
 
 

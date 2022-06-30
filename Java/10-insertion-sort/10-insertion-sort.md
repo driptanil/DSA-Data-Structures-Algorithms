@@ -1,7 +1,7 @@
 # Insertion Sort
 Insertion Sort is sorting the array in parts.
 
-![](Java/10-insertion-sort/image1.png)
+![](/Java/10-insertion-sort/image1.png)
 
 -   Space Complexity : O(1) [In-place Sorting Algorithm]
 -   Time Complexity :

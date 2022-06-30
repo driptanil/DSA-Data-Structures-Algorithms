@@ -4,13 +4,13 @@
 
 Time complexity is not the time taken by the machine.
 
-![500](Java/14-complexity/image1.png)
+![500](/Java/14-complexity/image1.png)
 
 It is a mathematical function that tells us how time grows as the size grows.
 
 Note: While determining time complexity, take size → infinity
 
-![500](Java/14-complexity/image2.png)
+![500](/Java/14-complexity/image2.png)
 
 Therefore, O(constant) < O(log(n)) < O(n).
 
@@ -28,7 +28,7 @@ $= O( n^3 )$   ( ignoring less significant terms )
 
 Big O Notation means the complexity is less or equal to n^3.
 
-![400](Java/14-complexity/image3.png)
+![400](/Java/14-complexity/image3.png)
 
 #### Little O Notation :
 
@@ -38,7 +38,7 @@ Little O Notation means the complexity is less than n^3.
 
 Big Omega Notation means the complexity is more or equal to n^3.
 
-![400](Java/14-complexity/image4.png)
+![400](/Java/14-complexity/image4.png)
 
 #### Little Omega Notation :
 
@@ -48,7 +48,7 @@ Little Omega Notation mean the complexity is more than n^3.
 
 Big Theta = Big O + Big Omega
 
-![450](Java/14-complexity/image5.png)
+![450](/Java/14-complexity/image5.png)
 
 ## Space Complexity
 
@@ -70,11 +70,11 @@ Heap Sort → O(1) ( Auxiliary Space )
 
 All sorting algorithms use O(n) Space Complexity.
 
-![500](Java/14-complexity/image6.png)
+![500](/Java/14-complexity/image6.png)
 
 ### Recursive Tree
 
-![800](Java/14-complexity/image7.png)
+![800](/Java/14-complexity/image7.png)
 
 At any particular point in time, no two function calls can be in the same level while the call of recursion will not be in the stack
 at the same time.
@@ -83,7 +83,7 @@ at the same time.
 
 ### Divide & Conquer Recurrence Relation :
 
-![750](Java/14-complexity/image8.png)
+![750](/Java/14-complexity/image8.png)
 
 $$
 T(x) = a_1T(b_1x + E_1(n)) + a_2T(b_2x + E_2(n)) + ... + a_kT(b_kx + E_k(n)) + g(n)
