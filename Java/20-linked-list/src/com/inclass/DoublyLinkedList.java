@@ -2,36 +2,6 @@ package com.inclass;
 
 public class DoublyLinkedList {
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-    public static class Node {
-        int var;
-        Node prev;
-        Node next;
-
-        public Node(int var) {
-            this.var = var;
-=======
->>>>>>> Stashed changes
-    public static void main(String[] args) {
-        DoublyLinkedList list = new DoublyLinkedList();
-        list.insertFirst(5);
-        list.display();
-
-        list.insertLast(6);
-        list.display();
-
-        list.insert(1, 7);
-        list.display();
-
-        list.deleteFirst();
-        list.display();
-
-        list.deleteLast();
-        list.display();
-    }
-
     private class Node {
         int val;
         Node next;
@@ -45,129 +15,31 @@ public class DoublyLinkedList {
             this.val = val;
             this.next = next;
             this.prev = prev;
-<<<<<<< Updated upstream
-=======
->>>>>>> 26cb4d1de4c58af983f4c6b258cb129327a5f10c
->>>>>>> Stashed changes
         }
     }
 
     private Node head;
     private Node tail;
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-    private long size;
 
     public DoublyLinkedList() {
-        size = 0;
-=======
->>>>>>> Stashed changes
-    private int size;
-
-    public DoublyLinkedList() {
-        this.size = 0;
-    }
-
-    public void insertFirst(int val) {
-        Node node = new Node(val);
-        node.prev = null;
-        node.next = head;
-        head = node;
-
-        if (tail == null)
-            tail = head;
-
-        size++;
-    }
-
-    public void insertLast(int val) {
-        Node node = new Node(val);
-        node.prev = tail;
-        node.next = null;
-        tail.next = node;
-        tail = node;
-        if (head == null)
-            head = tail;
-
-        size++;
-    }
-
-    public void insert(int index, int val) {
-        Node node = new Node(val);
-
-        Node temp = head;
-        for (int i = 0; i < index - 1; i++) {
-            temp = temp.next;
-        }
-        if (temp.next == null) {
-            insertLast(val);
-            return;
-        }
-        node.next = temp.next;
-        node.prev = temp;
-        if (temp.next.next != null)
-            temp.next.next.prev = node;
-        temp.next = node;
-
-        size++;
-    }
-
-    public void deleteFirst() {
-        head.next.prev = null;
-        head = head.next;
-
-        size--;
-    }
-
-    public void deleteLast() {
-        tail.prev.next = null;
-        tail = tail.prev;
-        tail.prev = null;
-        size--;
-    }
-
-    public void delete(int index) {
-        Node temp = head;
-        for (int i = 0; i < index - 1; i++) {
-            temp = temp.next;
-        }
-        temp.next.next.prev = temp;
-        temp.next = temp.next.next.next;
-        size--;
-<<<<<<< Updated upstream
-=======
->>>>>>> 26cb4d1de4c58af983f4c6b258cb129327a5f10c
->>>>>>> Stashed changes
+        head = null;
+        tail = null;
     }
 
     public void display() {
         Node temp = head;
-<<<<<<< Updated upstream
         while (temp != null) {
             System.out.print(temp.val + " -> ");
-=======
-<<<<<<< HEAD
-        while(temp != null) {
-            System.out.print(temp.var + " -> ");
-=======
-        while (temp != null) {
-            System.out.print(temp.val + " -> ");
->>>>>>> 26cb4d1de4c58af983f4c6b258cb129327a5f10c
->>>>>>> Stashed changes
             temp = temp.next;
         }
         System.out.println("end");
     }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 
     public void displayReverse() {
         Node temp = tail;
         System.out.print("end");
         while (temp != null) {
-            System.out.print(" -> " + temp.var);
+            System.out.print(" -> " + temp.val);
             temp = temp.prev;
         }
         System.out.println();
@@ -175,7 +47,6 @@ public class DoublyLinkedList {
 
     public void insertFirst(int var) {
         Node node = new Node(var);
-        size++;
         node.prev = null;
         if (head == null) {
             node.next = null;
@@ -189,7 +60,6 @@ public class DoublyLinkedList {
 
     public void insertLast(int var) {
         Node node = new Node(var);
-        size++;
         node.next = null;
         if (tail == null) {
             node.prev = null;
@@ -221,22 +91,19 @@ public class DoublyLinkedList {
         node.prev = temp;
         node.next = temp.next;
         temp.next.prev = node;
-        size++;
     }
 
     public int deleteFirst() {
-        int var = head.var;
+        int var = head.val;
         head.next.prev = null;
         head = head.next;
-        size--;
         return var;
     }
 
     public int deleteLast() {
-        int var = tail.var;
+        int var = tail.val;
         tail.prev.next = null;
         tail = tail.prev;
-        size--;
         return var;
     }
 
@@ -255,7 +122,7 @@ public class DoublyLinkedList {
             return deleteLast();
         }
 
-        int var = temp.next.var;
+        int var = temp.next.val;
         if (temp.next == tail) {
             temp.next = null;
             tail = temp;
@@ -312,7 +179,4 @@ public class DoublyLinkedList {
         System.out.println();
 
     }
-=======
->>>>>>> 26cb4d1de4c58af983f4c6b258cb129327a5f10c
->>>>>>> Stashed changes
 }

@@ -1,134 +1,29 @@
 package com.inclass;
 
 public class SinglyLinkedList {
-
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-    public static class ListNode {
-        int val;
-        public ListNode next;
+    private class ListNode {
+        public int val;
+        private ListNode next;
 
         public ListNode(int val) {
             this.val = val;
         }
 
         public ListNode() {
-            this.val = 0;
+            val = 0;
+        }
+
+        public ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
         }
     }
 
     public static ListNode head;
     public ListNode tail;
 
-    public SinglyLinkedList() {
-    }
-
-    public void display() {
+    public ListNode getNode(int index) {
         ListNode temp = head;
-        while (temp != null) {
-            System.out.print(temp.val + " -> ");
-=======
->>>>>>> Stashed changes
-    public static void main (String[] args) {
-        /*LinkedList<Integer> list = new LinkedList<Integer>();
-        list.add(1);*/
-
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.insertFirst(3);
-        list.insertFirst(4);
-        list.insertFirst(6);
-        list.insertFirst(10);
-        list.display();
-
-        list.insertLast(1);
-        list.display();
-
-        list.insert(3, 0);
-        list.display();
-
-        list.deleteFirst();
-        list.display();
-
-        list.deleteLast();
-        list.display();
-
-        list.delete(2);
-        list.display();
-
-        System.out.println(list.get(2));
-    }
-
-    private class Node {
-        public int value;
-        private Node next;
-
-        public Node(int value) {
-            this.value = value;
-        }
-
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
-    }
-
-    private Node head;
-    private Node tail;
-    private int size = 0;
-
-    public SinglyLinkedList() {
-        this.size = 0;
-    }
-
-    public void insertFirst(int val) {
-        Node node = new Node(val);
-        node.next = head;
-        head = node;
-
-        if (tail == null) {
-            tail = head;
-        }
-
-        size++;
-    }
-
-    public void insertLast(int val) {
-        Node node = new Node(val);
-        tail.next = node;
-        tail = node;
-        if (head == null) {
-            head = tail;
-        }
-        size++;
-    }
-
-    public void insert(int index, int val) {
-        Node node = new Node(val);
-        Node temp = head;
-
-        if (index == 0) {
-            insertFirst(val);
-            return;
-        }
-
-        for (int i = 0; i < index - 1; i++) {
-            temp = temp.next;
-        }
-
-        if (temp == tail) {
-            insertLast(val);
-            return;
-        }
-
-        node.next = temp.next;
-        temp.next = node;
-
-        size++;
-    }
-
-    public Node getNode(int index) {
-        Node temp = head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
@@ -136,55 +31,18 @@ public class SinglyLinkedList {
     }
 
     public int get(int index) {
-        Node node = getNode(index);
-        return node.value;
-    }
-
-    public void deleteFirst() {
-        if (head == null) {
-            System.out.println("Empty Linked List !");
-        }
-        head = head.next;
-        size--;
-    }
-
-    public void deleteLast() {
-        if (tail == null) {
-            System.out.println("Empty linked list");
-        }
-
-        Node node = getNode(size - 2);
-
-        node.next = null;
-        tail = node;
-        size--;
-    }
-
-    public void delete(int index) {
-        if (index == 0) {
-            deleteFirst();
-        }
-        Node node = getNode(index - 1);
-
-        node.next = node.next.next;
-        size--;
+        ListNode listNode = getNode(index);
+        return listNode.val;
     }
 
     public void display() {
-        Node temp = head;
+        ListNode temp = head;
         while (temp != null) {
-            System.out.print(temp.value + " -> ");
-<<<<<<< Updated upstream
-=======
->>>>>>> 26cb4d1de4c58af983f4c6b258cb129327a5f10c
->>>>>>> Stashed changes
+            System.out.print(temp.val + " -> ");
             temp = temp.next;
         }
         System.out.println("end");
     }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 
     public void insertFirst(int var) {
         ListNode listNode = new ListNode(var);
@@ -271,18 +129,18 @@ public class SinglyLinkedList {
      *
      * <p>Runtime: 1 ms, faster than 65.15% of Java online submissions for Remove Duplicates from Sorted List.</p>
      * Memory Usage: 45 MB, less than 5.96% of Java online submissions for Remove Duplicates from Sorted List.
-     * @param listNode
+     * @param
      * @return
      */
-    public ListNode deleteDuplicates(ListNode listNode) {
-        if (listNode == null)
-            return listNode;
-        ListNode temp = listNode;
-        while (listNode.next != null) {
-            if (listNode.val == listNode.next.val)
-                listNode.next = listNode.next.next;
+    public ListNode deleteDuplicates() {
+        if (head == null)
+            return head;
+        ListNode temp = head;
+        while (head.next != null) {
+            if (head.val == head.next.val)
+                head.next = head.next.next;
             else
-                listNode = listNode.next;
+                head = head.next;
         }
         return temp;
     }
@@ -316,7 +174,7 @@ public class SinglyLinkedList {
      * @return
      */
     public ListNode mergeTwoLists(ListNode listNode1, ListNode listNode2) {
-        ListNode head = new ListNode();
+        ListNode head = new ListNode(0);
         ListNode temp = head;
 
 
@@ -935,11 +793,5 @@ public class SinglyLinkedList {
 
         list.reOrderIII();
         list.display();
-
-        head = list.rotateRight(head, 2);
-        list.display();
     }
-=======
->>>>>>> 26cb4d1de4c58af983f4c6b258cb129327a5f10c
->>>>>>> Stashed changes
 }
