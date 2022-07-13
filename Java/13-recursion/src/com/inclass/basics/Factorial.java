@@ -2,7 +2,7 @@ package com.inclass.basics;
 
 public class Factorial {
     public static void main(String[] args) {
-        int n = 5;
+        int n = 0;
         System.out.println(factorial(n));
         System.out.println(fact(n, 1));
     }
@@ -16,7 +16,7 @@ public class Factorial {
     }
 
     static int factorial (int n) {
-        if (n == 1) {
+        if (n < 2) {
             return 1;
         }
         return n * factorial(n - 1);

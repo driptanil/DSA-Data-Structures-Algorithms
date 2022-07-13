@@ -15,4 +15,11 @@ public class ReverseInt {
         }
         return (int) (((n % 10) * Math.pow(10, (int) Math.log10(Math.abs(n)))) + reverse(n / 10));
     }
+
+    static int reverse2 (int r, int n) {
+        if (n == 0) {
+            return r / 10;
+        }
+        return reverse2((r + n % 10) * 10, n / 10);
+    }
 }

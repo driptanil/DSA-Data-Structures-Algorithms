@@ -2,50 +2,53 @@ package com.inclass;
 
 public class CircularLinkedList {
 
-    public static class Node {
-        int var;
-        Node next;
+    public static class ListNode {
+        int val;
+        ListNode next;
 
-        public Node(int var) {
-            this.var = var;
+        public ListNode(int val) {
+            this.val = val;
         }
     }
 
-    Node head;
+    ListNode head;
     private long size;
 
     public CircularLinkedList() {
         this.size = 0;
     }
 
-    public void display() {
-        Node temp = head;
-        System.out.print(">>=");
-        System.out.print(" " + temp.var + " ->");
-        while (temp.next != head) {
-            temp = temp.next;
-            System.out.print(" " + temp.var + " ->");
+    @Override
+    public String toString() {
+        if (head == null) {
+            return "null";
         }
-        System.out.println(">");
+        StringBuilder b = new StringBuilder();
+        ListNode temp = head;
+        do {
+            b.append(temp.val).append(" -> ");
+            temp = temp.next;
+        } while (temp != head);
+        return b.append("null").toString();
     }
 
     public void insertFirst(int var) {
-        Node node = new Node(var);
+        ListNode listNode = new ListNode(var);
         size++;
         if (head == null) {
-            head = node;
-            node.next = head;
+            head = listNode;
+            listNode.next = head;
             return;
         }
 
-        node.next = head;
+        listNode.next = head;
 
-        Node temp = head;
+        ListNode temp = head;
         while (temp.next != head) {
             temp = temp.next;
         }
-        temp.next = node;
-        head = node;
+        temp.next = listNode;
+        head = listNode;
     }
 
     public void insertLast(int var) {
@@ -55,13 +58,13 @@ public class CircularLinkedList {
         }
 
         size++;
-        Node node = new Node(var);
-        Node temp = head;
+        ListNode listNode = new ListNode(var);
+        ListNode temp = head;
         while (temp.next != head) {
             temp = temp.next;
         }
-        temp.next = node;
-        node.next = head;
+        temp.next = listNode;
+        listNode.next = head;
     }
 
     public void insert(int index, int var) {
@@ -70,7 +73,7 @@ public class CircularLinkedList {
             return;
         }
 
-        Node temp = head;
+        ListNode temp = head;
         int count = 0;
         while (count < index - 1) {
             temp = temp.next;
@@ -81,14 +84,17 @@ public class CircularLinkedList {
             return;
         }
 
-        Node node = new Node(var);
-        node.next = temp.next;
-        temp.next = node;
+        ListNode listNode = new ListNode(var);
+        listNode.next = temp.next;
+        temp.next = listNode;
     }
 
-    public int deleteFirst() {
-        int var = head.var;
-        Node temp = head;
+    public int deleteFirst() throws Exception{
+        if (head == null) {
+            throw new Exception ("Empty Circular Linked List !!!");
+        }
+        int var = head.val;
+        ListNode temp = head;
         while (temp.next != head) {
             temp = temp.next;
         }
@@ -97,24 +103,30 @@ public class CircularLinkedList {
         return var;
     }
 
-    public int deleteLast() {
-        Node temp = head;
-        Node temp2 = head;
+    public int deleteLast() throws Exception{
+        if (head == null) {
+            throw new Exception ("Empty Circular Linked List !!!");
+        }
+        ListNode temp = head;
+        ListNode temp2 = head;
         while (temp.next != head) {
             temp2 = temp;
             temp = temp.next;
         }
-        int var = temp.var;
+        int var = temp.val;
         temp2.next = head;
         return var;
     }
 
-    public int delete(int index) {
+    public int delete(int index) throws Exception{
+        if (head == null) {
+            throw new Exception ("Empty Circular Linked List !!!");
+        }
         if (index == 0) {
             return deleteFirst();
         }
 
-        Node temp = head;
+        ListNode temp = head;
         int count = 0;
         while (count < index - 1) {
             temp = temp.next;
@@ -124,37 +136,37 @@ public class CircularLinkedList {
             return deleteLast();
         }
 
-        int var = temp.next.var;
+        int var = temp.next.val;
         temp.next = temp.next.next;
         return var;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         CircularLinkedList list = new CircularLinkedList();
 
         list.insertFirst(5);
-        list.display();
+        System.out.println(list);
 
         list.insertLast(7);
-        list.display();
+        System.out.println(list);
 
         list.insertFirst(1);
-        list.display();
+        System.out.println(list);
 
         list.insertLast(9);
-        list.display();
+        System.out.println(list);
 
         list.insert(1, 3);
-        list.display();
+        System.out.println(list);
 
         System.out.println(list.deleteFirst());
-        list.display();
+        System.out.println(list);
 
         System.out.println(list.deleteLast());
-        list.display();
+        System.out.println(list);
 
         System.out.println(list.delete(1));
-        list.display();
+        System.out.println(list);
     }
 
 }

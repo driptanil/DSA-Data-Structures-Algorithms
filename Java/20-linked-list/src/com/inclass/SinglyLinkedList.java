@@ -1,9 +1,9 @@
 package com.inclass;
 
 public class SinglyLinkedList {
-    private class ListNode {
+    public static class ListNode {
         public int val;
-        private ListNode next;
+        private ListNode next = null;
 
         public ListNode(int val) {
             this.val = val;
@@ -19,8 +19,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public static ListNode head;
-    public ListNode tail;
+    public ListNode head;
 
     public ListNode getNode(int index) {
         ListNode temp = head;
@@ -35,19 +34,24 @@ public class SinglyLinkedList {
         return listNode.val;
     }
 
-    public void display() {
+    @Override
+    public String toString() {
+        if (head == null) {
+            return "null";
+        }
+        StringBuilder b = new StringBuilder();
         ListNode temp = head;
         while (temp != null) {
-            System.out.print(temp.val + " -> ");
+            b.append(temp.val).append(" -> ");
             temp = temp.next;
         }
-        System.out.println("end");
+        return b.append("null").toString();
     }
 
     public void insertFirst(int var) {
         ListNode listNode = new ListNode(var);
         if (head == null) {
-            tail = head = listNode;
+            head = listNode;
             listNode.next = null;
             return;
         }
@@ -57,19 +61,15 @@ public class SinglyLinkedList {
     }
 
     public void insertLast(int var) {
-        ListNode listNode = new ListNode(var);
-        if (head == null) {
-            tail = head = listNode;
-            listNode.next = null;
-            return;
+        ListNode node = new ListNode(var);
+        ListNode temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
         }
-
-        tail.next = listNode;
-        listNode.next = null;
-        tail = listNode;
+        temp.next = node;
     }
 
-    public void insert(int index, int var) {
+    public void insert(int index, int var) throws Exception{
         if (head == null) {
             insertLast(var);
             return;
@@ -80,37 +80,43 @@ public class SinglyLinkedList {
         int count = 0;
         ListNode temp = head;
         while (count < index - 1) {
+            if (temp == null) {
+                throw new Exception("index > size of Linked List !!!");
+            }
             temp = temp.next;
             count++;
-        }
-
-        if (temp == tail) {
-            insertLast(var);
-            return;
         }
         listNode.next = temp.next;
         temp.next = listNode;
     }
 
-    public int deleteLast() {
+    public int deleteLast() throws Exception {
+        if (head == null) {
+            throw new Exception("Empty Linked List !!!");
+        }
         ListNode temp = head;
-        ListNode temp2 = head;
-        while (temp != tail) {
-            temp2 = temp;
+
+        while (temp.next.next != null) {
             temp = temp.next;
         }
-        temp2.next = null;
-        tail = temp2;
-        return temp.val;
+        int val = temp.next.val;
+        temp.next = null;
+        return val;
     }
 
-    public int deleteFirst() {
+    public int deleteFirst() throws Exception{
+        if (head == null) {
+            throw new Exception ("Empty Linked List !!!");
+        }
         int var = head.val;
         head = head.next;
         return var;
     }
 
-    public int delete(int index) {
+    public int delete(int index) throws Exception{
+        if (head == null) {
+            throw new Exception ("Empty Linked List !!!");
+        }
         ListNode temp = head;
         int count = 0;
         while (count < index - 2) {
@@ -743,55 +749,50 @@ public class SinglyLinkedList {
         insertRec(index - 1, var, temp2);
     }
 
-    public static void main(String[] args) {
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.insertFirst(5);
-        list.display();
+    /**
+     * <p><b>2. Add Two Numbers</b></p>
+     * https://leetcode.com/problems/add-two-numbers/
+     * <p>Runtime: 3 ms, faster than 76.78% of Java online submissions for Add Two Numbers.</p>
+     * Memory Usage: 47.5 MB, less than 67.79% of Java online submissions for Add Two Numbers.
+     *
+     * @param head
+     * @param head2
+     */
+    public void addTwoNumbers(ListNode head, ListNode head2) {
+        ListNode temp = head;
+        ListNode temp2 = head2;
+        ListNode stop = head;
+        int carry = 0;
+        while (temp != null && temp2 != null) {
+            int store = temp.val + temp2.val + carry;
+            temp.val = store % 10;
+            carry = store / 10;
+            if (temp.next == null) {
+                stop = temp;
+            }
+            temp = temp.next;
+            temp2 = temp2.next;
+        }
+        if (temp2 != null) {
+            temp = stop;
+            temp.next = temp2;
+            temp = temp.next;
+        }
 
-        list.insertLast(7);
-        list.display();
+        while (temp != null) {
+            int store = temp.val + carry;
+            temp.val = store % 10;
+            carry = store / 10;
+            if (temp.next == null) {
+                stop = temp;
+            }
+            temp = temp.next;
+        }
 
-        list.insertLast(9);
-        list.display();
-
-        list.insertFirst(3);
-        list.display();
-
-        list.insert(3, 8);
-        list.display();
-
-        /*System.out.println(list.deleteLast());
-        list.display();
-
-        System.out.println(list.deleteFirst());
-        list.display();
-
-        System.out.println(list.delete(2));
-        list.display();*/
-
-        list.insertRec(2, 6, head);
-        list.display();
-
-        list.swap(1);
-        list.display();
-
-        list.mergeSort(head);
-        list.display();
-
-        list.reverseRec(head, head.next);
-        list.display();
-
-        list.reverseII(0, 3);
-        list.display();
-
-        list.reOrder();
-        list.display();
-
-        long size = list.size(head);
-        System.out.println(size);
-        System.out.println(list.getNode(size - 1).val);
-
-        list.reOrderIII();
-        list.display();
+        if (carry != 0) {
+            temp = stop;
+            temp.next = new ListNode(carry);
+            temp.next.next = null;
+        }
     }
 }

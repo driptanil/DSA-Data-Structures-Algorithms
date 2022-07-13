@@ -1,8 +1,10 @@
-package com.questions.easy;
+// package com.questions.easy;
+import java.util.Scanner;
 
 public class Prime {
     public static void main(String[] args) {
-        int n = 13;
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
         System.out.println(prime(n, 2));
     }
 

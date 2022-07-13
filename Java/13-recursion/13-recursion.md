@@ -172,29 +172,11 @@ public class PrintRange {
 ##### Q4. Factorial
 
 ```java
-package com.inclass;
-
-public class Factorial {
-  public static void main(String[] args) {
-	int n = 5;
-	System.out.println(factorial(n));
-	System.out.println(fact(n, 1));
-  }
-
-  static int fact(int n, int factorial) {
-	if (n == 0) {
-	    return factorial;
-	}
-	factorial *= n;
-	return fact(n - 1, factorial);
-  }
-
-  static int factorial (int n) {
-	if (n == 1) {
-	    return 1;
+static int factorial (int n) {
+	if (n < 2) {
+		return 1;
 	}
 	return n * factorial(n - 1);
-  }
 }
 
 /* Output : 120  120
@@ -203,29 +185,35 @@ public class Factorial {
 
 ##### Q5. Sum of Digits
     
-    ```java
-    
-    ```
+```java
+static int sumofDigits(int n) {  
+	if (n == 0)  
+		return 0;  
+	return n % 10 + sumofDigits(n / 10);  
+} 
+```
     
 
 
 ##### Q6. Reverse Integer
     
 ```java
-package com.inclass;
+// reverse(0, n)
+static int reverse (int r, int n) {  
+    if (n == 0) {  
+        return r / 10;  
+    }  
+    return reverse((r + n % 10) * 10, n / 10);  
+}
 
-public class ReverseInt {
-  public static void main(String[] args) {
-	int n = 12345;
-	System.out.println(reverse(n));
-  }
-
-  static int reverse (int n) {
-	if ((int) Math.log10(n) == 0) {
-	    return n * 10000;
-	}
-	return ((n % 10) * 100000 + reverse(n / 10)) / 10;
-  }
+static int reverse (int n) {  
+    if (n == 0) {  
+        return 0;  
+    }  
+    if ((int) Math.log10(Math.abs(n)) == 0) {  
+        return n;  
+    }  
+    return (int) (((n % 10) * Math.pow(10, (int) Math.log10(Math.abs(n)))) + reverse(n / 10));  
 }
 ```
     
@@ -233,23 +221,14 @@ public class ReverseInt {
 ##### Q7. Palindrome Number
     
 ```java
-package com.inclass;
-
-public class Palindrome {
-  public static void main(String[] args) {
-	int n = 12321;
-	System.out.println(palindrome(n));
-  }
-
-  static boolean palindrome (int n) {
+static boolean palindrome (int n) {
 	if (n / 10 == 0) {
-	    return true;
+		return true;
 	}
 	if (n / (int) Math.pow(10, (int) Math.log10(n)) == n % 10) {
-	    return palindrome((n % (int) Math.pow(10, (int) Math.log10(n)) - (n % 10)) / 10);
+		return palindrome((n % (int) Math.pow(10, (int) Math.log10(n)) - (n % 10)) / 10);
 	}
 	return false;
-  }
 }
 
 /* Output : true
@@ -259,23 +238,14 @@ public class Palindrome {
 ##### Q8. Count number of zeros in Integer
     
 ```java
-package com.inclass;
-
-public class CountZero {
-  public static void main (String[] args) {
-	int n = 10030;
-	System.out.println(zero(n, 0));
-  }
-
-  static int zero (int n, int count) {
-	if (n == 0) {
-	    return count;
-	}
-	if (n % 10 == 0) {
-	    count++;
-	}
-	return zero(n / 10, count);
-  }
+static int zero (int n) {  
+    if (n == 0) {  
+        return 0;  
+    }  
+    if (n % 10 != 0) {  
+        return zero(n / 10);  
+    }  
+    return 1 + zero(n / 10);  
 }
 ```
     
@@ -283,46 +253,12 @@ public class CountZero {
 ##### Q9. Count the number of steps to reduce a number to zero
     
 ```java
-package com.inclass;
-
-public class StepsToZero {
-  public static void main(String[] args) {
-	int n = 14;
-	System.out.println(steps(n));
-	System.out.println(stepsRec(n, 0));
-  }
-  
-  /*
-  Runtime: 0 ms, faster than 100.00% of Java online submissions for Number of Steps to Reduce a Number to Zero.
-  Memory Usage: 39.2 MB, less than 18.26% of Java online submissions for Number of Steps to Reduce a Number to Zero.
-   */
-  static int stepsRec(int n, int count) {
-	if (n == 0) {
-	    return count;
-	}
-	if (n % 2 == 1) {
-	    return stepsRec(n - 1, count + 1);
-	}
-	return stepsRec(n / 2, count + 1);
-  }
-
-  /*
-  Runtime: 0 ms, faster than 100.00% of Java online submissions for Number of Steps to Reduce a Number to Zero.
-  Memory Usage: 39 MB, less than 18.91% of Java online submissions for Number of Steps to Reduce a Number to Zero.
-   */
-  static int steps (int n) {
-	int count = 0;
-	while (n > 0) {
-	    if (n % 2 == 1) {
-		  n -= 1;
-		  count++;
-	    } else {
-		  n /= 2;
-		  count++;
-	    }
-	}
-	return count;
-  }
+static int numberOfSteps(int n) {
+	if (n == 0) 
+		return 0;
+	if (n % 2 == 1)
+		return 1 + numberOfSteps(n - 1);
+	return 1 + numberOfSteps(n/2);
 }
 ```
     
@@ -332,59 +268,51 @@ public class StepsToZero {
 
 ##### Q1. Check Sorted Array    
 ```java
-package com.inclass;
-
-public class CountZero {
-    public static void main (String[] args) {
-	  int n = 10030;
-	  System.out.println(zero(n, 0));
-    }
-
-    static int zero (int n, int count) {
-	  if (n == 0) {
-		return count;
-	  }
-	  if (n % 10 == 0) {
-		count++;
-	  }
-	  return zero(n / 10, count);
-    }
+// betterSorted(arr, 0)
+static boolean betterSorted (int[] arr, int index) {  
+    if (index >= arr.length - 1) {  
+        return true;  
+    }  
+    return arr[index] < arr[index + 1] && betterSorted(arr, index + 1);  
 }
 ```
 
 ##### Q2. Linear Search
     
 ```java
-package com.arrays;
+static boolean linearSearch(int[] arr, int target, int count) {  
+    if (count >= arr.length) {  
+        return false;  
+    }  
+    return target == arr[count] || linearSearch(arr, target, count + 1);  
+}  
+```
 
-import java.util.ArrayList;
+```java
+static ArrayList<Integer> list = new ArrayList<>(0);  
+  
+static ArrayList<Integer> multipleOccurrences (int[] arr, int target, int count) {  
+    if (count >= arr.length) {  
+        return list;  
+    }  
+    if (arr[count] == target) {  
+        list.add(count);  
+    }  
+    return multipleOccurrences(arr, target, count + 1);  
+}  
+```
 
-public class LinearSearch {
-  public static void main(String[] args) {
-	int[] arr = new int[] {1, 2, 3, 4, 4, 5};
-	int target = 4;
-	System.out.println(linearSearch(arr, target , 0));
-	System.out.println(multipleOccurrences(arr, target, 0));
-  }
-
-  static boolean linearSearch(int[] arr, int target, int count) {
-	if (count >= arr.length) {
-	    return false;
-	}
-	return target == arr[count] || linearSearch(arr, target, count + 1);
-  }
-
-  static ArrayList<Integer> list = new ArrayList<>(0);
-
-  static ArrayList<Integer> multipleOccurrences (int[] arr, int target, int count) {
-	if (count >= arr.length) {
-	    return list;
-	}
-	if (arr[count] == target) {
-	    list.add(count);
-	}
-	return multipleOccurrences(arr, target, count + 1);
-  }
+```java  
+static ArrayList<Integer> returnArrayList (int[] arr, int target, int count) {  
+    ArrayList<Integer> list = new ArrayList<>(1);  
+    if (arr[count] == target) {  
+        list.add(count);  
+    }  
+    if (count == arr.length - 1) {  
+        return list;  
+    }  
+    list.addAll(returnArrayList(arr, target, count + 1));  
+    return list;  
 }
 ```
     

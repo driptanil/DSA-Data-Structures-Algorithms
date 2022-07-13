@@ -2,41 +2,46 @@ package com.inclass;
 
 public class DoublyLinkedList {
 
-    private class Node {
+    private static class ListNode {
         int val;
-        Node next;
-        Node prev;
+        ListNode next;
+        ListNode prev;
 
-        public Node(int val) {
+        public ListNode(int val) {
             this.val = val;
         }
 
-        public Node(int val, Node next, Node prev) {
+        public ListNode(int val, ListNode next, ListNode prev) {
             this.val = val;
             this.next = next;
             this.prev = prev;
         }
     }
 
-    private Node head;
-    private Node tail;
+    private ListNode head;
+    private ListNode tail;
 
     public DoublyLinkedList() {
         head = null;
         tail = null;
     }
 
-    public void display() {
-        Node temp = head;
+    @Override
+    public String toString() {
+        if (head == null) {
+            return "null";
+        }
+        StringBuilder b = new StringBuilder();
+        ListNode temp = head;
         while (temp != null) {
-            System.out.print(temp.val + " -> ");
+            b.append(temp.val).append(" -> ");
             temp = temp.next;
         }
-        System.out.println("end");
+        return b.append("null").toString();
     }
 
     public void displayReverse() {
-        Node temp = tail;
+        ListNode temp = tail;
         System.out.print("end");
         while (temp != null) {
             System.out.print(" -> " + temp.val);
@@ -46,38 +51,38 @@ public class DoublyLinkedList {
     }
 
     public void insertFirst(int var) {
-        Node node = new Node(var);
-        node.prev = null;
+        ListNode listNode = new ListNode(var);
+        listNode.prev = null;
         if (head == null) {
-            node.next = null;
-            head = tail = node;
+            listNode.next = null;
+            head = tail = listNode;
             return;
         }
-        node.next = head;
-        head.prev = node;
-        head = node;
+        listNode.next = head;
+        head.prev = listNode;
+        head = listNode;
     }
 
     public void insertLast(int var) {
-        Node node = new Node(var);
-        node.next = null;
+        ListNode listNode = new ListNode(var);
+        listNode.next = null;
         if (tail == null) {
-            node.prev = null;
-            head = tail = node;
+            listNode.prev = null;
+            head = tail = listNode;
             return;
         }
-        node.prev = tail;
-        tail.next = node;
-        tail = node;
+        listNode.prev = tail;
+        tail.next = listNode;
+        tail = listNode;
     }
 
     public void insert(int index, int var) {
-        Node node = new Node(var);
+        ListNode listNode = new ListNode(var);
         if (head == null || index == 0) {
             insertFirst(var);
             return;
         }
-        Node temp = head;
+        ListNode temp = head;
         int count = 0;
         while (count < index - 1) {
             temp = temp.next;
@@ -87,31 +92,40 @@ public class DoublyLinkedList {
             insertLast(var);
             return;
         }
-        temp.next = node;
-        node.prev = temp;
-        node.next = temp.next;
-        temp.next.prev = node;
+        temp.next = listNode;
+        listNode.prev = temp;
+        listNode.next = temp.next;
+        temp.next.prev = listNode;
     }
 
-    public int deleteFirst() {
+    public int deleteFirst() throws Exception{
+        if (head == null) {
+            throw new Exception("Empty double linked list !!!");
+        }
         int var = head.val;
         head.next.prev = null;
         head = head.next;
         return var;
     }
 
-    public int deleteLast() {
+    public int deleteLast() throws Exception{
+        if (head == null) {
+            throw new Exception("Empty double linked list !!!");
+        }
         int var = tail.val;
         tail.prev.next = null;
         tail = tail.prev;
         return var;
     }
 
-    public int delete(int index) {
+    public int delete(int index) throws Exception{
+        if (head == null) {
+            throw new Exception ("Empty Circular Linked List !!!");
+        }
         if (index == 0) {
             return deleteFirst();
         }
-        Node temp = head;
+        ListNode temp = head;
         int count = 0;
         while (count < index - 1) {
             count++;
@@ -134,47 +148,47 @@ public class DoublyLinkedList {
         return var;
     }
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws Exception{
         DoublyLinkedList list = new DoublyLinkedList();
 
         list.insertFirst(3);
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
         list.insertFirst(1);
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
         list.insertLast(5);
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
         list.insert(0, 7);
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
         list.deleteFirst();
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
         list.deleteLast();
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
         list.insertLast(7);
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
 
         list.delete(2);
-        list.display();
+        System.out.println(list);
         list.displayReverse();
         System.out.println();
 
