@@ -39,7 +39,7 @@
 				</ul>
 			</ol>
 <br>
-<h2><img align="left" src="readme/progress.gif" width="30">⠀Progress: <img src="https://progress-bar.dev/78?title=37/46"></h2>
+<h2><img align="left" src="readme/progress.gif" width="30">⠀Progress: <img src="https://progress-bar.dev/100?title=46/46"></h2>
 <img align="right" width=400px alt="side_sticker" src="readme/machine.gif">
 			<table>
 				<thead align="center">
