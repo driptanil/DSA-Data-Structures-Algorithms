@@ -131,7 +131,7 @@
 					</tr>
 					<tr>
 						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/Java/21-stacks-queues">Stacks Queues</a></td>
-						<td><img src="https://progress-bar.dev/0?title=🔴⠀"> </td>
+						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 				</tbody>
 			</table>
