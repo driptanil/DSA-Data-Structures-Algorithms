@@ -22,14 +22,14 @@ public class CustomStackArray <T> extends CustomArray<T> {
 
     public Object pop() throws Exception {
         if (isEmpty()) {
-            throw new Exception("Cannot pop from an Empty Queue");
+            throw new Exception("Cannot pop from an Empty Stack");
         }
         return data[ptr--];
     }
 
     public Object peek() throws Exception {
         if (isEmpty()) {
-            throw new Exception("Cannot peek from an Empty Queue");
+            throw new Exception("Cannot peek from an Empty Stack");
         }
         return data[ptr];
     }

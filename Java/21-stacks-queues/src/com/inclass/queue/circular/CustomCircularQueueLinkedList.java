@@ -13,7 +13,7 @@ public class CustomCircularQueueLinkedList<T> {
             return;
         }
         ListNode temp = head.next;
-        head.next = new ListNode(val);
+        head .next= new ListNode(val);
         head.next.next = temp;
         head = head.next;
     }

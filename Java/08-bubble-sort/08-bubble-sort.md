@@ -6,7 +6,7 @@ In every step, adjacent elements are compared and swapped.
 
 ![](/Java/08-bubble-sort/image1.png)
 
--   Space Complexity = O(1) [In-place Sorting Algorithm]
+-   Space Complexity = O(1) (In-place Sorting Algorithm)
     
 -   Time Complexity :
     

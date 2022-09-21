@@ -795,4 +795,34 @@ public class SinglyLinkedList {
             temp.next.next = null;
         }
     }
+
+
+    /**
+     * <p><b>23. Merge k Sorted Lists</b></p>
+     * https://leetcode.com/problems/merge-k-sorted-lists/
+     * <p>Runtime: 113 ms, faster than 20.02% of Java online submissions for Merge k Sorted Lists.</p>
+     * Memory Usage: 44 MB, less than 95.08% of Java online submissions for Merge k Sorted Lists.
+     * @param lists
+     * @return
+     */
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
+            return null;
+        }
+        if (lists.length == 1) {
+            return lists[0];
+        }
+        int i = 1;
+        while (i < lists.length) {
+            if (lists[i] != null) {
+                lists[0] = mergeTwoLists(lists[0], lists[i]);
+            }
+            i++;
+        }
+        return lists[0];
+    }
+
+    public static void main(String[] args) {
+
+    }
 }
