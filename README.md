@@ -117,15 +117,15 @@
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/J19-oop">Object Oriented Programming</a></td>
+						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/19-oop">Object Oriented Programming</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/J20-linked-list">Linked List</a></td>
+						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/20-linked-list">Linked List</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/J21-stacks-queues">Stacks Queues</a></td>
+						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/21-stacks-queues">Stacks Queues</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 				</tbody>
