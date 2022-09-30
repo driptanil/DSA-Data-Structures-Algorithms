@@ -1,4 +1,4 @@
 .obsidian/
 .vscode/
-./*/.idea
-./*/out
+*/.idea
+*/out
