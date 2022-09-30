@@ -79,7 +79,7 @@ public class MergeSort {
 
 Total Number of Levels = ${N}/ {2^k}$
 
-$\Rightarrow 1 = N/ 2^k \\\Rightarrow2^k = N \\\Rightarrow k = log_2N$
+$\Rightarrow 1 = N/ 2^k \\ \Rightarrow2^k = N \\ \Rightarrow k = log_2N$
 
 $$
 \therefore O[N * log_2N]
