@@ -22,11 +22,6 @@
 			<h2>How to use ?:</h2>
 			<ol>
 				<li>To clone the repository use <code>git clone https://github.com/driptanil/DSA-Data-Structures-Algorithms</code></li>
-				<li>To use Obsidian (because <u><b>GitHub README.md does not support LATEX</b></u> (math equations) 😭) :</li>
-				<ul>
-					<li>Choose <code>Open Folder as a vault</code>, choose repository folder</li>
-					<li>Choose safe mode off (if promoted), because some helpful community plugins are used in Obsidian.</li>
-				</ul>
 				<li>To use IntelliJ Idea:</li>
 				<ul>
 					<li>each topic is a project, use <code>Open Project</code> and choose the topic folder</li>
@@ -50,87 +45,87 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/Java/01-flow-of-program">Flow of Program</a></td>
+						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/01-flow-of-program">Flow of Program</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/02-first-java">First Java</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/02-first-java">First Java</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/03-conditionals-loops">Conditional Loops</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/03-conditionals-loops">Conditional Loops</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/04-functions-methods"> Functions Methods</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/04-functions-methods"> Functions Methods</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/05-arrays">Arrays</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/05-arrays">Arrays</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/06-linear-search">Linear Search</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/06-linear-search">Linear Search</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/07-binary-search">Binary Search</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/07-binary-search">Binary Search</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/08-bubble-sort">Bubble Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/08-bubble-sort">Bubble Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/09-selection-sort">Selection Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/09-selection-sort">Selection Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/10-insertion-sort">Insertion Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/10-insertion-sort">Insertion Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/11-cycle-sort">Cyclic Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/11-cycle-sort">Cyclic Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/12-patterns">Patterns</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/12-patterns">Patterns</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/13-recursion">Recursion</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/13-recursion">Recursion</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/14-complexity">Complexity</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/14-complexity">Complexity</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/15-math-for-dsa">Math Operators</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/15-math-for-dsa">Math Operators</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/16-merge-sort">Merge Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/16-merge-sort">Merge Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/17-quick-sort">Quick Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/17-quick-sort">Quick Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/Java/18-backtracking">Backtracking</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/18-backtracking">Backtracking</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/Java/19-oop">Object Oriented Programming</a></td>
+						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/J19-oop">Object Oriented Programming</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/Java/20-linked-list">Linked List</a></td>
+						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/J20-linked-list">Linked List</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/Java/21-stacks-queues">Stacks Queues</a></td>
+						<td><a href="https://github.com/driptanil/DSA-Data-Structures-Algorithms/tree/main/J21-stacks-queues">Stacks Queues</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 				</tbody>

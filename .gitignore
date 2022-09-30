@@ -1,0 +1,5 @@
+.obsidian/
+.vscode/
+*/.idea
+*/out
+*/*.iml
