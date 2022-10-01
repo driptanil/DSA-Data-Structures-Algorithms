@@ -1,12 +1,12 @@
 # Cyclic Sort
 Cycle Sort is only applicable for arrays containing a range of elements.
 
-![500](/Java/11-cycle-sort/image1.png)
+![500](./image1.png)
 
--   Space Complexity : O(1)
+-   Space Complexity : $O(1)$
 -   Time Complexity :
-    -   Best Case : O(n)
-    -   Worst Case : O(n)
+    -   Best Case : $O(n)$
+    -   Worst Case : $O(n)$
 
 	```java
 	package com.inclass;

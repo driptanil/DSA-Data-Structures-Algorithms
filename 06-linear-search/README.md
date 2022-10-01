@@ -1,9 +1,9 @@
 # Linear Searching
 Time Complexity :
 
--   Best Case : O ( 1 )
+-   Best Case : $O ( 1 )$
     
--   Worst Case : O ( n ) [ where n is the size of array ]
+-   Worst Case : $O ( n )$ [ where n is the size of array ]
     
 -   Q. Integer in Array
     
@@ -174,5 +174,3 @@ Time Complexity :
         }
     }
     ```
-
-![[07-binary-search]]

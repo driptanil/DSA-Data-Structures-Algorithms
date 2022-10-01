@@ -4,14 +4,14 @@ Bubble Sort is also called Sinking or Exchange Sort.
 
 In every step, adjacent elements are compared and swapped.
 
-![](/Java/08-bubble-sort/image1.png)
+![](./image1.png)
 
--   Space Complexity = O(1) [In-place Sorting Algorithm]
+-   Space Complexity = $O(1)$ [In-place Sorting Algorithm]
     
 -   Time Complexity :
     
-    -   Best Case : O(n)
-    -   Worst Case : O(n^2)
+    -   Best Case : $O(n)$
+    -   Worst Case : $O(n^2)$
     
 -   In-place Sorting:
     -   A Sorting Algorithm which uses constant Space Complexity i.e. zero Auxiliary Space
@@ -60,5 +60,3 @@ In every step, adjacent elements are compared and swapped.
 	    }
 	}
 	```
-
-![[09-selection-sort]]
