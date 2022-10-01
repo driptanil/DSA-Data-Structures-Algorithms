@@ -18,7 +18,7 @@ void insert(int x)
     }
     else if ((rear + 1) % MAX == front)
     {
-        printf("Queue is full\n");
+        printf("Full Queue !!!\n");
     }
     else
     {
@@ -30,7 +30,7 @@ void delete ()
 {
     if (front == -1 && rear == -1)
     {
-        printf("Queue is empty\n");
+        printf("Empty Queue !!!\n");
     }
     else if (front == rear)
     {
@@ -46,7 +46,6 @@ void display()
 {
     if (front != -1 && rear != -1)
     {
-        printf("Queue is: ");
         for (int i = front; i != rear; i = (i + 1) % MAX)
         {
             printf("%d ", queue_array[i]);
@@ -61,9 +60,9 @@ int main()
     int a;
     while (1)
     {
-        printf("1. Enqueue    ");
-        printf("2. Dequeue    ");
-        printf("3. Exit     ");
+        printf("1. Enqueue\t");
+        printf("2. Dequeue\t");
+        printf("3. Exit\n");
         printf("Enter your choice : ");
         scanf("%d", &choice);
         switch (choice)
