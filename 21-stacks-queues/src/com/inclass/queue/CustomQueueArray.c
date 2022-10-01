@@ -6,7 +6,6 @@
 
 int currentSize=0;
 int front=0,rear=-1;
-
 int isFull(){
     if(currentSize==size){
         return true;
@@ -60,8 +59,8 @@ void main(){
     while(1) {
         int selection;
 
-        printf("%s","***Queue Operation Menu*** \n1. Enqueue 2. Dequeue 3.Display 4. Exit\n");
-        printf("%s","Enter your selection: ");
+        printf("%s","\n\n1. Enqueue\t2. Dequeue\t3. Exit\n");
+        printf("%s","\nEnter your selection: ");
         scanf("%d",&selection);
 
         switch(selection){
@@ -71,14 +70,13 @@ void main(){
                     printf("%s","Enter value to be inserted: ");
                     scanf("%d",&value);
                     enqueue(arr,value);
+                    display(arr);
                     break;
 
             case(2):dequeue(arr);
-                    break;
-            case(3):
                     display(arr);
                     break;
-            case(4):
+            case(3):
                 printf("%s","Exited successfully");
                 return;
             default:
