@@ -7,12 +7,12 @@
 
 In Selection Sort, Largest or Smallest element is selected and is placed in correct place.
 
-![](/Java/09-selection-sort/image1.png)
+![](./image1.png)
 
 -   Time Complexity :
-    -   Best Case : O(n^2)
-    -   Worst Case : O(n^2)
--   Space Complexity : O(1) [In-place Sorting]
+    -   Best Case : $O(n^2)$
+    -   Worst Case : $O(n^2)$
+-   Space Complexity : $O(1)$ [In-place Sorting]
 -   Non-Stable Sorting Algorithm
 -   Use Case : Performs well in small arrays
 

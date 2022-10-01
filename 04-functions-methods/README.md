@@ -35,7 +35,7 @@ public class Greeting {
 /* Output : Driptanil */
 ```
 
-![](Java/04-functions-methods/image1.png)
+![](./image1.png)
 
 -   Strings cannot be changed, because Strings are immutable. So, new Strings are created in heap memory
     
@@ -62,7 +62,7 @@ public class Greeting {
     /* Output : 20 10 */
     ```
     
-	![450](Java/04-functions-methods/image2.png)
+	![](./image2.png)
 	
     Although `x` and `y` are modified, `a` and `b` remain unchanged, because maybe new objects are made in heap memory.
     
@@ -232,5 +232,3 @@ public class Ambigutity {
 ```
 
 When more than one variable arguments are present in function overloading, then calling a function with no parameters would give a error. This is called Ambiguity.
-
-# ![[05-Arrays]]

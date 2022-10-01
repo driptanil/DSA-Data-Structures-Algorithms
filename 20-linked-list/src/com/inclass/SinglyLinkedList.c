@@ -6,6 +6,11 @@ typedef struct node {
     struct node * next;
 }node;
 
+/** inti()
+ * takes an integer parameter
+ * declares a node and assigns the integer
+ * returns the node
+ */
 node * init(int val) {
     node * newNode = (node *) malloc(sizeof (node));
     newNode->val=val;
@@ -13,6 +18,10 @@ node * init(int val) {
     return newNode;
 }
 
+/** insertFirst()
+ * adds a new node at the front of the linked list
+ * takes integer parameter
+ */
 void insertFirst(node ** head, int val) {
     if (*head == NULL) {
         node * newNode = init(val);
@@ -24,6 +33,10 @@ void insertFirst(node ** head, int val) {
     *head = newNode;
 }
 
+/** insertLast()
+ * adds a new node at the front of the linked list
+ * takes integer parameter
+ */
 void insertLast(node ** head, int val) {
     if (*head == NULL) {
         insertFirst(head, val);
@@ -37,6 +50,11 @@ void insertLast(node ** head, int val) {
     temp->next = newNode;
 }
 
+/** deleteFirst()
+ * if the linked list is empty, prints "Empty Linked List !!!"
+ * prints the integer at the First node
+ * deletes the first node
+ */
 int deleteFirst (node ** head) {
     if (*head == NULL) {
         printf("\nEmpty Linked List !!!");
@@ -47,6 +65,11 @@ int deleteFirst (node ** head) {
     return val;
 }
 
+/** deleteLast()
+ * if the linked list is empty, prints "Empty Linked List !!!"
+ * prints the integer at the last node
+ * deletes the last node
+ */
 int deleteLast (node ** head) {
     node * temp = *head;
     while (temp->next->next != NULL) {
@@ -57,6 +80,10 @@ int deleteLast (node ** head) {
     return val;
 }
 
+/** display()
+ * prints the linked list
+ * format : [1] -> [2] -> [3] -> [4] -> [5] -> null
+ */
 void display(node * head) {
     node * temp = head;
     printf("\n");
