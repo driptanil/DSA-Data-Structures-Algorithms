@@ -19,42 +19,41 @@ In every step, adjacent elements are compared and swapped.
     -   A Sorting Algorithm without changing indexes of equal elements while sorting.
 
 
-- 
-  ```java
-	package com.inclass;
-	
-	import java.util.Arrays;
-	
-	public class BubbleSort {
-		
-		public static void main(String[] args) {
-			int[] arr = {5, 4, 3, 2, 1};
-			bubbleSort(arr);
-			System.out.println(Arrays.toString(arr));
-		}
-		
-		static void bubbleSort(int[] arr) {
-			int count = arr.length - 1;
-			int check = 0;
-			while (count > 0) {
-				boolean sorted = false;
-				for (int i = 0; i < count; i++) {
-					check++;
-					if (arr[i] > arr[i + 1]) {
-						int temp = arr[i];
-						arr[i] = arr[i + 1];
-						arr[i + 1] = temp;
-						sorted = true;
-					}
-				}
-				if (!sorted) {
-					break;
-				}
-				count--;
-			}
-			System.out.println(check);
-		}
+```java
+package com.inclass;
+
+import java.util.Arrays;
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+		int[] arr = {5, 4, 3, 2, 1};
+		bubbleSort(arr);
+		System.out.println(Arrays.toString(arr));
 	}
+
+	static void bubbleSort(int[] arr) {
+		int count = arr.length - 1;
+		int check = 0;
+		while (count > 0) {
+			boolean sorted = false;
+			for (int i = 0; i < count; i++) {
+				check++;
+				if (arr[i] > arr[i + 1]) {
+					int temp = arr[i];
+					arr[i] = arr[i + 1];
+					arr[i + 1] = temp;
+					sorted = true;
+				}
+			}
+			if (!sorted) {
+				break;
+			}
+			count--;
+		}
+		System.out.println(check);
+	}
+}
 ```
 
 
@@ -180,34 +179,33 @@ Cycle Sort is only applicable for arrays containing a range of elements.
     -   Best Case : $O(n)$
     -   Worst Case : $O(n)$
 
--  
-  ```java
-  package com.inclass;
-    
-    import java.util.Arrays;
-    
-    public class CycleSortAlgorithm {
-        public static void main(String[] args) {
-            int[] arr = {3, 5, 2, 1, 4};
-            cycleSort(arr);
-            System.out.println(Arrays.toString(arr));
-        }
-    
-        static void cycleSort(int[] arr) {
-            int index = 0;
-            while(index < arr.length) {
-                if (arr[index] != arr[arr[index] - 1]) {
-                    System.out.println(Arrays.toString(arr));
-                    int temp = arr[index];
-                    arr[index] = arr[arr[index] - 1];
-                    arr[temp - 1] = temp;
-                } else {
-                    index++;
-                }
-            }
-        }
+```java
+package com.inclass;
+
+import java.util.Arrays;
+
+public class CycleSortAlgorithm {
+public static void main(String[] args) {
+    int[] arr = {3, 5, 2, 1, 4};
+    cycleSort(arr);
+    System.out.println(Arrays.toString(arr));
+}
+
+static void cycleSort(int[] arr) {
+    int index = 0;
+    while(index < arr.length) {
+	if (arr[index] != arr[arr[index] - 1]) {
+	    System.out.println(Arrays.toString(arr));
+	    int temp = arr[index];
+	    arr[index] = arr[arr[index] - 1];
+	    arr[temp - 1] = temp;
+	} else {
+	    index++;
+	}
     }
-  ```
+}
+}
+```
 
 
 # Merge Sort Algorithm  
@@ -562,40 +560,36 @@ $$
 T[n] = T[k] + T[n-k-1] + O(n)  
 $$  
   
-- Worst Case (k = 0):  
-      
-    $$  
-    ⁍  
-    $$  
-      
-    when $n \rightarrow \infty, \ O(n)$ is less dominating,  
-      
-    $$  
-    \Rightarrow f(n)=f(n-1) \\  
-    \Rightarrow f(n)=(n-1) + f(n-2) \\  
-    \Rightarrow f(n)=(n-1) + (n-2) + (n-3) + ... \\  
-    \Rightarrow f(n)=\frac{n(n-1)}{2} \\ \Rightarrow f(n)= \frac{1}{2}(n^2-n)\\ \Rightarrow f(n)= O(n^2)  
-    $$  
+- Worst Case (k = 0):   
+
+$⁍$  when $n \rightarrow \infty, \ O(n)$ is less dominating,  
+
+$$  
+\Rightarrow f(n)=f(n-1) \\  
+\Rightarrow f(n)=(n-1) + f(n-2) \\  
+\Rightarrow f(n)=(n-1) + (n-2) + (n-3) + ... \\  
+\Rightarrow f(n)=\frac{n(n-1)}{2} \\ \Rightarrow f(n)= \frac{1}{2}(n^2-n)\\ \Rightarrow f(n)= O(n^2)  
+$$  
       
 - Best Case (k= $\frac{n}{2}$):  
       
-    $$  
-    T[n] = T[\frac{n}{2}] + T[\frac{n}{2}] + [n - 1] \\ =  2T[\frac{n}{2}] + [n - 1]  
-    $$  
-      
-    Using Akra-Bazzi to find complexity:  
-      
-    Finding $p,$  
-      
-    $$  
-    a_1b_1^p = 1 \ \Rightarrow 2 * \frac{1}{2} = 1 \\  
-    \therefore p = 1  
-    $$  
-      
-    $$  
-    T(x) = \theta (x^P + x^p \int_1^x \frac{g(u)du)}{u^{p+1}} \\  
-    = \theta(x + x \int_1^x \frac{(u-1)du}{u^2} \\  
-    = \theta(x + x\int^x_1 \frac{1}{u} du - x\int^x_1 \frac{1}{u^2}du \\  
-    = \theta(x+xlog(x)-x+1) \\  
-    = \theta(xlog(x))  
-    $$
+$$  
+T[n] = T[\frac{n}{2}] + T[\frac{n}{2}] + [n - 1] \\ =  2T[\frac{n}{2}] + [n - 1]  
+$$  
+
+Using Akra-Bazzi to find complexity:  
+
+Finding $p,$  
+
+$$  
+a_1b_1^p = 1 \ \Rightarrow 2 * \frac{1}{2} = 1 \\  
+\therefore p = 1  
+$$  
+
+$$  
+T(x) = \theta (x^P + x^p \int_1^x \frac{g(u)du)}{u^{p+1}} \\  
+= \theta(x + x \int_1^x \frac{(u-1)du}{u^2} \\  
+= \theta(x + x\int^x_1 \frac{1}{u} du - x\int^x_1 \frac{1}{u^2}du \\  
+= \theta(x+xlog(x)-x+1) \\  
+= \theta(xlog(x))  
+$$
