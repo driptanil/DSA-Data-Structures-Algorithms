@@ -1,7 +1,7 @@
 
 <h2><img src="readme/back.png"></h2><br>
 		<h2><img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" align="left"></h2>
-		<img align="right" width=400 alt="side_sticker" src="https://i.pinimg.com/originals/ef/16/e4/ef16e4e68b0d3cb81e6bb8a8c3258d7e.gif">
+		<img align="right" width=300 alt="side_sticker" src="./readme/algorithm.gif">
 			<p style="text-indent: 2em;">
 				<img src="readme/bullet.gif" width="40">
 				<a href="https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="Youtube" width="35"/>  Youtube Playlist </a>
@@ -73,15 +73,15 @@
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/08-bubble-sort">Bubble Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/08-sorting">Bubble Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/09-selection-sort">Selection Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/08-sorting">Selection Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/10-insertion-sort">Insertion Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/08-sorting">Insertion Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
@@ -105,11 +105,11 @@
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/16-merge-sort">Merge Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/08-sorting">Merge Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>
-						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/17-quick-sort">Quick Sort</a></td>
+						<td><a href="https://github.com/driptanil/Data-Structures-Algorithms/tree/main/08-sorting">Quick Sort</a></td>
 						<td><img src="https://progress-bar.dev/100?title=✅⠀"> </td>
 					</tr>
 					<tr>

@@ -85,30 +85,30 @@ public class CustomCircularQueueArray<T> extends CustomArray<T> {
         CustomCircularQueueArray<Integer> list = new CustomCircularQueueArray<>(2);
         list.add(1);
         list.add(2);
-//        System.out.println(list);
+       System.out.println(list);
         list.display();
         list.add(3);
 
-//        System.out.println(list);
+       System.out.println(list);
         list.display();
         System.out.println(list.remove());
-        //        System.out.println(list);
+               System.out.println(list);
         list.display();
         System.out.println(list.peek());
 
         list.add(4);
-        //        System.out.println(list);
+               System.out.println(list);
         list.display();
 
         list.add(5);
-        //        System.out.println(list);
+               System.out.println(list);
         list.display();
 
         list.add(6);
-//        System.out.println(list);
+       System.out.println(list);
         list.display();
         list.add(7);
-//        System.out.println(list);
+       System.out.println(list);
         list.display();
     }
 

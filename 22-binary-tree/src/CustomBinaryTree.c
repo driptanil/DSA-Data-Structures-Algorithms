@@ -7,15 +7,17 @@ typedef struct binaryTree {
     struct binaryTree * right;
 }tree;
 
-tree * init (int val) {
+//  will create new nodes 
+
+tree * init (int data) {
     tree * node = (tree *) malloc (sizeof(tree));
-    node->val = val;
+    node->val = data;
     node->left = NULL;
     node->right = NULL;
     return node;
 }
 
-
+// [10, 1, 3, null, null, null, 2, 4, 6, null, null, 7, null, null, 5, null, null]
 int i = -1;
 tree * arrayToTree(int arr[]) {
     if (arr[++i] == 0) {

@@ -138,10 +138,56 @@ public class CustomBinaryTree<T> {
         return new int[] {dia, hei};
     }
 
+    public Integer maximum(TreeNode root) {
+        if (root == null) {
+            return Integer.MIN_VALUE;
+        }
+        return Math.max((Integer) root.val, Math.max(maximum(root.left), maximum(root.right)));
+    }
+
+    public Integer minimum(TreeNode root) {
+        if (root == null) {
+            return Integer.MAX_VALUE;
+        }
+        return Math.min((Integer) root.val, Math.min(minimum(root.left), minimum(root.right)));
+    }
+
+    public ArrayList<T> leftNodes(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        ArrayList<T> left = new ArrayList<>();
+        if (root.left != null) {
+            left.add(root.left.val);
+        }
+        left.addAll(leftNodes(root.left));
+        left.addAll(leftNodes(root.right));
+        return left;
+    }
+
+    public ArrayList<T> rightNodes(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        ArrayList<T> right = new ArrayList<>();
+        if (root.right != null) {
+            right.add(root.right.val);
+        }
+        right.addAll(rightNodes(root.left));
+        right.addAll(rightNodes(root.right));
+        return right;
+    }
+
+    public ArrayList<T> leftView (TreeNode left) {
+
+    }
+
     public static void main(String[] args) {
         CustomBinaryTree<Integer> tree = new CustomBinaryTree<>();
 
-        Integer[] arr = new Integer[] {1, 2, 4, null, null, 5, null, null, 3, null, 6, null, null};
+        // Integer[] arr = new Integer[] {1, 2, 4, null, null, 5, null, null, 3, null, 6, null, null};
+        Integer[] arr = new Integer[] {4, 7, null, null, 6, null, 2, 5, null, null, 1, 3, null, null, null};
+
         tree.root = tree.arrayToTree(arr);
         System.out.println("Root = " + tree.root.val);
 
@@ -169,5 +215,12 @@ public class CustomBinaryTree<T> {
 
         int[] arr2 =  tree.diameter(tree.root);
         System.out.println("Diameter = " + (arr2[0] - 1));
+
+        System.out.println("Maximum = " + tree.maximum(tree.root));
+        System.out.println("Minimum = " + tree.minimum(tree.root));
+
+        System.out.println("Left View = " + tree.leftNodes(tree.root));
+        System.out.println("Right View = " + tree.rightNodes(tree.root));
+
     }
 }

@@ -1,5 +1,7 @@
 package com.inclass;
 
+import java.util.Stack;
+
 public class SinglyLinkedList {
     public static class ListNode {
         public int val;
@@ -130,9 +132,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <b><p>83. Remove Duplicates from Sorted List</p></b>
-     * https://leetcode.com/problems/remove-duplicates-from-sorted-list
-     *
+     * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list"><h1>83. Remove Duplicates from Sorted List</h1></a>
      * <p>Runtime: 1 ms, faster than 65.15% of Java online submissions for Remove Duplicates from Sorted List.</p>
      * Memory Usage: 45 MB, less than 5.96% of Java online submissions for Remove Duplicates from Sorted List.
      * @param
@@ -152,8 +152,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <b><p>1290. Convert Binary Number in a Linked List to Integer</p></b>
-     * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
+     * <a href="https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/"><h1>1290. Convert Binary Number in a Linked List to Integer</h1></a>
      * <p>Runtime: 1 ms, faster than 34.22% of Java online submissions for Convert Binary Number in a Linked List to Integer.</p>
      * Memory Usage: 41 MB, less than 70.78% of Java online submissions for Convert Binary Number in a Linked List to Integer.
      *
@@ -171,8 +170,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>21. Merge Two Sorted Lists</b></p>
-     * https://leetcode.com/problems/merge-two-sorted-lists/submissions/
+     * <a href="https://leetcode.com/problems/merge-two-sorted-lists/submissions/"><h1>21. Merge Two Sorted Lists</h1></a>
      * <p>Runtime: 1 ms, faster than 66.92% of Java online submissions for Merge Two Sorted Lists.</p>
      * <p>Memory Usage: 42.5 MB, less than 69.11% of Java online submissions for Merge Two Sorted Lists.</p>
      * @param listNode1
@@ -206,49 +204,41 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>206. Reverse Linked List</b></p>
-     * <p>https://leetcode.com/problems/reverse-linked-list/</p>
+     * <h1><a href="https://leetcode.com/problems/reverse-linked-list/">206. Reverse Linked List</a></h1>
      * <p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.</p>
      * Memory Usage: 42.8 MB, less than 60.13% of Java online submissions for Reverse Linked List.
      */
     public ListNode reverse(ListNode head) {
-        if (head == null)
-            return head;
-        ListNode prev = head;
-        ListNode temp = head.next;
+        ListNode prev = null;
+        ListNode temp = head;
         while (temp != null) {
             ListNode store = temp.next;
             temp.next = prev;
             prev = temp;
             temp = store;
         }
-        head.next = null;
+
         return prev;
     }
 
     /**
-     * <p><b>206. Reverse Linked List</b></p>
-     * <p>https://leetcode.com/problems/reverse-linked-list/</p>
+     * <h1><a href="https://leetcode.com/problems/reverse-linked-list/">206. Reverse Linked List</a></h1>
      * <p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.</p>
      * Memory Usage: 42.8 MB, less than 60.13% of Java online submissions for Reverse Linked List.
+     * @param head
      * @param prev
-     * @param temp
      */
-    public void reverseRec(ListNode prev, ListNode temp) {
-        if (temp == null) {
-            head.next = null;
-            head = prev;
-            return;
+    public ListNode reverseRec(ListNode head, ListNode prev) {
+        if (head == null) {
+            return prev;
         }
-
-        ListNode store = temp.next;
-        temp.next = prev;
-        reverseRec(temp, store);
+        ListNode store = head.next;
+        head.next = prev;
+        return reverseRec(store, head);
     }
 
     /**
-     * <p><b>92. Reverse Linked List II</b></p>
-     * https://leetcode.com/problems/reverse-linked-list-ii/
+     * <a href="https://leetcode.com/problems/reverse-linked-list-ii/"><h1>92. Reverse Linked List II</h1></a>
      * <p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List II.</p>
      * Memory Usage: 42.2 MB, less than 18.11% of Java online submissions for Reverse Linked List II.
      * @param left
@@ -289,8 +279,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>141. Linked List Cycle</b></p>
-     * https://leetcode.com/problems/linked-list-cycle/submissions/
+     * <a href="https://leetcode.com/problems/linked-list-cycle/submissions/"><h1>141. Linked List Cycle</h1></a>
      * <p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Linked List Cycle.</p>
      * <p>Memory Usage: 45.7 MB, less than 57.29% of Java online submissions for Linked List Cycle.</p>
      * @param
@@ -337,8 +326,8 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>142. Linked List Cycle II</b></p>
-     * https://leetcode.com/problems/linked-list-cycle-ii/submissions/
+     * <a href="https://leetcode.com/problems/linked-list-cycle-ii/"><h1>142. Linked List Cycle II</h1></a>
+     *
      * <p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Linked List Cycle II.</p>
      * Memory Usage: 42.7 MB, less than 87.40% of Java online submissions for Linked List Cycle II.
      * @return
@@ -378,8 +367,8 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>876. Middle of the Linked List</b></p>
-     * https://leetcode.com/problems/middle-of-the-linked-list/
+     * <a href="https://leetcode.com/problems/middle-of-the-linked-list/"><h1>876. Middle of the Linked List</h1></a>
+     *
      * <p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Middle of the Linked List.</p>
      * Memory Usage: 41.4 MB, less than 54.45% of Java online submissions for Middle of the Linked List.
      * @param head
@@ -396,8 +385,8 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>148. Sort List</b></p>
-     * <p>https://leetcode.com/problems/sort-list/</p>
+     * <a href="https://leetcode.com/problems/sort-list/"><h1>148. Sort List</h1></a>
+     *
      * <p>Runtime: 12 ms, faster than 82.08% of Java online submissions for Sort List.</p>
      * Memory Usage: 50.4 MB, less than 90.78% of Java online submissions for Sort List.
      * @param head
@@ -528,8 +517,7 @@ public class SinglyLinkedList {
 
 
     /**
-     * <p><b>234. Palindrome Linked List</b></p>
-     * https://leetcode.com/problems/palindrome-linked-list/
+     * <a href="https://leetcode.com/problems/palindrome-linked-list/"><h1>234. Palindrome Linked List</h1></a>
      * <p>Runtime: 6 ms, faster than 74.49% of Java online submissions for Palindrome Linked List.</p>
      * Memory Usage: 103.7 MB, less than 30.79% of Java online submissions for Palindrome Linked List.
      * @return
@@ -566,8 +554,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>143. Reorder List</b></p>
-     * https://leetcode.com/problems/reorder-list/
+     * <a href="https://leetcode.com/problems/reorder-list/"><h1>143. Reorder List</h1></a>
      * <p>Runtime: 1070 ms, faster than 5.01% of Java online submissions for Reorder List.</p>
      * Memory Usage: 45.2 MB, less than 87.45% of Java online submissions for Reorder List.
      */
@@ -590,8 +577,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>143. Reorder List</b></p>
-     * https://leetcode.com/problems/reorder-list/
+     * <a href="https://leetcode.com/problems/reorder-list/"><h1>143. Reorder List</h1></a>
      * <p>Runtime: 1389 ms, faster than 5.01% of Java online submissions for Reorder List.</p>
      * Memory Usage: 45.1 MB, less than 87.45% of Java online submissions for Reorder List.
      */
@@ -621,8 +607,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>143. Reorder List</b></p>
-     *https://leetcode.com/problems/reorder-list/
+     * <a href="https://leetcode.com/problems/reorder-list/"><h1>143. Reorder List</h1></a>
      * <p>Runtime: 2 ms, faster than 71.78% of Java online submissions for Reorder List.</p>
      * Memory Usage: 54.5 MB, less than 28.79% of Java online submissions for Reorder List.
      */
@@ -650,8 +635,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>25. Reverse Nodes in k-Group</b></p>
-     * https://leetcode.com/problems/reverse-nodes-in-k-group/
+     * <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/"><h1>25. Reverse Nodes in k-Group</h1></a>
      * <p>Runtime: 1 ms, faster than 58.81% of Java online submissions for Reverse Nodes in k-Group.</p>
      * Memory Usage: 45.3 MB, less than 70.51% of Java online submissions for Reverse Nodes in k-Group.
      * @param head
@@ -705,8 +689,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>61. Rotate List</b></p>
-     * https://leetcode.com/problems/rotate-list/
+     * <a href="https://leetcode.com/problems/rotate-list/"><h1>61. Rotate List</h1></a>
      * <p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Rotate List.</p>
      * Memory Usage: 41.8 MB, less than 87.88% of Java online submissions for Rotate List.
      * @param head
@@ -750,8 +733,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * <p><b>2. Add Two Numbers</b></p>
-     * https://leetcode.com/problems/add-two-numbers/
+     * <a href="https://leetcode.com/problems/add-two-numbers/"><h1>2. Add Two Numbers</h1></a>
      * <p>Runtime: 3 ms, faster than 76.78% of Java online submissions for Add Two Numbers.</p>
      * Memory Usage: 47.5 MB, less than 67.79% of Java online submissions for Add Two Numbers.
      *
@@ -798,8 +780,7 @@ public class SinglyLinkedList {
 
 
     /**
-     * <p><b>23. Merge k Sorted Lists</b></p>
-     * https://leetcode.com/problems/merge-k-sorted-lists/
+     * <a href="https://leetcode.com/problems/merge-k-sorted-lists/"><h1>23. Merge k Sorted Lists</h1></a>
      * <p>Runtime: 113 ms, faster than 20.02% of Java online submissions for Merge k Sorted Lists.</p>
      * Memory Usage: 44 MB, less than 95.08% of Java online submissions for Merge k Sorted Lists.
      * @param lists
@@ -822,6 +803,349 @@ public class SinglyLinkedList {
         return lists[0];
     }
 
+    /**
+     * <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list"><h1>19. Remove Nth Node From End of List</h1></a>
+     *
+     * <p>Runtime 0 ms Beats 100% </p>
+     * Memory 43.7 MB Beats 5.50%
+     */
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode store = reverseRec(head, null);
+        ListNode temp = store;
+        while(n != 2) {
+            if (temp == null) {
+                store = store.next;
+                return reverseRec(store, null);
+            }
+            n--;
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        return reverseRec(store, null);
+    }
+
+
+    /**
+     * <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list"><h1>19. Remove Nth Node From End of List</h1></a>
+     * using Stack
+     * <p>Runtime 1 ms Beats 19.61% </p>
+     * Memory 41 MB Beats 15.99%
+     */
+    public ListNode removeNthFromEndStack(ListNode head, int n) {
+        Stack<ListNode> stack = new Stack<>();
+        ListNode temp = head;
+        while (temp != null) {
+            stack.push(temp);
+            temp= temp.next;
+        }
+
+        while (n != 0) {
+            n--;
+            stack.pop();
+        }
+        if (stack.isEmpty()) {
+            return head.next;
+        }
+        temp = stack.pop();
+        temp.next = temp.next.next;
+        return head;
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/swap-nodes-in-pairs/"><h1>24. Swap Nodes in Pairs</h1></a>
+     * Runtime 0 ms Beats 100%
+     * Memory 40.4 MB Beats 19%
+     * @param head
+     * @return
+     */
+
+    public ListNode swapPairs(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode temp = new ListNode(0);
+        temp.next = head;
+        ListNode start = temp;
+
+        while (head != null && head.next != null) {
+            ListNode store = head.next.next;
+            head.next.next = head;
+            start.next = head.next;
+            head.next = store;
+
+
+            start = head;
+            head = start.next;
+        }
+
+        return temp.next;
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/"><h1>82. Remove Duplicates from Sorted List II</h1></a>
+     * Runtime 0 ms Beats 100%
+     * Memory 41.8 MB Beats 76.48%
+     * @param head
+     * @return
+     */
+
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode temp = new ListNode(0);
+        temp.next = head;
+
+        ListNode prev = temp;
+
+        while (head != null && head.next != null) {
+
+            if (head.val == head.next.val) {
+                while (head != null && head.next != null) {
+                    if (head.val != head.next.val) {
+                        break;
+                    }
+                    head = head.next;
+                }
+                prev.next = head.next;
+            } else {
+                prev = head;
+            }
+            head = head.next;
+
+        }
+        return temp.next;
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/partition-list/"><h1>86. Partition List</h1></a>
+     *
+     * <p>Runtime 0 ms Beats 100%</p>
+     * Memory 42.5 MB Beats 11.48%
+     * @param head
+     * @param x
+     * @return
+     */
+    public ListNode partition(ListNode head, int x) {
+        ListNode min = new ListNode(0);
+        ListNode max = new ListNode(0);
+
+        ListNode tempMin = min;
+        ListNode tempMax = max;
+
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = null;
+            if (head.val < x) {
+                tempMin.next = head;
+                tempMin = tempMin.next;
+            } else {
+                tempMax.next = head;
+                tempMax = tempMax.next;
+            }
+            head = next;
+        }
+
+        tempMin.next = max.next;
+
+        return min.next;
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/remove-nodes-from-linked-list/"><h1>2487. Remove Nodes From Linked List</h1></a>
+     *
+     * <p>Runtime 6 ms Beats 95.19%</p>
+     * Memory 68.2 MB Beats 34.47%
+     * @param head
+     * @return
+     */
+
+    public ListNode removeNodes(ListNode head) {
+        head = reverse(head);
+        ListNode temp = head;
+        while (head.next != null) {
+            if (head.val > head.next.val) {
+                head.next = head.next.next;
+            } else {
+                head = head.next;
+            }
+        }
+
+        return reverse(temp);
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/odd-even-linked-list"><h1>328. Odd Even Linked List</h1></a>
+     *
+     * <p>Runtime 0 ms Beats 100%</p>
+     * Memory 42 MB Beats 43.65%
+     */
+
+    public ListNode oddEvenList(ListNode head) {
+        ListNode one = new ListNode(0);
+        ListNode two = new ListNode(0);
+
+        ListNode temp = one;
+        ListNode temp2 = two;
+
+        boolean bool = true;
+        while(head != null) {
+            if (bool) {
+                temp.next = head;
+                temp = temp.next;
+            } else {
+                temp2.next = head;
+                temp2 = temp2.next;
+            }
+            head = head.next;
+            bool = !bool;
+        }
+
+        temp.next = two.next;
+        temp2.next = null;
+
+        return one.next;
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/add-two-numbers-ii"><h1>445. Add Two Numbers II</h1></a>
+     *
+     * <p>Runtime 2 ms Beats 100%</p>
+     * Memory 43.3 MB Beats 16.2%
+     * @param l1
+     * @param l2
+     * @return
+     */
+
+    public ListNode addTwoNumbersII(ListNode l1, ListNode l2) {
+        ListNode one = reverse(l1);
+        ListNode two = reverse(l2);
+
+        ListNode head = new ListNode(0);
+        ListNode temp = head;
+
+        int carry = 0;
+        while (one != null && two != null) {
+            int val = carry + (one.val + two.val);
+            carry = val / 10;
+            temp.next = new ListNode(val % 10);
+            temp = temp.next;
+            one = one.next;
+            two = two.next;
+        }
+
+        while (one != null) {
+            int val = carry + (one.val);
+            carry = val / 10;
+            temp.next = new ListNode(val % 10);
+            one = one.next;
+            temp = temp.next;
+        }
+
+        while (two != null) {
+            int val = carry + (two.val);
+            carry = val / 10;
+            temp.next = new ListNode(val % 10);
+            two = two.next;
+            temp = temp.next;
+        }
+
+        if (carry != 0) {
+            temp.next = new ListNode(carry);
+        }
+
+        return reverse(head.next);
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/add-two-numbers-ii"><h1>445. Add Two Numbers II</h1></a>
+     *
+     * <p>Runtime 32 ms Beats 5.81%</p>
+     * Memory 42.6 MB Beats 34.70%
+     * @param l1
+     * @param l2
+     * @return
+     */
+
+    public ListNode addTwoNumbersIIinplace(ListNode l1, ListNode l2) {
+        ListNode one = reverse(l1);
+        ListNode two = reverse(l2);
+
+        ListNode head = one;
+        ListNode prev = null;
+
+        int carry = 0;
+        while (one != null && two != null) {
+            int val = carry + (one.val + two.val);
+            carry = val / 10;
+            one.val = val % 10;
+            prev = one;
+            System.out.println(one.val);
+            one = one.next;
+            two = two.next;
+        }
+
+        while (one != null) {
+            int val = carry + (one.val);
+            carry = val / 10;
+            one.val = val % 10;
+            System.out.println(one.val);
+            prev = one;
+            one = one.next;
+
+        }
+
+        while (two != null) {
+            int val = carry + (two.val);
+            carry = val / 10;
+            if (one == null) {
+                one = prev;
+            }
+            one.next = new ListNode(val % 10);
+            one = one.next;
+            two = two.next;
+        }
+
+        if (carry != 0) {
+            if (one == null) {
+                one = prev;
+            }
+            one.next = new ListNode(carry);
+        }
+
+        return reverse(head);
+    }
+
+    /**
+     * <a href="https://leetcode.com/problems/swapping-nodes-in-a-linked-list/"><h1>1721. Swapping Nodes in a Linked List</h1></a>
+     *
+     * <p>Runtime 2 ms Beats 100%</p>
+     * Memory 57 MB Beats 68.98%
+     * @param head
+     * @param k
+     * @return
+     */
+
+    public ListNode swapNodes(ListNode head, int k) {
+
+        ListNode slow  = head;
+        ListNode fast = head;
+
+        for (int i = 1; i < k; i++) {
+            fast = fast.next;
+        }
+        ListNode temp = fast;
+
+        while (fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        int store = temp.val;
+        temp.val = slow.val;
+        slow.val = store;
+
+        return head;
+
+    }
     public static void main(String[] args) {
 
     }

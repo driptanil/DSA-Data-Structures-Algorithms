@@ -1,7 +1,7 @@
 # Cyclic Sort
 Cycle Sort is only applicable for arrays containing a range of elements.
 
-![500](./image1.png)
+![500](../08-sorting/notes/cycle-sort/image1.png)
 
 -   Space Complexity : $O(1)$
 -   Time Complexity :
