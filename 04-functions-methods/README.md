@@ -22,9 +22,9 @@ public class Greeting {
 ```java
 public class Greeting {
     public static void main(String[] args) {
-				String name = "Driptanil";
-				func(name);
-				System.out.println(name));
+		String name = "Driptanil";
+		func(name);
+		System.out.println(name));
     }
 
     static void func(String naam) {
@@ -41,7 +41,7 @@ public class Greeting {
     
 -   `naam` variable can be only called in the scope of `func` function, calling `naam` in others function will give an error. This is called Scoping.
     
--   In java, `a = b` a is passed by the value of b [not reference]
+-   In java, `a = b` a is passed by the value of b (not reference)
     
     ```java
     public class Swap {

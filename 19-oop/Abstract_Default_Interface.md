@@ -176,6 +176,7 @@ I start like a normal car
 I stop like a normal car
 ```
 ````
+
 - when we use classes, the parent class has no idea of child class, but the child class has idea about parent classes. when a function is called from child class and the same function exists in parent class, then the child class and parent class both has to be present at compile time.
   
 - two class which are unrelated to each other can implement the same interfaces.
@@ -237,7 +238,7 @@ B -> run
 ```
 ````
 
-- `static` methods cannot be inherited, and it cannot be overridden, so `static` methods must have a body and must be called by interface name.
+- ` static ` methods cannot be inherited, and it cannot be overridden, so ` static ` methods must have a body and must be called by interface name.
   
 ````ad-info
 title: Class
@@ -278,11 +279,11 @@ Hello World !
 The access modifier in child class, must no be more restricting, than the parent class. (same for interfaces).
 ```
 
-````ad-class
+````ad-info
 title: Parent Class
+
 ```java
 package com.inclass.access;  
-  
 public class C {  
     String name;  
     public C(String name) {  
@@ -294,7 +295,8 @@ public class C {
 }
 ```
 ````
-`````ad-class
+
+`````ad-info
 title: Child Class with main
 ```java
 package com.inclass.access;  
@@ -307,7 +309,8 @@ public class D extends C{
     @Override  
     protected void name() {  
         System.out.println("I am not " + name);  
-    }    public static void main(String[] args) {  
+    }
+    public static void main(String[] args) {  
         D d = new D("Driptanil");  
         d.name();  
     }
@@ -323,7 +326,7 @@ java: name() in com.inclass.access.D cannot override name() in com.inclass.acces
 
 --- 
 
-````ad-class
+````ad-info
 title: Parent Class
 ```java
 package com.inclass.access;  
@@ -340,7 +343,7 @@ public class C {
 }
 ```
 ````
-````ad-class
+````ad-info
 title: Child Class with main
 ```java
 package com.inclass.access;  
